@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="03d178bd-432c-4991-ba2a-10d6526422c2" name="Default" comment="removed">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="E:/badassgameVersions/trunk/.idea/.name" afterPath="E:/badassgameVersions/trunk/.idea/.name" />
+    <list default="true" readonly="true" id="03d178bd-432c-4991-ba2a-10d6526422c2" name="Default" comment="moved ivy jar location out of repository">
+      <change type="NEW" beforePath="" afterPath="E:/resources/build-common.xml" />
+      <change type="NEW" beforePath="" afterPath="E:/dataVersions/trunk/build.xml" />
+      <change type="NEW" beforePath="" afterPath="E:/dataVersions/trunk/data.properties" />
+      <change type="NEW" beforePath="" afterPath="E:/resources/local.properties" />
+      <change type="NEW" beforePath="" afterPath="E:/resources/repository.ivy.properties" />
+      <change type="DELETED" beforePath="E:\resources\repository\net.java.jinput\ivy.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\net.java.jutils\ivy.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\org.lwjgl.lwjgl\ivy.xml" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\net.java.jinput\jinput-jar.jar" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\net.java.jinput\jinput-platform-jar.jar" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\net.java.jutils\jutils-jar.jar" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\org.lwjgl.lwjgl\lwjgl-jar.jar" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\org.lwjgl.lwjgl\lwjgl-platform-jar.jar" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\net.java.jinput" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\net.java.jutils" afterPath="" />
+      <change type="DELETED" beforePath="E:\resources\repository\org.lwjgl.lwjgl" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="E:/badassgameVersions/trunk/badassgame.iml" afterPath="E:/badassgameVersions/trunk/badassgame.iml" />
+      <change type="MODIFICATION" beforePath="E:/badengineVersions/trunk/badengine.iml" afterPath="E:/badengineVersions/trunk/badengine.iml" />
       <change type="MODIFICATION" beforePath="E:/resources/build.xml" afterPath="E:/resources/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="E:/dataVersions/trunk/data.iml" afterPath="E:/dataVersions/trunk/data.iml" />
+      <change type="MODIFICATION" beforePath="E:/goodengineVersions/trunk/goodengine.iml" afterPath="E:/goodengineVersions/trunk/goodengine.iml" />
+      <change type="MODIFICATION" beforePath="E:/resources/ivy.xml" afterPath="E:/resources/ivy.xml" />
+      <change type="MODIFICATION" beforePath="E:/resources/resources.iml" afterPath="E:/resources/resources.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox.iml" afterPath="$PROJECT_DIR$/sandbox.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\resources\repository\ivy\ivy.jar" afterPath="E:/resources/ivy/ivy.jar" />
+      <change type="MOVED" beforePath="E:\resources\repository\ivy" afterPath="E:/resources/ivy" />
     </list>
     <ignored path="sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392263449399" ignored="false" />
-    <file path="/build.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392102405399" ignored="false" />
-    <file path="/ivy.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392101883778" ignored="false" />
+    <file path="/Dummy.txt" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392271952006" ignored="false" />
+    <file path="/build.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392274415435" ignored="false" />
+    <file path="/ivy.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392272013481" ignored="false" />
     <file path="/DummyFile.xpath" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392102773856" ignored="false" />
     <file path="/.name" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392263527011" ignored="false" />
+    <file path="/Entity.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392268711135" ignored="false" />
+    <file path="/local.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392270134090" ignored="false" />
+    <file path="/data.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392274134026" ignored="false" />
+    <file path="/build-common.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392274890885" ignored="false" />
+    <file path="/repository.ivy.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392274173852" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +50,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -76,7 +107,88 @@
     <favorites_list name="sandbox" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="20" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/resources/build.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="21" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="build-common.xml" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://E:/resources/build-common.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="29" column="41" selection-start="806" selection-end="806" vertical-scroll-proportion="0.17537943">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="local.properties" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/resources/local.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="10" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://E:/dataVersions/trunk/build.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="25" column="33" selection-start="585" selection-end="585" vertical-scroll-proportion="0.7013201">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="repository.ivy.properties" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/resources/repository.ivy.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="data.properties" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/dataVersions/trunk/data.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="3" column="47" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/resources/ivy.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="15" column="17" selection-start="315" selection-end="471" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -87,9 +199,16 @@
     <option name="changedFiles">
       <list>
         <option value="E:/goodengineVersions/trunk/goodengine.iml" />
-        <option value="E:/resources/ivy.xml" />
-        <option value="E:/resources/build.xml" />
         <option value="E:/badassgameVersions/trunk/.idea/.name" />
+        <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java" />
+        <option value="E:/resources/local.properties" />
+        <option value="E:/dataVersions/trunk/ivy.xml" />
+        <option value="E:/resources/ivy.xml" />
+        <option value="E:/dataVersions/trunk/data.properties" />
+        <option value="E:/resources/repository.ivy.properties" />
+        <option value="E:/dataVersions/trunk/build.xml" />
+        <option value="E:/resources/build.xml" />
+        <option value="E:/resources/build-common.xml" />
       </list>
     </option>
   </component>
@@ -158,10 +277,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -187,203 +302,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="copyright" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ivy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -398,7 +317,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.externalResources" />
-    <property name="last_opened_file_path" value="E:/dataVersions/trunk/data.iml" />
+    <property name="last_opened_file_path" value="E:/dataVersions/trunk/build.xml" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -415,6 +334,7 @@
       <recent name="E:\badassgameVersions\trunk" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\resources" />
       <recent name="E:\badassgameVersions\trunk" />
       <recent name="E:\sandbox\src" />
     </key>
@@ -634,33 +554,42 @@
       <created>1392263459101</created>
       <updated>1392263459101</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="small changes">
+      <created>1392263639101</created>
+      <updated>1392263639101</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updated ivy.xml with configurations/defaults, updated build retrieve task. added entity interface in badassgame package">
+      <created>1392268406101</created>
+      <updated>1392268406101</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1916" y="-4" width="1928" height="1088" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="2016" y="96" width="1728" height="888" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6709129" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6709129" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32908705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32908705" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908705" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6709129" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -706,7 +635,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial project layout commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated ivy.xml with configurations/defaults, updated build retrieve task. added entity interface in badassgame package" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -728,6 +657,8 @@
     <MESSAGE value="branch dir creation" />
     <MESSAGE value="trunk dir creation" />
     <MESSAGE value="initial project layout commit" />
+    <MESSAGE value="small changes" />
+    <MESSAGE value="updated ivy.xml with configurations/defaults, updated build retrieve task. added entity interface in badassgame package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -740,60 +671,24 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
     <buildFile url="file://E:/resources/build.xml">
+      <targetFilters>
+        <filter targetName="download-ivy" isVisible="false" />
+        <filter targetName="install-ivy" isVisible="true" />
+        <filter targetName="clean-ivy" isVisible="true" />
+        <filter targetName="clean-cache" isVisible="true" />
+        <filter targetName="update-repository" isVisible="true" />
+        <filter targetName="clean-repository" isVisible="true" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
+    <buildFile url="file://E:/dataVersions/trunk/build.xml">
       <expanded value="true" />
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/badassgameVersions/trunk/badassgame.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/goodengineVersions/trunk/goodengine.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/badassgameVersions/trunk/badassgame.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://E:/goodengineVersions/trunk/goodengine.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="519" selection-end="519" vertical-scroll-proportion="0.24074075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/badassgameVersions/trunk/badassgame.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="462" selection-end="462" vertical-scroll-proportion="0.16666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/resources/resources.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/resources/ivy.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="193" selection-end="193" vertical-scroll-proportion="0.16831683">
           <folding />
         </state>
       </provider>
@@ -847,9 +742,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="20" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="10" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/dataVersions/trunk/data.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="47" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="17" selection-start="315" selection-end="471" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/repository.ivy.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://E:/resources/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="104" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.7419899">
+        <state line="21" column="0" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/dataVersions/trunk/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="33" selection-start="585" selection-end="585" vertical-scroll-proportion="0.7013201">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/build-common.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="41" selection-start="806" selection-end="806" vertical-scroll-proportion="0.17537943">
           <folding />
         </state>
       </provider>
@@ -883,6 +827,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>repository</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -906,12 +851,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>data</last-edited>
+          <last-edited>badassgame</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="AntConfiguration">
     <buildFile url="file://E:/resources/build.xml" />
+    <buildFile url="file://E:/dataVersions/trunk/build.xml" />
   </component>
 </project>
 
