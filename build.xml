@@ -1,0 +1,21 @@
+<!--
+
+-->
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="sandbox" basedir=".">
+    <description>
+        Data build file for compilation scripts
+    </description>
+    <!--
+
+        this build file is a self contained project:
+        it requires ant 2.3 and java 1.7
+    -->
+
+
+    <!--
+    -->
+    <property file="${basedir}/sandbox.properties"/>
+
+    <import file="${resources.basedir}/${build.common.file}"/>
+
+</project>
