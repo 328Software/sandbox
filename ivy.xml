@@ -1,0 +1,24 @@
+<ivy-module version="2.0">
+    <info organisation="org.badassgame" module="sandbox"/>
+
+
+    <configurations defaultconf="default">
+        <conf name="master" visibility="public"/>
+        <conf name="compile" visibility="public"/>
+        <conf name="runtime" visibility="public" extends="compile"/>
+        <conf name="test" visibility="public" extends="runtime"/>
+        <conf name="default" visibility="public" extends="runtime,master"/>
+    </configurations>
+
+    <publications defaultconf="master">
+        <artifact name="sandbox" url="file://${pub}"/>
+    </publications>
+
+
+    <dependencies>
+        <dependency org="org.badassgame" name="data" rev="0.1">
+            <conf name="default" mapped="default"/>
+            <conf name="runtime" mapped="runtime"/>
+        </dependency>
+    </dependencies>
+</ivy-module>

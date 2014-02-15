@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="03d178bd-432c-4991-ba2a-10d6526422c2" name="Default" comment="created compile script. set up sandbox build scripts. moved configuration information to properties files">
-      <change type="MODIFICATION" beforePath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java" afterPath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java" />
+    <list default="true" readonly="true" id="03d178bd-432c-4991-ba2a-10d6526422c2" name="Default" comment="small changes">
+      <change type="NEW" beforePath="" afterPath="E:/dataVersions/trunk/ivy.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ivy.xml" />
+      <change type="DELETED" beforePath="E:\resources\ivy.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="E:/resources/build-common.xml" afterPath="E:/resources/build-common.xml" />
       <change type="MODIFICATION" beforePath="E:/resources/build.xml" afterPath="E:/resources/build.xml" />
+      <change type="MODIFICATION" beforePath="E:/dataVersions/trunk/data.properties" afterPath="E:/dataVersions/trunk/data.properties" />
+      <change type="MODIFICATION" beforePath="E:/resources/local.properties" afterPath="E:/resources/local.properties" />
       <change type="MODIFICATION" beforePath="E:/resources/repository.ivy.properties" afterPath="E:/resources/repository.ivy.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox.properties" afterPath="$PROJECT_DIR$/sandbox.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392361263765" ignored="false" />
+    <file path="/Dummy.txt" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392450990280" ignored="false" />
     <file path="/build.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392362288770" ignored="false" />
-    <file path="/ivy.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392358128500" ignored="false" />
+    <file path="/ivy.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392456099013" ignored="false" />
     <file path="/DummyFile.xpath" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392102773856" ignored="false" />
     <file path="/.name" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392263527011" ignored="false" />
     <file path="/Entity.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392361858605" ignored="false" />
     <file path="/local.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392270134090" ignored="false" />
-    <file path="/data.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392358284601" ignored="false" />
-    <file path="/build-common.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392364391747" ignored="false" />
-    <file path="/repository.ivy.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392275252571" ignored="false" />
-    <file path="/ivysettings.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392277754175" ignored="false" />
-    <file path="/sandbox.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392358310345" ignored="false" />
+    <file path="/data.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392454879706" ignored="false" />
+    <file path="/build-common.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392455309466" ignored="false" />
+    <file path="/repository.ivy.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392450874221" ignored="false" />
+    <file path="/ivysettings.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392446677732" ignored="false" />
+    <file path="/sandbox.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392454884009" ignored="false" />
+    <file path="/ivysettings-local.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392448072676" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,28 +95,55 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="data.properties" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://E:/dataVersions/trunk/data.properties">
+          <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/resources/build.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="30" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+                <state line="20" column="13" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://E:/resources/build.xml">
+          <file leaf-file-name="ActionQueue.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/ActionQueue.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="18" selection-start="404" selection-end="404" vertical-scroll-proportion="0.26597583">
+                <state line="9" column="17" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="local.properties" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/resources/local.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="2" column="0" selection-start="27" selection-end="36" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://E:/resources/ivy.xml">
+            <entry file="file://E:/dataVersions/trunk/ivy.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="34" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+                <state line="23" column="33" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sandbox.properties" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sandbox.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="0.11447811">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/resources/repository/org.lwjgl.lwjgl/lwjgl/2.9.0/ivy.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -128,16 +161,7 @@
           <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/build.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="31" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="sandbox.properties" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sandbox.properties">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="4" column="28" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+                <state line="16" column="32" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -150,16 +174,25 @@
           <file leaf-file-name="repository.ivy.properties" pinned="false" current="false" current-in-tab="false">
             <entry file="file://E:/resources/repository.ivy.properties">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="11" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+                <state line="1" column="31" selection-start="101" selection-end="113" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="build-common.xml" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="build-common.xml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://E:/resources/build-common.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="119" column="15" selection-start="4742" selection-end="4742" vertical-scroll-proportion="0.093333334">
+                <state line="104" column="0" selection-start="4327" selection-end="4327" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ivy.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="20" column="51" selection-start="769" selection-end="769" vertical-scroll-proportion="0.55284554">
                   <folding />
                 </state>
               </provider>
@@ -177,20 +210,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="E:/goodengineVersions/trunk/goodengine.iml" />
         <option value="E:/badassgameVersions/trunk/.idea/.name" />
-        <option value="E:/resources/local.properties" />
-        <option value="E:/dataVersions/trunk/ivy.xml" />
         <option value="E:/resources/ivysettings.xml" />
+        <option value="E:/dataVersions/trunk/build.xml" />
+        <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="E:/resources/local.properties" />
+        <option value="E:/dataVersions/trunk/ivysettings.xml" />
+        <option value="E:/dataVersions/trunk/ivysettings-local.xml" />
+        <option value="E:/resources/repository.ivy.properties" />
         <option value="E:/resources/build.xml" />
         <option value="E:/resources/ivy.xml" />
         <option value="E:/dataVersions/trunk/data.properties" />
         <option value="$PROJECT_DIR$/sandbox.properties" />
-        <option value="E:/dataVersions/trunk/build.xml" />
-        <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
-        <option value="E:/resources/repository.ivy.properties" />
         <option value="E:/resources/build-common.xml" />
+        <option value="E:/dataVersions/trunk/ivy.xml" />
+        <option value="$PROJECT_DIR$/ivy.xml" />
       </list>
     </option>
   </component>
@@ -226,109 +261,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="sandbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sandbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trunk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -391,13 +329,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="247" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="247" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="247" />
     <property name="project.structure.proportion" value="0.15" />
@@ -447,127 +386,6 @@
       <recent name="E:\badassgameVersions\trunk" />
       <recent name="E:\sandbox\src" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="13">E:\badassgameVersions\trunk\.idea\modules.xml</PATH>
-            <PATH vcs="svn" revision="13">E:\badassgameVersions\trunk\.idea\misc.xml</PATH>
-            <PATH vcs="svn" revision="13">E:\badassgameVersions\trunk\.idea\vcs.xml</PATH>
-            <PATH vcs="svn" revision="13">E:\badassgameVersions\trunk\.idea\workspace.xml</PATH>
-            <PATH vcs="svn" revision="10">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Entity.java</PATH>
-            <PATH vcs="svn" revision="12">E:\resources\local.properties</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-            <PATH vcs="svn" revision="10">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Attributes.java</PATH>
-            <PATH vcs="svn" revision="10">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Action.java</PATH>
-            <PATH vcs="svn" revision="10">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Relation.java</PATH>
-            <PATH vcs="svn" revision="10">E:\dataVersions\trunk\src\main\java\org\badassgame\data\ActionQueue.java</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -816,32 +634,40 @@
       <created>1392361244101</created>
       <updated>1392361244101</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="small changes">
+      <created>1392364566101</created>
+      <updated>1392364566101</updated>
+    </task>
+    <task id="LOCAL-00018" summary="changed resolve pattern">
+      <created>1392451008101</created>
+      <updated>1392451008101</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1916" y="-4" width="1928" height="1088" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67834395" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67834395" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09978655" sideWeight="0.6790254" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32165605" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3209746" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67834395" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13927428" sideWeight="0.6790254" order="0" side_tool="false" content_ui="combo" x="2256" y="114" width="261" height="942" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="2016" y="96" width="1728" height="888" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908705" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -889,7 +715,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="created compile script. set up sandbox build scripts. moved configuration information to properties files" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed resolve pattern" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -911,7 +737,6 @@
     <MESSAGE value="branch dir creation" />
     <MESSAGE value="trunk dir creation" />
     <MESSAGE value="initial project layout commit" />
-    <MESSAGE value="small changes" />
     <MESSAGE value="updated ivy.xml with configurations/defaults, updated build retrieve task. added entity interface in badassgame package" />
     <MESSAGE value="moving stuff around, setting up build file for data" />
     <MESSAGE value="moving stuff around, setting up build file for data part duex" />
@@ -919,6 +744,8 @@
     <MESSAGE value="removed an unused property" />
     <MESSAGE value="added some lib macros" />
     <MESSAGE value="created compile script. set up sandbox build scripts. moved configuration information to properties files" />
+    <MESSAGE value="small changes" />
+    <MESSAGE value="changed resolve pattern" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -939,6 +766,7 @@
         <filter targetName="update-repository" isVisible="true" />
         <filter targetName="clean-repository" isVisible="true" />
       </targetFilters>
+      <treeView value="false" />
       <expanded value="true" />
     </buildFile>
     <buildFile url="file://E:/dataVersions/trunk/build.xml">
@@ -951,25 +779,24 @@
       <expanded value="true" />
     </buildFile>
     <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="download-ivy" isVisible="false" />
+        <filter targetName="install-ivy" isVisible="true" />
+        <filter targetName="test-dir" isVisible="false" />
+        <filter targetName="clean-repository" isVisible="true" />
+        <filter targetName="update-repository" isVisible="true" />
+        <filter targetName="retrieve-lib" isVisible="false" />
+        <filter targetName="clean-lib" isVisible="false" />
+        <filter targetName="clean-build" isVisible="false" />
+        <filter targetName="compile" isVisible="false" />
+        <filter targetName="build-jar" isVisible="false" />
+        <filter targetName="publish" isVisible="false" />
+      </targetFilters>
+      <treeView value="false" />
       <expanded value="true" />
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/.name">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://E:/dataVersions/trunk/.idea/.name">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://E:/badassgameVersions/trunk/.idea/.name">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://E:/badengineVersions/trunk/.idea/.name">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -982,21 +809,12 @@
     </entry>
     <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="64" selection-start="239" selection-end="239" vertical-scroll-proportion="0.3050571">
-          <folding />
-        </state>
+        <state line="11" column="64" selection-start="239" selection-end="239" vertical-scroll-proportion="0.3050571" />
       </provider>
     </entry>
-    <entry file="file://E:/resources/ivy.xml">
+    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/ActionQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+        <state line="9" column="17" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1008,44 +826,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
+    <entry file="file://E:/resources/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/resources/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="401" selection-end="401" vertical-scroll-proportion="0.39666668">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/resources/repository.ivy.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+        <state line="20" column="13" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://E:/dataVersions/trunk/data.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+        <state line="4" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="0.11486486">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/resources/build.xml">
+    <entry file="file://E:/resources/local.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="404" selection-end="404" vertical-scroll-proportion="0.26597583">
+        <state line="2" column="0" selection-start="27" selection-end="36" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/repository.ivy.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="31" selection-start="101" selection-end="113" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://E:/resources/build-common.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="15" selection-start="4742" selection-end="4742" vertical-scroll-proportion="0.093333334">
+        <state line="104" column="0" selection-start="4327" selection-end="4327" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/repository/net.java.jinput/jinput/2.0.5/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.08635578" />
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/repository/org.lwjgl.lwjgl/lwjgl/2.9.0/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/dataVersions/trunk/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="51" selection-start="769" selection-end="769" vertical-scroll-proportion="0.55284554">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="32" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="0.11447811">
           <folding />
         </state>
       </provider>
@@ -1103,11 +954,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>goodengine</last-edited>
+          <last-edited>badengine</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
