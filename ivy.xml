@@ -8,6 +8,7 @@
         <conf name="runtime" visibility="public" extends="compile"/>
         <conf name="test" visibility="public" extends="runtime"/>
         <conf name="default" visibility="public" extends="runtime,master"/>
+        <conf name="junit" visibility="public"/>
     </configurations>
 
     <publications defaultconf="master">
@@ -20,5 +21,11 @@
             <conf name="default" mapped="default"/>
             <conf name="runtime" mapped="runtime"/>
         </dependency>
+
+        <dependency org="junit" name="junit" rev="4.11">
+            <conf name="junit" mapped="master"/>
+            <conf name="test" mapped="compile"/>
+        </dependency>
+
     </dependencies>
 </ivy-module>

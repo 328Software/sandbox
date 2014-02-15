@@ -4,6 +4,8 @@
     <buildFile url="file://E:/resources/build.xml" />
     <buildFile url="file://E:/dataVersions/trunk/build.xml" />
     <buildFile url="file://$PROJECT_DIR$/build.xml" />
+    <buildFile url="file://E:/resources/common/build-junit.xml" />
+    <buildFile url="file://E:/resources/common/macro.xml" />
   </component>
 </project>
 

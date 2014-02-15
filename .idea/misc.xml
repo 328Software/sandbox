@@ -43,7 +43,7 @@
         <entry key="E:/resources">
           <value>
             <SvnBranchConfiguration>
-              <option name="trunkUrl" value="" />
+              <option name="trunkUrl" value="svn://ec2-54-201-135-46.us-west-2.compute.amazonaws.com/svn/resources" />
             </SvnBranchConfiguration>
           </value>
         </entry>
