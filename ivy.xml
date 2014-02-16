@@ -20,10 +20,10 @@
 
 
     <dependencies>
-        <!--<dependency org="org.badassgame" name="data" rev="0.1">-->
-            <!--<conf name="default" mapped="default"/>-->
-            <!--<conf name="runtime" mapped="runtime"/>-->
-        <!--</dependency>-->
+        <dependency org="org.badassgame" name="data" rev="0.1">
+            <conf name="default" mapped="default"/>
+            <conf name="runtime" mapped="runtime"/>
+        </dependency>
 
         <dependency org="junit" name="junit" rev="4.11">
             <conf name="junit" mapped="master"/>
