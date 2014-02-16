@@ -29,9 +29,8 @@ public class JunitConfigurationTest {
     public void basicUnitTestTwo() {
         assertTrue(true);
         System.out.println("running unit test two...");
-//        System.out.println(new Asdf());
         try {
-            Class.forName("org.badassgame.data.Entity");
+            Class.forName("org.badassgame.data.entity.Entity");
         } catch (ClassNotFoundException e) {
             fail("could not find class entity");
         }

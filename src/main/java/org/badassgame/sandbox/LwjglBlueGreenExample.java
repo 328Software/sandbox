@@ -17,7 +17,7 @@ import org.lwjgl.opengl.GL33;
 public class LwjglBlueGreenExample {
     public void start() {
         try {
-            Display.setDisplayMode(new DisplayMode(800, 600));
+            Display.setDisplayMode(new DisplayMode(1920, 1080));
             Display.create();
         } catch (LWJGLException e) {
             e.printStackTrace();

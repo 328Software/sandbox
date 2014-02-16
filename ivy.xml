@@ -26,8 +26,7 @@
         </dependency>
 
         <dependency org="junit" name="junit" rev="4.11">
-            <conf name="junit" mapped="master"/>
-            <conf name="test" mapped="runtime"/>
+            <conf name="test" mapped="default"/>
         </dependency>
 
         <dependency org="org.lwjgl.lwjgl" name="lwjgl" rev="2.9.0">
