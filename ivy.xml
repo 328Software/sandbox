@@ -1,4 +1,4 @@
-<ivy-module version="2.0">
+<ivy-module version="2.0"  xmlns:e="http://ant.apache.org/ivy/extra">
     <info organisation="org.badassgame" module="sandbox"/>
 
 
@@ -9,6 +9,9 @@
         <conf name="test" visibility="public" extends="runtime"/>
         <conf name="default" visibility="public" extends="runtime,master"/>
         <conf name="junit" visibility="public"/>
+        <conf name="windows-native" visibility="public"/>
+        <conf name="linux-native" visibility="public"/>
+        <conf name="osx-native" visibility="public"/>
     </configurations>
 
     <publications defaultconf="master">
@@ -17,10 +20,10 @@
 
 
     <dependencies>
-        <dependency org="org.badassgame" name="data" rev="0.1">
-            <conf name="default" mapped="default"/>
-            <conf name="runtime" mapped="runtime"/>
-        </dependency>
+        <!--<dependency org="org.badassgame" name="data" rev="0.1">-->
+            <!--<conf name="default" mapped="default"/>-->
+            <!--<conf name="runtime" mapped="runtime"/>-->
+        <!--</dependency>-->
 
         <dependency org="junit" name="junit" rev="4.11">
             <conf name="junit" mapped="master"/>
@@ -30,6 +33,12 @@
         <dependency org="org.lwjgl.lwjgl" name="lwjgl" rev="2.9.0">
             <conf name="default" mapped="default"/>
             <conf name="runtime" mapped="runtime"/>
+        </dependency>
+
+        <dependency org="org.lwjgl.lwjgl" name="lwjgl-platform" rev="2.9.0" conf="*">
+            <artifact name="lwjgl-platform" e:classifier="natives-linux" conf="linux-native"/>
+            <artifact name="lwjgl-platform" e:classifier="natives-windows" conf="windows-native"/>
+            <artifact name="lwjgl-platform" e:classifier="natives-osx" conf="osx-native"/>
         </dependency>
     </dependencies>
 </ivy-module>
