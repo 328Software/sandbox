@@ -12,15 +12,27 @@ import org.junit.Test;
  */
 public class LwjglTest {
 
-    LwjglExample example;
-
     @Before
     public void createFixture() {
-        example = new LwjglExample();
     }
 
     @Test
     public void testStart() {
-        example.start();
+        new LwjglExample().start();
+    }
+
+    @Test
+    public void testInputStart() {
+        new LwjglInputExample().start();
+    }
+
+    @Test
+    public void testBlueGreen() {
+        new LwjglBlueGreenExample().start();
+    }
+
+    @Test
+    public void testQuadGL30() {
+        new QuadGL30Example();
     }
 }

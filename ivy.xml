@@ -40,5 +40,10 @@
             <artifact name="lwjgl-platform" e:classifier="natives-windows" conf="windows-native"/>
             <artifact name="lwjgl-platform" e:classifier="natives-osx" conf="osx-native"/>
         </dependency>
+
+        <dependency org="org.lwjgl.lwjgl" name="lwjgl_util" rev="2.9.0">
+            <conf name="default" mapped="default"/>
+            <conf name="runtime" mapped="runtime"/>
+        </dependency>
     </dependencies>
 </ivy-module>
