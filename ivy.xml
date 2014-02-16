@@ -8,7 +8,6 @@
         <conf name="runtime" visibility="public" extends="compile"/>
         <conf name="test" visibility="public" extends="runtime"/>
         <conf name="default" visibility="public" extends="runtime,master"/>
-        <conf name="junit" visibility="public"/>
         <conf name="windows-native" visibility="public"/>
         <conf name="linux-native" visibility="public"/>
         <conf name="osx-native" visibility="public"/>
@@ -26,6 +25,10 @@
         </dependency>
 
         <dependency org="junit" name="junit" rev="4.11">
+            <conf name="test" mapped="default"/>
+        </dependency>
+
+        <dependency org="org.easymock" name="easymock" rev="3.2">
             <conf name="test" mapped="default"/>
         </dependency>
 

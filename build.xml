@@ -13,6 +13,7 @@
 
     <dirname property="sandbox.basedir" file="${ant.file.sandbox}"/>
 
+    <property name="module.basedir" value="${basedir}"/>
     <!--
     -->
     <property file="${sandbox.basedir}/sandbox.properties"/>
