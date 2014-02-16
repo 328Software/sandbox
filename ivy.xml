@@ -24,8 +24,12 @@
 
         <dependency org="junit" name="junit" rev="4.11">
             <conf name="junit" mapped="master"/>
-            <conf name="test" mapped="compile"/>
+            <conf name="test" mapped="runtime"/>
         </dependency>
 
+        <dependency org="org.lwjgl.lwjgl" name="lwjgl" rev="2.9.0">
+            <conf name="default" mapped="default"/>
+            <conf name="runtime" mapped="runtime"/>
+        </dependency>
     </dependencies>
 </ivy-module>

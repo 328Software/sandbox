@@ -2,34 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="03d178bd-432c-4991-ba2a-10d6526422c2" name="Default" comment="refactored some interfaces">
-      <change type="NEW" beforePath="" afterPath="E:/resources/common" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/Asdf.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/JunitConfigurationTest.java" />
-      <change type="NEW" beforePath="" afterPath="E:/resources/common/build-junit.xml" />
-      <change type="NEW" beforePath="" afterPath="E:/resources/local-properties.xml" />
-      <change type="NEW" beforePath="" afterPath="E:/resources/common/macro.xml" />
-      <change type="DELETED" beforePath="E:\sandbox\src\main\java\org\badassgame\sandbox\Test.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/entity" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/LwjglTest.java" />
+      <change type="DELETED" beforePath="E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\AbstractEntityAttribute.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\ActiveEntityAttribute.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\KinematicAttribute.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\PassiveEntityAttribute.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\PhysicalAttribute.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\StructureEntityAttribute.java" afterPath="" />
       <change type="MODIFICATION" beforePath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/EntityAttribute.java" afterPath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/EntityAttribute.java" />
-      <change type="MODIFICATION" beforePath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/PhysicalAttribute.java" afterPath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/PhysicalAttribute.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="MODIFICATION" beforePath="E:/resources/build-common.xml" afterPath="E:/resources/build-common.xml" />
-      <change type="MODIFICATION" beforePath="E:/resources/repository/net.java.jinput/jinput-platform/2.0.5/ivy.xml" afterPath="E:/resources/repository/net.java.jinput/jinput-platform/2.0.5/ivy.xml" />
-      <change type="MODIFICATION" beforePath="E:/resources/repository/net.java.jinput/jinput/2.0.5/ivy.xml" afterPath="E:/resources/repository/net.java.jinput/jinput/2.0.5/ivy.xml" />
-      <change type="MODIFICATION" beforePath="E:/resources/repository/net.java.jutils/jutils/1.0.0/ivy.xml" afterPath="E:/resources/repository/net.java.jutils/jutils/1.0.0/ivy.xml" />
-      <change type="MODIFICATION" beforePath="E:/resources/repository/org.lwjgl.lwjgl/lwjgl-platform/2.9.0/ivy.xml" afterPath="E:/resources/repository/org.lwjgl.lwjgl/lwjgl-platform/2.9.0/ivy.xml" />
-      <change type="MODIFICATION" beforePath="E:/resources/repository/org.lwjgl.lwjgl/lwjgl/2.9.0/ivy.xml" afterPath="E:/resources/repository/org.lwjgl.lwjgl/lwjgl/2.9.0/ivy.xml" />
+      <change type="MODIFICATION" beforePath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/interaction/InteractionAttribute.java" afterPath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/interaction/InteractionAttribute.java" />
+      <change type="MODIFICATION" beforePath="E:/resources/common/build-junit.xml" afterPath="E:/resources/common/build-junit.xml" />
+      <change type="MODIFICATION" beforePath="E:/dataVersions/trunk/data.properties" afterPath="E:/dataVersions/trunk/data.properties" />
+      <change type="MODIFICATION" beforePath="E:/dataVersions/trunk/ivy.xml" afterPath="E:/dataVersions/trunk/ivy.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ivy.xml" afterPath="$PROJECT_DIR$/ivy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox.properties" afterPath="$PROJECT_DIR$/sandbox.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\dataVersions\trunk\src\main\java\org\badassgame\data\Entity.java" afterPath="E:/dataVersions/trunk/src/main/java/org/badassgame/data/entity/Entity.java" />
+      <change type="MOVED" beforePath="E:\sandbox\src\main\java\org\badassgame\sandbox\GraphicTest.java" afterPath="$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/LwjglExample.java" />
     </list>
     <ignored path="sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392506504154" ignored="false" />
+    <file path="/Dummy.txt" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392509463234" ignored="false" />
     <file path="/build.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392460118216" ignored="false" />
-    <file path="/ivy.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392505669238" ignored="false" />
+    <file path="/ivy.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392508019894" ignored="false" />
     <file path="/DummyFile.xpath" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392102773856" ignored="false" />
     <file path="/.name" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392263527011" ignored="false" />
-    <file path="/Entity.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392361858605" ignored="false" />
+    <file path="/Entity.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392508745440" ignored="false" />
     <file path="/local.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392270134090" ignored="false" />
     <file path="/data.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392454879706" ignored="false" />
     <file path="/build-common.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392501889895" ignored="false" />
@@ -44,9 +43,12 @@
     <file path="/macro.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392504710586" ignored="false" />
     <file path="/local-properties.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392505388362" ignored="false" />
     <file path="/common.properties" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392500706124" ignored="false" />
-    <file path="/build-junit.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392506372670" ignored="false" />
+    <file path="/build-junit.xml" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392507762846" ignored="false" />
     <file path="/PhysicalAttribute.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392506766930" ignored="false" />
     <file path="/EntityAttribute.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392506801775" ignored="false" />
+    <file path="/LwjglTest.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392507459351" ignored="false" />
+    <file path="/ActiveAttribute.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392508512127" ignored="false" />
+    <file path="/EntityTest.java" changelist="03d178bd-432c-4991-ba2a-10d6526422c2" time="1392508977191" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,60 +116,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="JunitConfigurationTest.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/JunitConfigurationTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="46" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PassiveEntityAttribute.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/PassiveEntityAttribute.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="17" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="EntityAttribute.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/EntityAttribute.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="32" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+                <state line="3" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="KinematicAttribute.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/KinematicAttribute.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="17" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ActiveEntityAttribute.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/ActiveEntityAttribute.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="17" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PhysicalAttribute.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/PhysicalAttribute.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="13" column="43" selection-start="317" selection-end="317" vertical-scroll-proportion="0.39184397">
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -181,28 +134,72 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ivy.xml">
+          <file leaf-file-name="Entity.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/entity/Entity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="27" column="23" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
+                <state line="14" column="46" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EntityTest.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://E:/dataVersions/trunk/src/test/java/org/badassgame/data/EntityTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="38" column="56" selection-start="819" selection-end="819" vertical-scroll-proportion="0.97068965">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LwjglExample.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/LwjglExample.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="45" column="5" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LwjglTest.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/LwjglTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="23" column="24" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="HasAttributes.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/HasAttributes.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="11" column="35" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://E:/dataVersions/trunk/build.xml">
+          <file leaf-file-name="Action.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/Action.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="55" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+                <state line="11" column="17" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/build.xml">
+          <file leaf-file-name="sandbox.properties" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sandbox.properties">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="10" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
+                <state line="4" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -233,16 +230,34 @@
           <file leaf-file-name="build-junit.xml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://E:/resources/common/build-junit.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="0" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
+                <state line="38" column="40" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Asdf.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://E:/resources/repository/junit/junit/4.11/ivy.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="28" column="19" selection-start="2502" selection-end="2502" vertical-scroll-proportion="0.8206897">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Asdf.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/Asdf.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="37" selection-start="210" selection-end="210" vertical-scroll-proportion="0.31965813">
+                <state line="11" column="0" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://E:/dataVersions/trunk/ivy.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="17" column="58" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -260,7 +275,7 @@
           <file leaf-file-name="macro.xml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://E:/resources/common/macro.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="50" column="33" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.0">
+                <state line="50" column="20" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -287,22 +302,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/DisplayTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/Test.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
-        <option value="E:/resources/build.xml" />
-        <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/Attributes.java" />
-        <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/Attribute.java" />
-        <option value="E:/resources/common/local-properties.xml" />
-        <option value="E:/resources/common/common.properties" />
-        <option value="E:/resources/build-common.xml" />
         <option value="E:/resources/common/macro.xml" />
         <option value="$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/JunitConfigurationTest.java" />
         <option value="E:/resources/local-properties.xml" />
-        <option value="$PROJECT_DIR$/ivy.xml" />
-        <option value="E:/resources/common/build-junit.xml" />
         <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/PhysicalAttribute.java" />
+        <option value="$PROJECT_DIR$/sandbox.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/GraphicTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/LwjglTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/LwjglExample.java" />
+        <option value="$PROJECT_DIR$/ivy.xml" />
+        <option value="E:/dataVersions/trunk/ivy.xml" />
+        <option value="E:/resources/common/build-junit.xml" />
+        <option value="E:/dataVersions/trunk/data.properties" />
+        <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/ActiveAttribute.java" />
         <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/EntityAttribute.java" />
+        <option value="E:/dataVersions/trunk/src/main/java/org/badassgame/data/Entity.java" />
+        <option value="E:/dataVersions/trunk/src/test/java/org/badassgame/data/EntityTest.java" />
       </list>
     </option>
   </component>
@@ -346,6 +361,490 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="sandbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="badassgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="badassgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="badassgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="attribute" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="badassgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="attribute" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interaction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="badassgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="attribute" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="badassgame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="junit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="junit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="junit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="junit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4.11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -421,12 +920,10 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="UPDATED" />
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\collections\ActionQueue.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Entity.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Action.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Relation.java</PATH>
-            <PATH vcs="svn" revision="13">E:\sandbox\sandbox.properties</PATH>
-            <PATH vcs="svn" revision="13">E:\sandbox\sandbox.iml</PATH>
+            <PATH vcs="svn" revision="16">E:\dataVersions\trunk\data.properties</PATH>
+            <PATH vcs="svn" revision="16">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\PhysicalAttribute.java</PATH>
+            <PATH vcs="svn" revision="16">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\KinematicAttribute.java</PATH>
+            <PATH vcs="svn" revision="16">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\ActiveEntityAttribute.java</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Created" />
@@ -434,21 +931,8 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="false" />
             <option name="myId" value="CREATED" />
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Interaction.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\KinematicAttribute.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\PassiveEntityAttribute.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\ActiveEntityAttribute.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\EntityAttribute.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\PhysicalAttribute.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\interaction</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\interaction\ActionAttribute.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\interaction\RelationAttribute.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\interaction\InteractionAttribute.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\HasAttributes.java</PATH>
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\Attribute.java</PATH>
-            <PATH vcs="svn" revision="13">E:\sandbox\src\main\java\org\badassgame\sandbox\GraphicTest.java</PATH>
+            <PATH vcs="svn" revision="16">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\StructureEntityAttribute.java</PATH>
+            <PATH vcs="svn" revision="16">E:\dataVersions\trunk\src\main\java\org\badassgame\data\attribute\entity\AbstractEntityAttribute.java</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Deleted" />
@@ -456,7 +940,6 @@
             <option name="mySupportsDeletion" value="false" />
             <option name="myCanBeAbsent" value="true" />
             <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-            <PATH vcs="svn" revision="15">E:\dataVersions\trunk\src\main\java\org\badassgame\data\Attribute.java</PATH>
           </FILE-GROUP>
           <FILE-GROUP>
             <option name="myUpdateName" value="Restored" />
@@ -814,27 +1297,31 @@
       <created>1392500678105</created>
       <updated>1392500678105</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="created unit test target and refactored some targets">
+      <created>1392506999102</created>
+      <updated>1392506999102</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1916" y="-4" width="1928" height="1088" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.67834395" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09978655" sideWeight="0.6709129" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09978655" sideWeight="0.6794055" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32908705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3209746" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3205945" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14727855" sideWeight="0.6709129" order="0" side_tool="false" content_ui="combo" x="2256" y="114" width="261" height="942" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20010673" sideWeight="0.6794055" order="0" side_tool="false" content_ui="combo" x="2256" y="114" width="261" height="942" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="2016" y="96" width="1728" height="888" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -887,7 +1374,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored some interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="created unit test target and refactored some targets" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -923,6 +1410,7 @@
     <MESSAGE value="removed test target, and added descriptions to targets." />
     <MESSAGE value="changed target names" />
     <MESSAGE value="refactored some interfaces" />
+    <MESSAGE value="created unit test target and refactored some targets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -983,17 +1471,19 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/resources/common/macro.xml">
+    <entry file="file://$PROJECT_DIR$/sandbox.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="33" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.0">
+        <state line="4" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/resources/common/build-junit.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/LwjglExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="45" column="5" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1004,25 +1494,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/JunitConfigurationTest.java">
+    <entry file="file://E:/dataVersions/trunk/ivy.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="46" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
+        <state line="17" column="58" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/common/build-junit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="40" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/resources/repository/junit/junit/4.11/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="2502" selection-end="2502" vertical-scroll-proportion="0.8206897">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/badassgame/sandbox/LwjglTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="24" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox.properties">
+    <entry file="file://E:/dataVersions/trunk/data.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
+        <state line="1" column="63" selection-start="65" selection-end="65" vertical-scroll-proportion="0.02905983">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/resources/build.xml">
+    <entry file="file://E:/resources/local.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="37" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+        <state line="11" column="40" selection-start="259" selection-end="259" vertical-scroll-proportion="0.31965813">
           <folding />
         </state>
       </provider>
@@ -1034,68 +1545,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/resources/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/collections/ActionQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/dataVersions/trunk/ivy.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="40" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/ActiveEntityAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/PassiveEntityAttribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/EntityAttribute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+        <state line="3" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/KinematicAttribute.java">
+    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/HasAttributes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
+        <state line="11" column="35" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/attribute/entity/PhysicalAttribute.java">
+    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="317" selection-end="317" vertical-scroll-proportion="0.39184397">
+        <state line="11" column="17" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/dataVersions/trunk/src/main/java/org/badassgame/data/entity/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="46" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/badassgame/sandbox/Asdf.java">
+    <entry file="file://E:/dataVersions/trunk/src/test/java/org/badassgame/data/EntityTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="37" selection-start="210" selection-end="210" vertical-scroll-proportion="0.31965813">
-          <folding />
+        <state line="38" column="56" selection-start="819" selection-end="819" vertical-scroll-proportion="0.97068965">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
