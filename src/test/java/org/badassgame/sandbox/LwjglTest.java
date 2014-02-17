@@ -16,23 +16,28 @@ public class LwjglTest {
     public void createFixture() {
     }
 
-    @Test
-    public void testStart() {
-        new LwjglExample().start();
-    }
+//    @Test
+//    public void testStart() {
+//        new LwjglExample().start();
+//    }
+//
+//    @Test
+//    public void testInputStart() {
+//        new LwjglInputExample().start();
+//    }
+//
+//    @Test
+//    public void testBlueGreen() {
+//        new LwjglBlueGreenExample().start();
+//    }
+//
+//    @Test
+//    public void testQuadGL30() {
+//        new QuadGL30Example();
+//    }
 
     @Test
-    public void testInputStart() {
-        new LwjglInputExample().start();
-    }
-
-    @Test
-    public void testBlueGreen() {
-        new LwjglBlueGreenExample().start();
-    }
-
-    @Test
-    public void testQuadGL30() {
-        new QuadGL30Example();
+    public void testTriangles() {
+         new Triangles().run();
     }
 }
