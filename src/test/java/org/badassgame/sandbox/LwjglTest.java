@@ -38,6 +38,6 @@ public class LwjglTest {
 
     @Test
     public void testTriangles() {
-         new Triangles().run();
+         new QuadArrayGL11().run();
     }
 }
