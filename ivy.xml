@@ -47,5 +47,10 @@
             <conf name="default" mapped="default"/>
             <conf name="runtime" mapped="runtime"/>
         </dependency>
+
+        <dependency org="org.l33tlabs.twl" name="pngdecoder" rev="1.0">
+            <conf name="default" mapped="default"/>
+            <conf name="runtime" mapped="runtime"/>
+        </dependency>
     </dependencies>
 </ivy-module>

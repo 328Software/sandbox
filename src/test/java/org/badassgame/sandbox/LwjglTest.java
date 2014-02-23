@@ -1,5 +1,6 @@
 package org.badassgame.sandbox;
 
+import org.badassgame.sandbox.quad.FancyQuadTest;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,28 +17,29 @@ public class LwjglTest {
     public void createFixture() {
     }
 
-//    @Test
-//    public void testStart() {
-//        new LwjglExample().start();
-//    }
-//
-//    @Test
-//    public void testInputStart() {
-//        new LwjglInputExample().start();
-//    }
-//
-//    @Test
-//    public void testBlueGreen() {
-//        new LwjglBlueGreenExample().start();
-//    }
-//
-//    @Test
-//    public void testQuadGL30() {
-//        new QuadGL30Example();
-//    }
+    @Test
+    public void testStart() {
+        new LwjglExample().start();
+    }
 
     @Test
-    public void testTriangles() {
-         new QuadArrayGL11().run();
+    public void testInputStart() {
+        new LwjglInputExample().start();
     }
+
+    @Test
+    public void testBlueGreen() {
+        new LwjglBlueGreenExample().start();
+    }
+
+    @Test
+    public void testQuadGL30() {
+        new QuadGL30Example();
+    }
+
+//    @Test
+//    public void testTriangles() {
+//        System.out.println("what is going on????");
+//        new FancyQuadTest();
+//    }
 }
