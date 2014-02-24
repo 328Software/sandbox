@@ -193,7 +193,7 @@ public class QuadArrayGL30 {
     private void setupQuads() throws Exception {
         for(int i = 0; i < quadRows; i++) {
             for(int j = 0; j < quadColumns; j++) {
-                this.setupQuad(-0.5f + 0.1f*i, 0.5f-0.1f*j, (float) (.1*(i+j)), 0.1f, (i%2|j%2)==0||(i%2&j%2)==1);
+                this.setupQuad(-0.5f + 0.1f*i, 0.5f-0.1f*j, (float) -(.1*(i+j)), 0.1f, (i%2|j%2)==0||(i%2&j%2)==1);
             }
         }
     }
@@ -281,12 +281,16 @@ public class QuadArrayGL30 {
 
         // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
         VertexData v0 = new VertexData();
-        v0.setXYZ(x, y, z); v0.setRGB(blackInt,blackInt,blackInt); v0.setST(0, 0);
+        //top left
+        v0.setXYZ(x, y, z+length); v0.setRGB(blackInt,blackInt,blackInt); v0.setST(0, 0);
         VertexData v1 = new VertexData();
+        //bottom left
         v1.setXYZ(x, y-length, z); v1.setRGB(blackInt,blackInt,blackInt); v1.setST(0, 1);
         VertexData v2 = new VertexData();
-        v2.setXYZ(x+length, y-length, z); v2.setRGB(blackInt,blackInt,blackInt); v2.setST(1, 1);
+        //bottom right
+        v2.setXYZ(x+length, y-length, z-length); v2.setRGB(blackInt,blackInt,blackInt); v2.setST(1, 1);
         VertexData v3 = new VertexData();
+        //top right
         v3.setXYZ(x+length, y, z); v3.setRGB(blackInt,blackInt,blackInt); v3.setST(1, 0);
 
         VertexData[] vertices = new VertexData[]{v0, v1, v2, v3};
