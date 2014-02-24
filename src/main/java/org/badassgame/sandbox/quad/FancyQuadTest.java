@@ -36,8 +36,8 @@ public class FancyQuadTest {
 
     // Setup variables
     private final String WINDOW_TITLE = "The Quad: Moving";
-    private final int WIDTH = 320;
-    private final int HEIGHT = 200;
+    private final int WIDTH = 800;
+    private final int HEIGHT = 600;
     private final double PI = 3.14159265358979323846;
     // Quad variables
     private int vaoId = 0;
@@ -69,8 +69,8 @@ public class FancyQuadTest {
         this.setupOpenGL();
 
         this.setupQuad();
-        this.setupShaders();
-        this.setupTextures();
+//        this.setupShaders();
+//        this.setupTextures();
         this.setupMatrices();
 
         while (!Display.isCloseRequested()) {
@@ -369,8 +369,9 @@ public class FancyQuadTest {
     }
 
     private void loopCycle() {
+        System.out.println("HI MOM");
         // Update logic
-        this.logicCycle();
+//        this.logicCycle();
         // Update rendered frame
         this.renderCycle();
 
