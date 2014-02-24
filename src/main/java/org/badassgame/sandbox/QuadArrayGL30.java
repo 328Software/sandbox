@@ -22,6 +22,8 @@ import org.lwjgl.util.vector.Vector3f;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class QuadArrayGL30 {
@@ -33,17 +35,16 @@ public class QuadArrayGL30 {
 
 
     // Setup variables
-    private final String WINDOW_TITLE = "The Quad: Moving";
-    private final int WIDTH = 800;
-    private final int HEIGHT = 600;
-    private final double PI = 3.14159265358979323846;
+    private static final String WINDOW_TITLE = "The Quad: Moving";
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
+    private static final double PI = 3.14159265358979323846;
     // Quad variables
-    private int vaoId = 0;
-    private int vboId = 0;
-    private int vboiId = 0;
+//    private List<> vaoIds = 0;
+//    private int vboIds = 0;
+//    private int vboiIds = 0;
+    List<QuadIds> quadIdsList;
     private int indicesCount = 0;
-    private VertexData[] vertices = null;
-    private ByteBuffer verticesByteBuffer = null;
     // Shader variables
     private int pId = 0;
     // Texture variables
@@ -63,7 +64,16 @@ public class QuadArrayGL30 {
     private FloatBuffer matrix44Buffer = null;
     private String errorMsg = "";
 
-    public QuadArrayGL30() {
+    private int quadColumns;
+    private int quadRows;
+
+
+    public QuadArrayGL30(int quadRows, int quadColumns) {
+
+        this.quadIdsList = new ArrayList<QuadIds>();
+        this.quadRows = quadRows;
+        this.quadColumns = quadColumns;
+
         try {
             // Initialize OpenGL (Display)
             this.setupOpenGL();
@@ -73,7 +83,7 @@ public class QuadArrayGL30 {
         }
 
         try {
-            this.setupQuad();
+            this.setupQuads();
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("setupQuad failed");
@@ -180,7 +190,16 @@ public class QuadArrayGL30 {
         this.exitOnGLError("setupOpenGL");
     }
 
-    private void setupQuad() throws Exception  {
+    private void setupQuads() throws Exception {
+        for(int i = 0; i < quadRows; i++) {
+            for(int j = 0; j < quadColumns; j++) {
+                this.setupQuad(-0.5f + 0.1f*i, 0.5f-0.1f*j, 0.1f, i%2==0);
+            }
+        }
+    }
+
+    private void setupQuad(float x, float y, float length, boolean black) throws Exception  {
+/*
         // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
         VertexData v0 = new VertexData();
         v0.setXYZ(-0.5f, 0.5f, 0); v0.setRGB(1, 0, 0); v0.setST(0, 0);
@@ -252,6 +271,88 @@ public class QuadArrayGL30 {
         cameraPos = new Vector3f(0, 0, -1);
 
         this.exitOnGLError("setupQuad");
+*/
+
+
+
+
+
+
+        // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
+        VertexData v0 = new VertexData();
+        v0.setXYZ(x, y, 0); v0.setRGB(1,1,1); v0.setST(0, 0);
+        VertexData v1 = new VertexData();
+        v1.setXYZ(x, y-length, 0); v1.setRGB(1,1,1); v1.setST(0, 1);
+        VertexData v2 = new VertexData();
+        v2.setXYZ(x+length, y-length, 0); v2.setRGB(1, 1, 1); v2.setST(1, 1);
+        VertexData v3 = new VertexData();
+        v3.setXYZ(x+length, y, 0); v3.setRGB(1, 1, 1); v3.setST(1, 0);
+
+        VertexData[] vertices = new VertexData[]{v0, v1, v2, v3};
+
+        // Put each 'Vertex' in one FloatBuffer
+        ByteBuffer verticesByteBuffer = BufferUtils.createByteBuffer(vertices.length *
+                VertexData.stride);
+        FloatBuffer verticesFloatBuffer = verticesByteBuffer.asFloatBuffer();
+        for (int i = 0; i < vertices.length; i++) {
+            // Add position, color and texture floats to the buffer
+            verticesFloatBuffer.put(vertices[i].getElements());
+        }
+        verticesFloatBuffer.flip();
+
+
+        // OpenGL expects to draw vertices in counter clockwise order by default
+        byte[] indices = {
+                0, 1, 2,
+                2, 3, 0
+        };
+        indicesCount = indices.length;
+        ByteBuffer indicesBuffer = BufferUtils.createByteBuffer(indicesCount);
+        indicesBuffer.put(indices);
+        indicesBuffer.flip();
+
+        // Create a new Vertex Array Object in memory and select it (bind)
+        int vaoId = GL30.glGenVertexArrays();
+        GL30.glBindVertexArray(vaoId);
+
+        // Create a new Vertex Buffer Object in memory and select it (bind)
+        int vboId = GL15.glGenBuffers();
+        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, vboId);
+        GL15.glBufferData(GL15.GL_ARRAY_BUFFER, verticesFloatBuffer, GL15.GL_STREAM_DRAW);
+
+        // Put the position coordinates in attribute list 0
+        GL20.glVertexAttribPointer(0, VertexData.positionElementCount, GL11.GL_FLOAT,
+                false, VertexData.stride, VertexData.positionByteOffset);
+        // Put the color components in attribute list 1
+        GL20.glVertexAttribPointer(1, VertexData.colorElementCount, GL11.GL_FLOAT,
+                false, VertexData.stride, VertexData.colorByteOffset);
+        // Put the texture coordinates in attribute list 2
+        GL20.glVertexAttribPointer(2, VertexData.textureElementCount, GL11.GL_FLOAT,
+                false, VertexData.stride, VertexData.textureByteOffset);
+
+        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
+
+        // Deselect (bind to 0) the VAO
+        GL30.glBindVertexArray(0);
+
+        // Create a new VBO for the indices and select it (bind) - INDICES
+        int vboiId = GL15.glGenBuffers();
+        GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboiId);
+        GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBuffer,
+                GL15.GL_STATIC_DRAW);
+        GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
+
+
+        quadIdsList.add(new QuadIds(vaoId, vboId, vboiId));
+
+        // Set the default quad rotation, scale and position values
+        modelPos = new Vector3f(0, 0, 0);
+        modelAngle = new Vector3f(0, 0, 0);
+        modelScale = new Vector3f(1, 1, 1);
+        cameraPos = new Vector3f(0, 0, -1);
+
+        this.exitOnGLError("setupQuad");
+
     }
 
     private void setupShaders() throws Exception  {
@@ -318,10 +419,16 @@ public class QuadArrayGL30 {
             switch (Keyboard.getEventKey()) {
                 // Move
                 case Keyboard.KEY_UP:
-                    modelPos.y += posDelta;
+                    cameraPos.y += posDelta;
                     break;
                 case Keyboard.KEY_DOWN:
-                    modelPos.y -= posDelta;
+                    cameraPos.y -= posDelta;
+                    break;
+                case Keyboard.KEY_L:
+                    cameraPos.x += posDelta;
+                    break;
+                case Keyboard.KEY_K:
+                    cameraPos.x -= posDelta;
                     break;
                 // Scale
                 case Keyboard.KEY_P:
@@ -375,32 +482,37 @@ public class QuadArrayGL30 {
     }
 
     private void renderCycle() throws Exception  {
-        GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
 
-        GL20.glUseProgram(pId);
 
-        // Bind the texture
-        GL13.glActiveTexture(GL13.GL_TEXTURE0);
-        GL11.glBindTexture(GL11.GL_TEXTURE_2D, texIds[textureSelector]);
+            GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
 
-        // Bind to the VAO that has all the information about the vertices
-        GL30.glBindVertexArray(vaoId);
-        GL20.glEnableVertexAttribArray(0);
-        GL20.glEnableVertexAttribArray(1);
-        GL20.glEnableVertexAttribArray(2);
+            GL20.glUseProgram(pId);
 
-        // Bind to the index VBO that has all the information about the order of the vertices
-        GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboiId);
+            // Bind the texture
+            GL13.glActiveTexture(GL13.GL_TEXTURE0);
+            GL11.glBindTexture(GL11.GL_TEXTURE_2D, texIds[textureSelector]);
+        for(QuadIds ids: quadIdsList) {
+            int vaoId = ids.vaoId;
+            int vboiId = ids.vboiId;
+            // Bind to the VAO that has all the information about the vertices
+            GL30.glBindVertexArray(vaoId);
+            GL20.glEnableVertexAttribArray(0);
+            GL20.glEnableVertexAttribArray(1);
+            GL20.glEnableVertexAttribArray(2);
 
-        // Draw the vertices
-        GL11.glDrawElements(GL11.GL_TRIANGLES, indicesCount, GL11.GL_UNSIGNED_BYTE, 0);
+            // Bind to the index VBO that has all the information about the order of the vertices
+            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboiId);
 
-        // Put everything back to default (deselect)
-        GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
-        GL20.glDisableVertexAttribArray(0);
-        GL20.glDisableVertexAttribArray(1);
-        GL20.glDisableVertexAttribArray(2);
-        GL30.glBindVertexArray(0);
+            // Draw the vertices
+            GL11.glDrawElements(GL11.GL_TRIANGLES, indicesCount, GL11.GL_UNSIGNED_BYTE, 0);
+
+            // Put everything back to default (deselect)
+            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
+            GL20.glDisableVertexAttribArray(0);
+            GL20.glDisableVertexAttribArray(1);
+            GL20.glDisableVertexAttribArray(2);
+            GL30.glBindVertexArray(0);
+        }
 
         GL20.glUseProgram(0);
 
@@ -426,24 +538,30 @@ public class QuadArrayGL30 {
         GL20.glUseProgram(0);
         GL20.glDeleteProgram(pId);
 
-        // Select the VAO
-        GL30.glBindVertexArray(vaoId);
+        for(QuadIds ids: quadIdsList) {
+            int vaoId = ids.vaoId;
+            int vboId = ids.vboId;
+            int vboiId = ids.vboiId;
 
-        // Disable the VBO index from the VAO attributes list
-        GL20.glDisableVertexAttribArray(0);
-        GL20.glDisableVertexAttribArray(1);
+            // Select the VAO
+            GL30.glBindVertexArray(vaoId);
 
-        // Delete the vertex VBO
-        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
-        GL15.glDeleteBuffers(vboId);
+            // Disable the VBO index from the VAO attributes list
+            GL20.glDisableVertexAttribArray(0);
+            GL20.glDisableVertexAttribArray(1);
 
-        // Delete the index VBO
-        GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
-        GL15.glDeleteBuffers(vboiId);
+            // Delete the vertex VBO
+            GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
+            GL15.glDeleteBuffers(vboId);
 
-        // Delete the VAO
-        GL30.glBindVertexArray(0);
-        GL30.glDeleteVertexArrays(vaoId);
+            // Delete the index VBO
+            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
+            GL15.glDeleteBuffers(vboiId);
+
+            // Delete the VAO
+            GL30.glBindVertexArray(0);
+            GL30.glDeleteVertexArrays(vaoId);
+        }
 
         this.exitOnGLError("destroyOpenGL");
 
@@ -556,6 +674,28 @@ public class QuadArrayGL30 {
             if (Display.isCreated()) Display.destroy();
 //            System.exit(-1);
             throw new Exception("you suck");
+        }
+    }
+
+    protected class QuadIds {
+        private int vaoId, vboId, vboiId;
+
+        protected QuadIds(int vaoId, int vboId, int vboiId) {
+            this.vaoId = vaoId;
+            this.vboId = vboId;
+            this.vboiId = vboiId;
+        }
+
+        int getVaoId() {
+            return vaoId;
+        }
+
+        int getVboId() {
+            return vboId;
+        }
+
+        int getVboiId() {
+            return vboiId;
         }
     }
 }

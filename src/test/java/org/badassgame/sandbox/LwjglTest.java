@@ -39,6 +39,11 @@ public class LwjglTest {
 
     @Test
     public void testTriangles() {
-        new QuadArrayGL30();
+        new QuadArrayGL30(10,10);
+    }
+
+    @Test
+    public void testTriangles2() {
+        new QuadArrayGL30(2,10);
     }
 }
