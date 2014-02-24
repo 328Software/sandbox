@@ -276,17 +276,18 @@ public class QuadArrayGL30 {
 
 
 
+        int blackInt = black?0:1;
 
 
         // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
         VertexData v0 = new VertexData();
-        v0.setXYZ(x, y, 0); v0.setRGB(1,1,1); v0.setST(0, 0);
+        v0.setXYZ(x, y, 0); v0.setRGB(blackInt,blackInt,blackInt); v0.setST(0, 0);
         VertexData v1 = new VertexData();
-        v1.setXYZ(x, y-length, 0); v1.setRGB(1,1,1); v1.setST(0, 1);
+        v1.setXYZ(x, y-length, 0); v1.setRGB(blackInt,blackInt,blackInt); v1.setST(0, 1);
         VertexData v2 = new VertexData();
-        v2.setXYZ(x+length, y-length, 0); v2.setRGB(1, 1, 1); v2.setST(1, 1);
+        v2.setXYZ(x+length, y-length, 0); v2.setRGB(blackInt,blackInt,blackInt); v2.setST(1, 1);
         VertexData v3 = new VertexData();
-        v3.setXYZ(x+length, y, 0); v3.setRGB(1, 1, 1); v3.setST(1, 0);
+        v3.setXYZ(x+length, y, 0); v3.setRGB(blackInt,blackInt,blackInt); v3.setST(1, 0);
 
         VertexData[] vertices = new VertexData[]{v0, v1, v2, v3};
 
@@ -359,9 +360,9 @@ public class QuadArrayGL30 {
         //Load the vertex shader
         errorMsg = "setupShaders start";
 
-        int vsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+        int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
         // Load the fragment shader
-        int fsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+        int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
 
         errorMsg = "setupShaders create pgm";
         //Create a new shader program that links both shaders
@@ -396,7 +397,7 @@ public class QuadArrayGL30 {
         //-- Input processing
         float rotationDelta = 15f;
         float scaleDelta = 0.1f;
-        float posDelta = 0.1f;
+        float posDelta = 0.02f;
         Vector3f scaleAddResolution = new Vector3f(scaleDelta, scaleDelta, scaleDelta);
         Vector3f scaleMinusResolution = new Vector3f(-scaleDelta, -scaleDelta,
                 -scaleDelta);
