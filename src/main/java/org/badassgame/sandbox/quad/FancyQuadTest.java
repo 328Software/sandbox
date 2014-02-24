@@ -65,12 +65,17 @@ public class FancyQuadTest {
     private FloatBuffer matrix44Buffer = null;
 
     public FancyQuadTest() {
+        try {
         // Initialize OpenGL (Display)
         this.setupOpenGL();
 
         this.setupQuad();
-//        this.setupShaders();
+        this.setupShaders();
 //        this.setupTextures();
+//        projectionMatrixLocation = GL20.glGetUniformLocation(pId,"projectionMatrix");
+//        viewMatrixLocation = GL20.glGetUniformLocation(pId, "viewMatrix");
+//        modelMatrixLocation = GL20.glGetUniformLocation(pId, "modelMatrix");
+
         this.setupMatrices();
 
         while (!Display.isCloseRequested()) {
@@ -85,6 +90,10 @@ public class FancyQuadTest {
 
         // Destroy OpenGL (Display)
         this.destroyOpenGL();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("you suck loser");
+        }
     }
 
     private void setupMatrices() {
@@ -116,14 +125,14 @@ public class FancyQuadTest {
         matrix44Buffer = BufferUtils.createFloatBuffer(16);
     }
 
-    private void setupTextures() {
+    private void setupTextures() throws Exception  {
         texIds[0] = this.loadPNGTexture("F:\\Users\\Brandon\\Desktop/grass.png", GL13.GL_TEXTURE0);
         texIds[1] = this.loadPNGTexture("F:\\Users\\Brandon\\Desktop/grass.png", GL13.GL_TEXTURE0);
 
         this.exitOnGLError("setupTexture");
     }
 
-    private void setupOpenGL() {
+    private void setupOpenGL() throws Exception  {
         // Setup an OpenGL context with API version 3.2
         try {
             PixelFormat pixelFormat = new PixelFormat();
@@ -138,11 +147,12 @@ public class FancyQuadTest {
             GL11.glViewport(0, 0, WIDTH, HEIGHT);
         } catch (LWJGLException e) {
             e.printStackTrace();
-            System.exit(-1);
+            throw new Exception("you suck");
+//            System.exit(-1);
         }
 
         // Setup an XNA like background color
-        GL11.glClearColor(0.4f, 0.6f, 0.9f, 0f);
+        GL11.glClearColor(130f/255f, 208f/255f, 157f/255f, 0f);
 
         // Map the internal OpenGL coordinate system to the entire screen
         GL11.glViewport(0, 0, WIDTH, HEIGHT);
@@ -150,7 +160,7 @@ public class FancyQuadTest {
         this.exitOnGLError("setupOpenGL");
     }
 
-    private void setupQuad() {
+    private void setupQuad() throws Exception  {
         // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
         VertexData v0 = new VertexData();
         v0.setXYZ(-0.5f, 0.5f, 0); v0.setRGB(1, 0, 0); v0.setST(0, 0);
@@ -224,36 +234,40 @@ public class FancyQuadTest {
         this.exitOnGLError("setupQuad");
     }
 
-    private void setupShaders() {
+    private void setupShaders() throws Exception  {
         // Load the vertex shader
-        int vsId = this.loadShader("assets/shaders/moving/vertex.glsl", GL20.GL_VERTEX_SHADER);
+//        int vsId = this.loadShader("assets/shaders/moving/vertex.glsl", GL20.GL_VERTEX_SHADER);
         // Load the fragment shader
-        int fsId = this.loadShader("assets/shaders/moving/fragment.glsl", GL20.GL_FRAGMENT_SHADER);
+//        int fsId = this.loadShader("assets/shaders/moving/fragment.glsl", GL20.GL_FRAGMENT_SHADER);
 
         // Create a new shader program that links both shaders
-        pId = GL20.glCreateProgram();
-        GL20.glAttachShader(pId, vsId);
-        GL20.glAttachShader(pId, fsId);
+//        pId = GL20.glCreateProgram();
+//        GL20.glAttachShader(pId, vsId);
+//        GL20.glAttachShader(pId, fsId);
 
         // Position information will be attribute 0
-        GL20.glBindAttribLocation(pId, 0, "in_Position");
+//        GL20.glBindAttribLocation(pId, 0, "in_Position");
         // Color information will be attribute 1
-        GL20.glBindAttribLocation(pId, 1, "in_Color");
+//        GL20.glBindAttribLocation(pId, 1, "in_Color");
         // Textute information will be attribute 2
-        GL20.glBindAttribLocation(pId, 2, "in_TextureCoord");
+//        GL20.glBindAttribLocation(pId, 2, "in_TextureCoord");
 
-        GL20.glLinkProgram(pId);
-        GL20.glValidateProgram(pId);
+//        GL20.glLinkProgram(pId);
+//        GL20.glValidateProgram(pId);
 
         // Get matrices uniform locations
-        projectionMatrixLocation = GL20.glGetUniformLocation(pId,"projectionMatrix");
-        viewMatrixLocation = GL20.glGetUniformLocation(pId, "viewMatrix");
-        modelMatrixLocation = GL20.glGetUniformLocation(pId, "modelMatrix");
+//        projectionMatrixLocation = GL20.glGetUniformLocation(pId,"projectionMatrix");
+//        viewMatrixLocation = GL20.glGetUniformLocation(pId, "viewMatrix");
+//        modelMatrixLocation = GL20.glGetUniformLocation(pId, "modelMatrix");
+//
+//        System.out.println(projectionMatrixLocation);
+//        System.out.println(viewMatrixLocation);
+//        System.out.println(modelMatrixLocation );
 
         this.exitOnGLError("setupShaders");
     }
 
-    private void logicCycle() {
+    private void logicCycle() throws Exception  {
         //-- Input processing
         float rotationDelta = 15f;
         float scaleDelta = 0.1f;
@@ -261,7 +275,7 @@ public class FancyQuadTest {
         Vector3f scaleAddResolution = new Vector3f(scaleDelta, scaleDelta, scaleDelta);
         Vector3f scaleMinusResolution = new Vector3f(-scaleDelta, -scaleDelta,
                 -scaleDelta);
-
+//
         while(Keyboard.next()) {
             // Only listen to events where the key was pressed (down event)
             if (!Keyboard.getEventKeyState()) continue;
@@ -323,19 +337,20 @@ public class FancyQuadTest {
         // Upload matrices to the uniform variables
         GL20.glUseProgram(pId);
 
-        projectionMatrix.store(matrix44Buffer); matrix44Buffer.flip();
-        GL20.glUniformMatrix4(projectionMatrixLocation, false, matrix44Buffer);
-        viewMatrix.store(matrix44Buffer); matrix44Buffer.flip();
-        GL20.glUniformMatrix4(viewMatrixLocation, false, matrix44Buffer);
+//        projectionMatrix.store(matrix44Buffer); matrix44Buffer.flip();
+//        GL20.glUniformMatrix4(projectionMatrixLocation, false, matrix44Buffer);
+//        viewMatrix.store(matrix44Buffer); matrix44Buffer.flip();
+//        GL20.glUniformMatrix4(viewMatrixLocation, false, matrix44Buffer);
         modelMatrix.store(matrix44Buffer); matrix44Buffer.flip();
         GL20.glUniformMatrix4(modelMatrixLocation, false, matrix44Buffer);
 
         GL20.glUseProgram(0);
 
+
         this.exitOnGLError("logicCycle");
     }
 
-    private void renderCycle() {
+    private void renderCycle() throws Exception  {
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
 
         GL20.glUseProgram(pId);
@@ -368,17 +383,17 @@ public class FancyQuadTest {
         this.exitOnGLError("renderCycle");
     }
 
-    private void loopCycle() {
-        System.out.println("HI MOM");
+    private void loopCycle() throws Exception  {
+//        System.out.println("HI MOM");
         // Update logic
-//        this.logicCycle();
+        this.logicCycle();
         // Update rendered frame
         this.renderCycle();
 
         this.exitOnGLError("loopCycle");
     }
 
-    private void destroyOpenGL() {
+    private void destroyOpenGL() throws Exception  {
         // Delete the texture
         GL11.glDeleteTextures(texIds[0]);
         GL11.glDeleteTextures(texIds[1]);
@@ -411,7 +426,7 @@ public class FancyQuadTest {
         Display.destroy();
     }
 
-    private int loadShader(String filename, int type) {
+    private int loadShader(String filename, int type) throws Exception  {
         StringBuilder shaderSource = new StringBuilder();
         int shaderID = 0;
 
@@ -425,7 +440,9 @@ public class FancyQuadTest {
         } catch (IOException e) {
             System.err.println("Could not read file.");
             e.printStackTrace();
-            System.exit(-1);
+            throw new Exception("you suck");
+
+//            System.exit(-1);
         }
 
         shaderID = GL20.glCreateShader(type);
@@ -434,7 +451,9 @@ public class FancyQuadTest {
 
         if (GL20.glGetShader(shaderID, GL20.GL_COMPILE_STATUS) == GL11.GL_FALSE) {
             System.err.println("Could not compile shader.");
-            System.exit(-1);
+            throw new Exception("you suck");
+
+//            System.exit(-1);
         }
 
         this.exitOnGLError("loadShader");
@@ -442,7 +461,7 @@ public class FancyQuadTest {
         return shaderID;
     }
 
-    private int loadPNGTexture(String filename, int textureUnit) {
+    private int loadPNGTexture(String filename, int textureUnit) throws Exception {
         ByteBuffer buf = null;
         int tWidth = 0;
         int tHeight = 0;
@@ -467,7 +486,9 @@ public class FancyQuadTest {
             in.close();
         } catch (IOException e) {
             e.printStackTrace();
-            System.exit(-1);
+            throw new Exception("you suck");
+
+//            System.exit(-1);
         }
 
         // Create a new texture object in memory and bind it
@@ -506,7 +527,7 @@ public class FancyQuadTest {
         return degrees * (float)(PI / 180d);
     }
 
-    private void exitOnGLError(String errorMessage) {
+    private void exitOnGLError(String errorMessage) throws Exception {
         int errorValue = GL11.glGetError();
 
         if (errorValue != GL11.GL_NO_ERROR) {
@@ -514,7 +535,8 @@ public class FancyQuadTest {
             System.err.println("ERROR - " + errorMessage + ": " + errorString);
 
             if (Display.isCreated()) Display.destroy();
-            System.exit(-1);
+//            System.exit(-1);
+            throw new Exception("you suck");
         }
     }
 }
