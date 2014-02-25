@@ -64,6 +64,7 @@ public class FancierQuadTest {
     private Vector3f modelAngle = null;
     private Vector3f modelScale = null;
     private Vector3f cameraPos = null;
+    private Vector3f cameraAngle = null;
     private FloatBuffer matrix44Buffer = null;
     private String errorMsg = "";
 
@@ -223,16 +224,16 @@ public class FancierQuadTest {
                 // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
                 VertexData v0 = new VertexData();
                 //top left
-                v0.setXYZ(x, y, z+length); v0.setRGB(blackInt, blackInt, blackInt);// v0.setST(0, 0);
+                v0.setXYZ(x, y, /*z+length*/0); v0.setRGB(blackInt, blackInt, blackInt);// v0.setST(0, 0);
                 VertexData v1 = new VertexData();
                 //bottom left
-                v1.setXYZ(x, y-length, z); v1.setRGB(blackInt, blackInt, blackInt);// v1.setST(0, 1);
+                v1.setXYZ(x, y-length, /*z*/0); v1.setRGB(blackInt, blackInt, blackInt);// v1.setST(0, 1);
                 VertexData v2 = new VertexData();
                 //bottom right
-                v2.setXYZ(x+length, y-length, z-length); v2.setRGB(blackInt, blackInt, blackInt);// v2.setST(1, 1);
+                v2.setXYZ(x+length, y-length, /*z-length*/0); v2.setRGB(blackInt, blackInt, blackInt);// v2.setST(1, 1);
                 VertexData v3 = new VertexData();
                 //top right
-                v3.setXYZ(x+length, y, z); v3.setRGB(blackInt, blackInt, blackInt);// v3.setST(1, 0);
+                v3.setXYZ(x+length, y, /*z*/0); v3.setRGB(blackInt, blackInt, blackInt);// v3.setST(1, 0);
 
                 VertexData[] vertices = new VertexData[]{v0, v1, v2, v3};
 
@@ -413,6 +414,7 @@ public class FancierQuadTest {
         modelAngle = new Vector3f(0, 0, 0);
         modelScale = new Vector3f(1, 1, 1);
         cameraPos = new Vector3f(0, 0, -1);
+        cameraAngle = new Vector3f(0, 0, 0);
 
         this.exitOnGLError("setupQuad");
 
@@ -507,6 +509,12 @@ public class FancierQuadTest {
                 case Keyboard.KEY_RIGHT:
                     modelAngle.z -= rotationDelta;
                     break;
+                case Keyboard.KEY_Y:
+                    cameraAngle.z += rotationDelta;
+                    break;
+                case Keyboard.KEY_G:
+                    cameraAngle.z -= rotationDelta;
+                    break;
             }
         }
 
@@ -517,6 +525,9 @@ public class FancierQuadTest {
 
         // Translate camera
         Matrix4f.translate(cameraPos, viewMatrix, viewMatrix);
+        Matrix4f.rotate(cameraAngle.x, new Vector3f(0, 0, 1), viewMatrix, viewMatrix);
+        Matrix4f.rotate(cameraAngle.y, new Vector3f(0, 1, 0), viewMatrix, viewMatrix);
+        Matrix4f.rotate(cameraAngle.z, new Vector3f(1, 0, 0), viewMatrix, viewMatrix);
 
         // Scale, translate and rotate model
         Matrix4f.scale(modelScale, modelMatrix, modelMatrix);
