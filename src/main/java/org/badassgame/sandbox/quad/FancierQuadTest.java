@@ -459,7 +459,7 @@ public class FancierQuadTest {
 
     private void logicCycle() throws Exception  {
         //-- Input processing
-        float rotationDelta = 15f;
+        float rotationDelta = 3f;
         float scaleDelta = 0.1f;
         float posDelta = 0.02f;
         Vector3f scaleAddResolution = new Vector3f(scaleDelta, scaleDelta, scaleDelta);
@@ -481,20 +481,74 @@ public class FancierQuadTest {
             }
 
             // Change model scale, rotation and translation values
+//            switch (Keyboard.getEventKey()) {
+//                // Move
+//                case Keyboard.KEY_UP:
+//                    cameraPos.y += posDelta;
+//                    break;
+//                case Keyboard.KEY_DOWN:
+//                    cameraPos.y -= posDelta;
+//                    break;
+//                case Keyboard.KEY_L:
+//                    cameraPos.x += posDelta;
+//                    break;
+//                case Keyboard.KEY_K:
+//                    cameraPos.x -= posDelta;
+//                    break;
+//                // Scale
+//                case Keyboard.KEY_P:
+//                    Vector3f.add(modelScale, scaleAddResolution, modelScale);
+//                    break;
+//                case Keyboard.KEY_M:
+//                    Vector3f.add(modelScale, scaleMinusResolution, modelScale);
+//                    break;
+//                // Rotation
+//                case Keyboard.KEY_LEFT:
+//                    modelAngle.z += rotationDelta;
+//                    break;
+//                case Keyboard.KEY_RIGHT:
+//                    modelAngle.z -= rotationDelta;
+//                    break;
+//                case Keyboard.KEY_Y:
+//                    cameraAngle.y += posDelta;
+//                    break;
+//                case Keyboard.KEY_G:
+//                    cameraAngle.y -= posDelta;
+//                    break;
+//                case Keyboard.KEY_T:
+//                    cameraAngle.x += posDelta;
+//                    break;
+//                case Keyboard.KEY_F:
+//                    cameraAngle.x -= posDelta;
+//                    break;
+//            }
+
+
             switch (Keyboard.getEventKey()) {
                 // Move
-                case Keyboard.KEY_UP:
-                    cameraPos.y += posDelta;
+
+                case Keyboard.KEY_W:
+                    cameraPos.z += posDelta;
                     break;
-                case Keyboard.KEY_DOWN:
-                    cameraPos.y -= posDelta;
+                case Keyboard.KEY_S:
+                    cameraPos.z -= posDelta;
                     break;
-                case Keyboard.KEY_L:
+
+                case Keyboard.KEY_A:
                     cameraPos.x += posDelta;
                     break;
-                case Keyboard.KEY_K:
+                case Keyboard.KEY_D:
                     cameraPos.x -= posDelta;
                     break;
+
+
+                case Keyboard.KEY_UP:
+                    cameraAngle.x += posDelta;
+                    break;
+                case Keyboard.KEY_DOWN:
+                    cameraAngle.x -= posDelta;
+                    break;
+
                 // Scale
                 case Keyboard.KEY_P:
                     Vector3f.add(modelScale, scaleAddResolution, modelScale);
@@ -510,12 +564,19 @@ public class FancierQuadTest {
                     modelAngle.z -= rotationDelta;
                     break;
                 case Keyboard.KEY_Y:
-                    cameraAngle.z += rotationDelta;
+                    cameraAngle.y += posDelta;
                     break;
                 case Keyboard.KEY_G:
-                    cameraAngle.z -= rotationDelta;
+                    cameraAngle.y -= posDelta;
+                    break;
+                case Keyboard.KEY_T:
+                    cameraAngle.x += posDelta;
+                    break;
+                case Keyboard.KEY_F:
+                    cameraAngle.x -= posDelta;
                     break;
             }
+
         }
 
         //-- Update matrices
@@ -525,9 +586,9 @@ public class FancierQuadTest {
 
         // Translate camera
         Matrix4f.translate(cameraPos, viewMatrix, viewMatrix);
-        Matrix4f.rotate(cameraAngle.x, new Vector3f(0, 0, 1), viewMatrix, viewMatrix);
+        Matrix4f.rotate(cameraAngle.z, new Vector3f(0, 0, 1), viewMatrix, viewMatrix);
         Matrix4f.rotate(cameraAngle.y, new Vector3f(0, 1, 0), viewMatrix, viewMatrix);
-        Matrix4f.rotate(cameraAngle.z, new Vector3f(1, 0, 0), viewMatrix, viewMatrix);
+        Matrix4f.rotate(cameraAngle.x, new Vector3f(1, 0, 0), viewMatrix, viewMatrix);
 
         // Scale, translate and rotate model
         Matrix4f.scale(modelScale, modelMatrix, modelMatrix);
