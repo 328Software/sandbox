@@ -14,6 +14,7 @@ import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -193,12 +194,27 @@ public class FancierQuadTest {
     }
 
     private void setupQuads() throws Exception {
+        List<Integer> values = new ArrayList<Integer>();
+
         ByteBuffer verticesByteBuffer = BufferUtils.createByteBuffer(4 * quadRows * quadColumns *
                 VertexData.stride);
 
+
         FloatBuffer verticesFloatBuffer = verticesByteBuffer.asFloatBuffer();
+
         for(int i = 0; i < quadRows; i++) {
             for(int j = 0; j < quadColumns; j++) {
+
+                int offset = (i*quadColumns+j)*4;
+
+                values.add(offset);
+                values.add(offset+1);
+                values.add(offset+2);
+                values.add(offset+2);
+                values.add(offset+3);
+                values.add(offset);
+
+
                 int blackInt = (i%2|j%2)==0||(i%2&j%2)==1?0:1;
 
                 float x =-0.5f + 0.1f*i,y=0.5f-0.1f*j,z=-(.1f*(i+j)),length=0.1f;
@@ -229,6 +245,36 @@ public class FancierQuadTest {
             }
         }
         verticesFloatBuffer.flip();
+
+
+        if(vboiId == null) {
+
+            int[] indices = new int[values.size()];
+            for(int i = 0; i < indices.length;i++) {
+                indices[i] = values.get(i);
+            }
+
+
+//            byte[] indices = {
+//                    0, 1, 2,
+//                    2, 3, 0
+//            };
+
+//            System.out.println(Arrays.toString(indices));
+
+            indicesCount = indices.length;
+            IntBuffer indicesBuffer = BufferUtils.createIntBuffer(indicesCount);
+            indicesBuffer.put(indices);
+            indicesBuffer.flip();
+
+            vboiId = GL15.glGenBuffers();
+            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboiId);
+            GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBuffer,
+                    GL15.GL_STATIC_DRAW);
+            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
+        }
+
+
 
         this.setupQuad(verticesFloatBuffer );
     }
@@ -352,15 +398,6 @@ public class FancierQuadTest {
                 false, VertexData.stride, VertexData.colorByteOffset);
 
 
-        GL20.glVertexAttribPointer(2, VertexData.positionElementCount, GL11.GL_FLOAT,
-                false, VertexData.stride, VertexData.stride+VertexData.positionByteOffset);
-//        Put the color components in attribute list 1
-        GL20.glVertexAttribPointer(3, VertexData.colorElementCount, GL11.GL_FLOAT,
-                false, VertexData.stride, VertexData.stride+VertexData.colorByteOffset);
-        // Put the texture coordinates in attribute list 2
-//        GL20.glVertexAttribPointer(2, VertexData.textureElementCount, GL11.GL_FLOAT,
-//                false, VertexData.stride, VertexData.textureByteOffset);
-
         GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
 
         // Deselect (bind to 0) the VAO
@@ -368,27 +405,6 @@ public class FancierQuadTest {
 
         // Create a new VBO for the indices and select it (bind) - INDICES
 
-        if(vboiId == null) {
-
-            int[] indices = {
-                    0, 1, 2,
-                    2, 3, 0,
-                    4, 5, 6,
-                    6, 7, 4,
-                    8, 9, 10,
-                    10, 11, 8
-            };
-            indicesCount = indices.length;
-            IntBuffer indicesBuffer = BufferUtils.createIntBuffer(indicesCount);
-            indicesBuffer.put(indices);
-            indicesBuffer.flip();
-
-            vboiId = GL15.glGenBuffers();
-            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboiId);
-            GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBuffer,
-                    GL15.GL_STATIC_DRAW);
-            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
-        }
 
         quadIdsList.add(new QuadIds(vaoId, vboId, vboiId));
 
@@ -545,23 +561,17 @@ public class FancierQuadTest {
             GL30.glBindVertexArray(vaoId);
             GL20.glEnableVertexAttribArray(0);
             GL20.glEnableVertexAttribArray(1);
-            GL20.glEnableVertexAttribArray(2);
-            GL20.glEnableVertexAttribArray(3);
-//            GL20.glEnableVertexAttribArray(2);
 
             // Bind to the index VBO that has all the information about the order of the vertices
             GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboiId);
 
             // Draw the vertices
-            GL11.glDrawElements(GL11.GL_TRIANGLES, indicesCount, GL11.GL_UNSIGNED_INT, 0);
+            GL32.glDrawElementsBaseVertex(GL11.GL_TRIANGLES, indicesCount, GL11.GL_UNSIGNED_INT, 0,0);
 
             // Put everything back to default (deselect)
             GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
             GL20.glDisableVertexAttribArray(0);
             GL20.glDisableVertexAttribArray(1);
-            GL20.glDisableVertexAttribArray(2);
-            GL20.glDisableVertexAttribArray(3);
-//            GL20.glDisableVertexAttribArray(2);
             GL30.glBindVertexArray(0);
         }
 

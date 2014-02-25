@@ -1,5 +1,6 @@
 package org.badassgame.sandbox;
 
+import org.badassgame.sandbox.quad.FancierQuadTest;
 import org.badassgame.sandbox.quad.FancyQuadTest;
 import org.junit.Before;
 import org.junit.Test;
@@ -39,7 +40,7 @@ public class LwjglTest {
 
     @Test
     public void testTriangles() {
-        new QuadArrayGL30(10,10);
+        new FancierQuadTest(1000,1000);
     }
 
 //    @Test

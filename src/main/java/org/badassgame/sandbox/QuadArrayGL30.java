@@ -282,16 +282,16 @@ public class QuadArrayGL30 {
         // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
         VertexData v0 = new VertexData();
         //top left
-        v0.setXYZ(x, y, z+length); v0.setRGB(blackInt,blackInt,blackInt); v0.setST(0, 0);
+        v0.setXYZ(x, y, z+length); v0.setRGB(blackInt,blackInt,blackInt);// v0.setST(0, 0);
         VertexData v1 = new VertexData();
         //bottom left
-        v1.setXYZ(x, y-length, z); v1.setRGB(blackInt,blackInt,blackInt); v1.setST(0, 1);
+        v1.setXYZ(x, y-length, z); v1.setRGB(blackInt,blackInt,blackInt);// v1.setST(0, 1);
         VertexData v2 = new VertexData();
         //bottom right
-        v2.setXYZ(x+length, y-length, z-length); v2.setRGB(blackInt,blackInt,blackInt); v2.setST(1, 1);
+        v2.setXYZ(x+length, y-length, z-length); v2.setRGB(blackInt,blackInt,blackInt);// v2.setST(1, 1);
         VertexData v3 = new VertexData();
         //top right
-        v3.setXYZ(x+length, y, z); v3.setRGB(blackInt,blackInt,blackInt); v3.setST(1, 0);
+        v3.setXYZ(x+length, y, z); v3.setRGB(blackInt,blackInt,blackInt);// v3.setST(1, 0);
 
         VertexData[] vertices = new VertexData[]{v0, v1, v2, v3};
 
@@ -332,9 +332,9 @@ public class QuadArrayGL30 {
         GL20.glVertexAttribPointer(1, VertexData.colorElementCount, GL11.GL_FLOAT,
                 false, VertexData.stride, VertexData.colorByteOffset);
         // Put the texture coordinates in attribute list 2
-        GL20.glVertexAttribPointer(2, VertexData.textureElementCount, GL11.GL_FLOAT,
-                false, VertexData.stride, VertexData.textureByteOffset);
-
+//        GL20.glVertexAttribPointer(2, VertexData.textureElementCount, GL11.GL_FLOAT,
+//                false, VertexData.stride, VertexData.textureByteOffset);
+//
         GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
 
         // Deselect (bind to 0) the VAO
@@ -364,9 +364,9 @@ public class QuadArrayGL30 {
         //Load the vertex shader
         errorMsg = "setupShaders start";
 
-        int vsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+        int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
         // Load the fragment shader
-        int fsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+        int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
 
         errorMsg = "setupShaders create pgm";
         //Create a new shader program that links both shaders
@@ -489,13 +489,13 @@ public class QuadArrayGL30 {
     private void renderCycle() throws Exception  {
 
 
-            GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
+        GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
 
-            GL20.glUseProgram(pId);
+        GL20.glUseProgram(pId);
 
-            // Bind the texture
-            GL13.glActiveTexture(GL13.GL_TEXTURE0);
-            GL11.glBindTexture(GL11.GL_TEXTURE_2D, texIds[textureSelector]);
+        // Bind the texture
+        GL13.glActiveTexture(GL13.GL_TEXTURE0);
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D, texIds[textureSelector]);
         for(QuadIds ids: quadIdsList) {
             int vaoId = ids.vaoId;
             int vboiId = ids.vboiId;
