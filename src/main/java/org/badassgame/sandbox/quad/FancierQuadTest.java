@@ -4,6 +4,7 @@ import de.matthiasmann.twl.utils.PNGDecoder;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
+import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.*;
 import org.lwjgl.util.glu.GLU;
 import org.lwjgl.util.vector.Matrix4f;
@@ -235,7 +236,7 @@ public class FancierQuadTest {
                 //top right
                 v3.setXYZ(x+length, y, /*z*/0); v3.setRGB(blackInt, blackInt, blackInt);// v3.setST(1, 0);
 
-                VertexData[] vertices = new VertexData[]{v0, v1, v2, v3};
+                VertexData[] vertices = new VertexData[]  {v0, v1, v2, v3};
 
                 // Put each 'Vertex' in one FloatBuffer
 
@@ -424,9 +425,10 @@ public class FancierQuadTest {
         //Load the vertex shader
         errorMsg = "setupShaders start";
 
-        int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
-        // Load the fragment shader
-        int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+        int vsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+        int fsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+        //int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+        //int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
 
         errorMsg = "setupShaders create pgm";
         //Create a new shader program that links both shaders
@@ -462,11 +464,16 @@ public class FancierQuadTest {
         float rotationDelta = 3f;
         float scaleDelta = 0.1f;
         float posDelta = 0.02f;
+        float mouseDeltaThresh = 0.000000001f;
+        Keyboard.enableRepeatEvents(true);
+
         Vector3f scaleAddResolution = new Vector3f(scaleDelta, scaleDelta, scaleDelta);
         Vector3f scaleMinusResolution = new Vector3f(-scaleDelta, -scaleDelta,
                 -scaleDelta);
 //
-        while(Keyboard.next()) {
+
+        while(Keyboard.next()|| Mouse.isInsideWindow()) {
+            System.out.println("HEY!INPUT");
             // Only listen to events where the key was pressed (down event)
             if (!Keyboard.getEventKeyState()) continue;
 
@@ -523,7 +530,6 @@ public class FancierQuadTest {
 //                    break;
 //            }
 
-
             switch (Keyboard.getEventKey()) {
                 // Move
 
@@ -575,6 +581,22 @@ public class FancierQuadTest {
                 case Keyboard.KEY_F:
                     cameraAngle.x -= posDelta;
                     break;
+            }
+
+
+            if (Mouse.getDX()>mouseDeltaThresh) {
+                System.out.println("X:"+Mouse.getDX());
+                cameraAngle.x += rotationDelta;
+            } else if (Mouse.getDX()<-mouseDeltaThresh) {
+                System.out.println("X:"+Mouse.getDX());
+                cameraAngle.x -= rotationDelta;
+            }
+            if (Mouse.getDY()>mouseDeltaThresh) {
+                System.out.println("Y:"+Mouse.getDY());
+                cameraAngle.y += rotationDelta;
+            } else if (Mouse.getDY()<-mouseDeltaThresh) {
+                System.out.println("Y:"+Mouse.getDY());
+                cameraAngle.y -= rotationDelta;
             }
 
         }
