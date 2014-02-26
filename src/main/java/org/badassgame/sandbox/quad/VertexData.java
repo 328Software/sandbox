@@ -3,11 +3,12 @@ package org.badassgame.sandbox.quad;
 public class VertexData {
     // Vertex data
     private float[] xyzw = new float[] {0f, 0f, 0f, 1f};
-    private float[] rgba = new float[] {1f, 1f, 1f, 1f};
+    private byte[] rgba = new byte[] {1, 1, 1, 0};
 //    private float[] st = new float[] {0f, 0f};
 
     // The amount of bytes an element has
-    public static final int elementBytes = 4;
+    public static final int posElementBytes = 4;
+    public static final int colorElementBytes = 1;
 
     // Elements per parameter
     public static final int positionElementCount = 4;
@@ -15,9 +16,9 @@ public class VertexData {
 //    public static final int textureElementCount = 2;
 
     // Bytes per parameter
-    public static final int positionBytesCount = positionElementCount * elementBytes;
-    public static final int colorByteCount = colorElementCount * elementBytes;
-//    public static final int textureByteCount = textureElementCount * elementBytes;
+    public static final int positionBytesCount = positionElementCount * posElementBytes;
+    public static final int colorByteCount = colorElementCount * colorElementBytes;
+//    public static final int textureByteCount = textureElementCount * posElementBytes;
 
     // Byte offsets per parameter
     public static final int positionByteOffset = 0;
@@ -36,8 +37,8 @@ public class VertexData {
         this.setXYZW(x, y, z, 1f);
     }
 
-    public void setRGB(float r, float g, float b) {
-        this.setRGBA(r, g, b, 1f);
+    public void setRGB(byte r, byte g, byte b) {
+        this.setRGBA(r, g, b, (byte)0);
     }
 
 //    public void setST(float s, float t) {
@@ -48,30 +49,39 @@ public class VertexData {
         this.xyzw = new float[] {x, y, z, w};
     }
 
-    public void setRGBA(float r, float g, float b, float a) {
-        this.rgba = new float[] {r, g, b, 1f};
+    public void setRGBA(byte r, byte g, byte b, byte a) {
+        this.rgba = new byte[] {r, g, b, a};
     }
 
     // Getters
-    public float[] getElements() {
-        float[] out = new float[VertexData.elementCount];
+    public PositionColorPair getElements() {
+        float[] flout = new float[VertexData.positionElementCount];
+        byte[] bout = new byte[VertexData.colorElementCount];
         int i = 0;
 
         // Insert XYZW elements
-        out[i++] = this.xyzw[0];
-        out[i++] = this.xyzw[1];
-        out[i++] = this.xyzw[2];
-        out[i++] = this.xyzw[3];
+        flout[i++] = this.xyzw[0];
+        flout[i++] = this.xyzw[1];
+        flout[i++] = this.xyzw[2];
+        flout[i] = this.xyzw[3];
         // Insert RGBA elements
-        out[i++] = this.rgba[0];
-        out[i++] = this.rgba[1];
-        out[i++] = this.rgba[2];
-        out[i] = this.rgba[3];
+
+       i = 0;
+
+        bout[i++] = this.rgba[0];
+        bout[i++] = this.rgba[1];
+        bout[i++] = this.rgba[2];
+        bout[i] = this.rgba[3];
+
+
+
+
+
         // Insert ST elements
 //        out[i++] = this.st[0];
 //        out[i++] = this.st[1];
 
-        return out;
+        return new PositionColorPair(flout, bout);
     }
 
     public float[] getXYZW() {
@@ -90,6 +100,24 @@ public class VertexData {
         return new float[] {this.rgba[0], this.rgba[1], this.rgba[2]};
     }
 
+
+    public class PositionColorPair {
+        private float[] positionData;
+        private byte[] colorData;
+
+        public PositionColorPair(float[] positionData, byte[] colorData) {
+            this.positionData = positionData;
+            this.colorData = colorData;
+        }
+
+        public float[] getPositionData() {
+            return positionData;
+        }
+
+        public byte[] getColorData() {
+            return colorData;
+        }
+    }
 //    public float[] getST() {
 //        return new float[] {this.st[0], this.st[1]};
 //    }

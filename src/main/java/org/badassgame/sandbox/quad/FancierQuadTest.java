@@ -47,6 +47,7 @@ public class FancierQuadTest {
 
     Integer vboiId = null;
     Integer vboId = null;
+    Integer colorVboId = null;
 
     private int indicesCount = 0;
     // Shader variables
@@ -199,10 +200,13 @@ public class FancierQuadTest {
         List<Integer> values = new ArrayList<Integer>();
 
         ByteBuffer verticesByteBuffer = BufferUtils.createByteBuffer(4 * quadRows * quadColumns *
-                VertexData.stride);
+                VertexData.positionBytesCount);
 
 
         FloatBuffer verticesFloatBuffer = verticesByteBuffer.asFloatBuffer();
+
+        verticesByteBuffer = BufferUtils.createByteBuffer(4 * quadRows * quadColumns *
+                VertexData.colorByteCount);
 
         for(int i = 0; i < quadRows; i++) {
             for(int j = 0; j < quadColumns; j++) {
@@ -217,7 +221,7 @@ public class FancierQuadTest {
                 values.add(offset);
 
 
-                int blackInt = (i%2|j%2)==0||(i%2&j%2)==1?0:1;
+                byte blackInt = (i%2|j%2)==0||(i%2&j%2)==1?(byte)0:-1;
 
                 float x =-0.5f + 0.1f*i,y=0.5f-0.1f*j,z=-(.1f*(i+j)),length=0.1f;
 
@@ -242,11 +246,13 @@ public class FancierQuadTest {
 
                 for (int k = 0; k < vertices.length; k++) {
                     // Add position, color and texture floats to the buffer
-                    verticesFloatBuffer.put(vertices[k].getElements());
+                    verticesFloatBuffer.put(vertices[k].getElements().getPositionData());
+                    verticesByteBuffer.put(vertices[k].getElements().getColorData());
                 }
             }
         }
         verticesFloatBuffer.flip();
+        verticesByteBuffer.flip();
 
 
         if(vboiId == null) {
@@ -278,10 +284,10 @@ public class FancierQuadTest {
 
 
 
-        this.setupQuad(verticesFloatBuffer );
+        this.setupQuad(verticesFloatBuffer, verticesByteBuffer);
     }
 
-    private void setupQuad(FloatBuffer verticesFloatBuffer) throws Exception  {
+    private void setupQuad(FloatBuffer verticesFloatBuffer, ByteBuffer verticesByteBuffer) throws Exception  {
 
 //
 //        int blackInt = black?0:1;
@@ -389,15 +395,21 @@ public class FancierQuadTest {
         if(vboId == null) {
             vboId = GL15.glGenBuffers();
         }
+        if(colorVboId == null) {
+            colorVboId = GL15.glGenBuffers();
+        }
         GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, vboId);
         GL15.glBufferData(GL15.GL_ARRAY_BUFFER, verticesFloatBuffer, GL15.GL_STATIC_DRAW);
 
         // Put the position coordinates in attribute list 0
         GL20.glVertexAttribPointer(0, VertexData.positionElementCount, GL11.GL_FLOAT,
-                false, VertexData.stride, VertexData.positionByteOffset);
+                false, VertexData.positionBytesCount, VertexData.positionByteOffset);
+
+        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, colorVboId);
+        GL15.glBufferData(GL15.GL_ARRAY_BUFFER, verticesByteBuffer, GL15.GL_STATIC_DRAW);
         // Put the color components in attribute list 1
-        GL20.glVertexAttribPointer(1, VertexData.colorElementCount, GL11.GL_FLOAT,
-                false, VertexData.stride, VertexData.colorByteOffset);
+        GL20.glVertexAttribPointer(1, VertexData.colorElementCount, GL11.GL_UNSIGNED_BYTE,
+                true, VertexData.colorByteCount, 0);
 
 
         GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
@@ -408,7 +420,7 @@ public class FancierQuadTest {
         // Create a new VBO for the indices and select it (bind) - INDICES
 
 
-        quadIdsList.add(new QuadIds(vaoId, vboId, vboiId));
+        quadIdsList.add(new QuadIds(vaoId, vboId, vboiId, colorVboId));
 
         // Set the default quad rotation, scale and position values
         modelPos = new Vector3f(0, 0, 0);
@@ -425,10 +437,10 @@ public class FancierQuadTest {
         //Load the vertex shader
         errorMsg = "setupShaders start";
 
-        int vsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
-        int fsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
-        //int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
-        //int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+//        int vsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+//        int fsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+        int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+        int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
 
         errorMsg = "setupShaders create pgm";
         //Create a new shader program that links both shaders
@@ -472,8 +484,7 @@ public class FancierQuadTest {
                 -scaleDelta);
 //
 
-        while(Keyboard.next()|| Mouse.isInsideWindow()) {
-            System.out.println("HEY!INPUT");
+        while(Keyboard.next()/*|| Mouse.isInsideWindow()*/) {
             // Only listen to events where the key was pressed (down event)
             if (!Keyboard.getEventKeyState()) continue;
 
@@ -697,6 +708,7 @@ public class FancierQuadTest {
             int vaoId = ids.vaoId;
             int vboId = ids.vboId;
             int vboiId = ids.vboiId;
+            int colorVboId = ids.colorVboId;
 
             // Select the VAO
             GL30.glBindVertexArray(vaoId);
@@ -712,6 +724,10 @@ public class FancierQuadTest {
             // Delete the index VBO
             GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
             GL15.glDeleteBuffers(vboiId);
+
+
+            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
+            GL15.glDeleteBuffers(colorVboId);
 
             // Delete the VAO
             GL30.glBindVertexArray(0);
@@ -833,12 +849,13 @@ public class FancierQuadTest {
     }
 
     protected class QuadIds {
-        private Integer vaoId, vboId, vboiId;
+        private Integer vaoId, vboId, vboiId, colorVboId;
 
-        protected QuadIds(Integer vaoId, Integer vboId, Integer vboiId) {
+        public QuadIds(Integer vaoId, Integer vboId, Integer vboiId, Integer colorVboId) {
             this.vaoId = vaoId;
             this.vboId = vboId;
             this.vboiId = vboiId;
+            this.colorVboId = colorVboId;
         }
 
         int getVaoId() {
@@ -851,6 +868,10 @@ public class FancierQuadTest {
 
         int getVboiId() {
             return vboiId;
+        }
+
+        int getColorVboId() {
+            return colorVboId;
         }
     }
 
