@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://E:/badassgameVersions/trunk/badassgame.iml" filepath="E:/badassgameVersions/trunk/badassgame.iml" />
       <module fileurl="file://E:/badengineVersions/trunk/badengine.iml" filepath="E:/badengineVersions/trunk/badengine.iml" />
-      <module fileurl="file://E:/dataVersions/trunk/data.iml" filepath="E:/dataVersions/trunk/data.iml" />
+      <module fileurl="file://E:/dataVersions/version_0_1a/data.iml" filepath="E:/dataVersions/version_0_1a/data.iml" />
       <module fileurl="file://E:/goodengineVersions/trunk/goodengine.iml" filepath="E:/goodengineVersions/trunk/goodengine.iml" />
       <module fileurl="file://E:/resources/resources.iml" filepath="E:/resources/resources.iml" />
       <module fileurl="file://$PROJECT_DIR$/sandbox.iml" filepath="$PROJECT_DIR$/sandbox.iml" />

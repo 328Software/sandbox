@@ -221,7 +221,10 @@ public class FancierQuadTest {
                 values.add(offset);
 
 
-                byte blackInt = (i%2|j%2)==0||(i%2&j%2)==1?(byte)0:-1;
+//                byte blackInt = (i%2|j%2)==0||(i%2&j%2)==1?(byte)0:(byte)((i*quadColumns+j)/256);
+                byte blackInt = (i%2|j%2)==0||(i%2&j%2)==1?(byte)0:(byte)-1;
+
+
 
                 float x =-0.5f + 0.1f*i,y=0.5f-0.1f*j,z=-(.1f*(i+j)),length=0.1f;
 
@@ -229,16 +232,16 @@ public class FancierQuadTest {
                 // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
                 VertexData v0 = new VertexData();
                 //top left
-                v0.setXYZ(x, y, /*z+length*/0); v0.setRGB(blackInt, blackInt, blackInt);// v0.setST(0, 0);
+                v0.setXYZ(x, y, /*z+length*/0); v0.setRGB(blackInt, (byte)(blackInt&0xf), (byte)(blackInt&0xf0));// v0.setST(0, 0);
                 VertexData v1 = new VertexData();
                 //bottom left
-                v1.setXYZ(x, y-length, /*z*/0); v1.setRGB(blackInt, blackInt, blackInt);// v1.setST(0, 1);
+                v1.setXYZ(x, y-length, /*z*/0); v1.setRGB(blackInt, (byte)(blackInt&0xf), (byte)(blackInt&0xf0));// v1.setST(0, 1);
                 VertexData v2 = new VertexData();
                 //bottom right
-                v2.setXYZ(x+length, y-length, /*z-length*/0); v2.setRGB(blackInt, blackInt, blackInt);// v2.setST(1, 1);
+                v2.setXYZ(x+length, y-length, /*z-length*/0); v2.setRGB(blackInt, (byte)(blackInt&0xf), (byte)(blackInt&0xf0));// v2.setST(1, 1);
                 VertexData v3 = new VertexData();
                 //top right
-                v3.setXYZ(x+length, y, /*z*/0); v3.setRGB(blackInt, blackInt, blackInt);// v3.setST(1, 0);
+                v3.setXYZ(x+length, y, /*z*/0); v3.setRGB(blackInt, (byte)(blackInt&0xf), (byte)(blackInt&0xf0));// v3.setST(1, 0);
 
                 VertexData[] vertices = new VertexData[]  {v0, v1, v2, v3};
 

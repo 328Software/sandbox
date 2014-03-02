@@ -4,6 +4,7 @@
     <mapping directory="" vcs="svn" />
     <mapping directory="E:/badengineVersions/trunk" vcs="svn" />
     <mapping directory="E:/dataVersions/trunk" vcs="svn" />
+    <mapping directory="E:/dataVersions/version_0_1a" vcs="svn" />
     <mapping directory="E:/goodengineVersions/trunk" vcs="svn" />
     <mapping directory="E:/resources" vcs="svn" />
   </component>
