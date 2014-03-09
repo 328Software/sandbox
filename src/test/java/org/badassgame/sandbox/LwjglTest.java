@@ -40,7 +40,7 @@ public class LwjglTest {
 
     @Test
     public void testTriangles() {
-        new FancierQuadTest(500,500);
+        new FancierQuadTest(1000,1000);
     }
 
 //    @Test

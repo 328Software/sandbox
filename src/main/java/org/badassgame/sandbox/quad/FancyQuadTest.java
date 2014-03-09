@@ -28,42 +28,42 @@ import de.matthiasmann.twl.utils.PNGDecoder.Format;
 
 import de.matthiasmann.twl.utils.PNGDecoder;
 public class FancyQuadTest {
-    // Entry point for the application
-    public static void main(String[] args) {
-        new FancyQuadTest();
-    }
-
-
-    // Setup variables
-    private final String WINDOW_TITLE = "The Quad: Moving";
-    private final int WIDTH = 800;
-    private final int HEIGHT = 600;
-    private final double PI = 3.14159265358979323846;
-    // Quad variables
-    private int vaoId = 0;
-    private int vboId = 0;
-    private int vboiId = 0;
-    private int indicesCount = 0;
-    private VertexData[] vertices = null;
-    private ByteBuffer verticesByteBuffer = null;
-    // Shader variables
-    private int pId = 0;
-    // Texture variables
-    private int[] texIds = new int[] {0, 0};
-    private int textureSelector = 0;
-    // Moving variables
-    private int projectionMatrixLocation = 0;
-    private int viewMatrixLocation = 0;
-    private int modelMatrixLocation = 0;
-    private Matrix4f projectionMatrix = null;
-    private Matrix4f viewMatrix = null;
-    private Matrix4f modelMatrix = null;
-    private Vector3f modelPos = null;
-    private Vector3f modelAngle = null;
-    private Vector3f modelScale = null;
-    private Vector3f cameraPos = null;
-    private FloatBuffer matrix44Buffer = null;
-
+//    // Entry point for the application
+//    public static void main(String[] args) {
+//        new FancyQuadTest();
+//    }
+//
+//
+//    // Setup variables
+//    private final String WINDOW_TITLE = "The Quad: Moving";
+//    private final int WIDTH = 800;
+//    private final int HEIGHT = 600;
+//    private final double PI = 3.14159265358979323846;
+//    // Quad variables
+//    private int vaoId = 0;
+//    private int vboId = 0;
+//    private int vboiId = 0;
+//    private int indicesCount = 0;
+//    private VertexData[] vertices = null;
+//    private ByteBuffer verticesByteBuffer = null;
+//    // Shader variables
+//    private int pId = 0;
+//    // Texture variables
+//    private int[] texIds = new int[] {0, 0};
+//    private int textureSelector = 0;
+//    // Moving variables
+//    private int projectionMatrixLocation = 0;
+//    private int viewMatrixLocation = 0;
+//    private int modelMatrixLocation = 0;
+//    private Matrix4f projectionMatrix = null;
+//    private Matrix4f viewMatrix = null;
+//    private Matrix4f modelMatrix = null;
+//    private Vector3f modelPos = null;
+//    private Vector3f modelAngle = null;
+//    private Vector3f modelScale = null;
+//    private Vector3f cameraPos = null;
+//    private FloatBuffer matrix44Buffer = null;
+//
 //    public FancyQuadTest() {
 //        try {
 //        // Initialize OpenGL (Display)

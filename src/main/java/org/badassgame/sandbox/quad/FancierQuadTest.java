@@ -1,6 +1,7 @@
 package org.badassgame.sandbox.quad;
 
 import de.matthiasmann.twl.utils.PNGDecoder;
+import org.badassgame.sandbox.DrawString;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
@@ -440,10 +441,10 @@ public class FancierQuadTest {
         //Load the vertex shader
         errorMsg = "setupShaders start";
 
-//        int vsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
-//        int fsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
-        int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
-        int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+        int vsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+        int fsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+//        int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+//        int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
 
         errorMsg = "setupShaders create pgm";
         //Create a new shader program that links both shaders
@@ -659,6 +660,9 @@ public class FancierQuadTest {
 
         GL20.glUseProgram(pId);
 
+        // Display Text
+
+        DrawString.drawString("you suck",5,5);
         // Bind the texture
 //        GL13.glActiveTexture(GL13.GL_TEXTURE0);
 //        GL11.glBindTexture(GL11.GL_TEXTURE_2D, texIds[textureSelector]);

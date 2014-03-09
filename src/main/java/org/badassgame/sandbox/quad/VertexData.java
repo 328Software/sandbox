@@ -64,7 +64,7 @@ public class VertexData {
         flout[i++] = this.xyzw[1];
         flout[i++] = this.xyzw[2];
         flout[i] = this.xyzw[3];
-        // Insert RGBA elements
+        // Insert RGBA elementsv
 
        i = 0;
 
