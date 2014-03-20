@@ -1,4 +1,4 @@
-package org.badassgame.sandbox;
+package org.badassgame.sandbox.quad;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
@@ -28,7 +28,7 @@ public class MultipleQuadsTest {
 
 
     public MultipleQuadsTest() {
-        // Initialize OpenGL (Display)
+        // Initialize OpenGL (display)
         this.setupOpenGL();
 
         this.setupQuad();
@@ -43,7 +43,7 @@ public class MultipleQuadsTest {
             Display.update();
         }
 
-        // Destroy OpenGL (Display)
+        // Destroy OpenGL (display)
         this.destroyOpenGL();
     }
 

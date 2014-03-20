@@ -1,4 +1,4 @@
-package org.badassgame.sandbox;
+package org.badassgame.sandbox.lwjgl;
 
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;

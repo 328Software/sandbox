@@ -66,7 +66,7 @@ public class FancyQuadTest {
 //
 //    public FancyQuadTest() {
 //        try {
-//        // Initialize OpenGL (Display)
+//        // Initialize OpenGL (display)
 //        this.setupOpenGL();
 //
 //        this.setupQuad();
@@ -78,17 +78,17 @@ public class FancyQuadTest {
 //
 //        this.setupMatrices();
 //
-//        while (!Display.isCloseRequested()) {
+//        while (!display.isCloseRequested()) {
 //            // Do a single loop (logic/render)
 //            this.loopCycle();
 //
 //            // Force a maximum FPS of about 60
-//            Display.sync(60);
+//            display.sync(60);
 //            // Let the CPU synchronize with the GPU if GPU is tagging behind
-//            Display.update();
+//            display.update();
 //        }
 //
-//        // Destroy OpenGL (Display)
+//        // Destroy OpenGL (display)
 //        this.destroyOpenGL();
 //        } catch (Exception e) {
 //            e.printStackTrace();
@@ -133,9 +133,9 @@ public class FancyQuadTest {
 //                    .withForwardCompatible(true)
 //                    .withProfileCore(true);
 //
-//            Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
-//            Display.setTitle(WINDOW_TITLE);
-//            Display.create(pixelFormat, contextAtrributes);
+//            display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
+//            display.setTitle(WINDOW_TITLE);
+//            display.create(pixelFormat, contextAtrributes);
 //
 //            GL11.glViewport(0, 0, WIDTH, HEIGHT);
 //        } catch (LWJGLException e) {
@@ -422,7 +422,7 @@ public class FancyQuadTest {
 //
 //        this.exitOnGLError("destroyOpenGL");
 //
-//        Display.destroy();
+//        display.destroy();
 //    }
 //
 //    private float coTangent(float angle) {
@@ -443,7 +443,7 @@ public class FancyQuadTest {
 //            String errorString = GLU.gluErrorString(errorValue);
 //            System.err.println("ERROR - " + errorMessage + ": " + errorString);
 //
-//            if (Display.isCreated()) Display.destroy();
+//            if (display.isCreated()) display.destroy();
 ////            System.exit(-1);
 //            throw new Exception("you suck");
 //        }

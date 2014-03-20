@@ -52,5 +52,10 @@
             <conf name="default" mapped="default"/>
             <conf name="runtime" mapped="runtime"/>
         </dependency>
+
+        <dependency org="org.apache.commons" name="commons-math" rev="2.2">
+            <conf name="default" mapped="default"/>
+            <conf name="runtime" mapped="runtime"/>
+        </dependency>
     </dependencies>
 </ivy-module>

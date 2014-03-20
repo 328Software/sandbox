@@ -1,4 +1,4 @@
-package org.badassgame.sandbox;
+package org.badassgame.sandbox.lwjgl;
 
 /**
  * Created with IntelliJ IDEA.

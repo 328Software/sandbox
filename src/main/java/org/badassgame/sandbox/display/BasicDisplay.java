@@ -1,6 +1,8 @@
-package org.badassgame.sandbox.quad;
+package org.badassgame.sandbox.display;
 
-import de.matthiasmann.twl.utils.PNGDecoder;
+import org.badassgame.sandbox.display.view.View;
+import org.badassgame.sandbox.display.view.representation.Representation;
+import org.badassgame.sandbox.quad.VertexData;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
@@ -10,7 +12,8 @@ import org.lwjgl.util.glu.GLU;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
@@ -19,20 +22,12 @@ import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Brandon
- * Date: 2/23/14
- * Time: 11:29 PM
+ * User: Alex
+ * Date: 3/16/14
+ * Time: 1:00 PM
  * To change this template use File | Settings | File Templates.
  */
-public class FancierQuadTest {
-
-
-    // Entry point for the application
-    public static void main(String[] args) {
-        new FancyQuadTest();
-    }
-
-
+public class BasicDisplay {
     // Setup variables
     private static final String WINDOW_TITLE = "The Quad: Moving";
     private static final int WIDTH = 800;
@@ -72,8 +67,7 @@ public class FancierQuadTest {
     private int quadColumns;
     private int quadRows;
 
-
-    public FancierQuadTest(int quadRows, int quadColumns) {
+    public BasicDisplay(int quadRows, int quadColumns) {
 
         this.quadIdsList = new ArrayList<QuadIds>();
         this.quadRows = quadRows;
@@ -107,7 +101,7 @@ public class FancierQuadTest {
 
         this.setupMatrices();
 
-        while (!Display.isCloseRequested()) {
+        while (!org.lwjgl.opengl.Display.isCloseRequested()) {
             // Do a single loop (logic/render)
             try {
                 this.loopCycle();
@@ -117,9 +111,9 @@ public class FancierQuadTest {
             }
 
             // Force a maximum FPS of about 60
-            Display.sync(60);
+            org.lwjgl.opengl.Display.sync(60);
             // Let the CPU synchronize with the GPU if GPU is tagging behind
-            Display.update();
+            org.lwjgl.opengl.Display.update();
         }
 
         // Destroy OpenGL (display)
@@ -130,6 +124,17 @@ public class FancierQuadTest {
             System.out.println("destroyOpenGl failed");
         }
     }
+
+    //@Override
+    public void displayView(View view) {
+        showGroundRepresentation(view.getRepresentation());
+    }
+
+    private void showGroundRepresentation(Representation<VertexData[][]> presentation) {
+
+
+    }
+
 
     private void setupMatrices() {
         // Setup projection matrix
@@ -161,8 +166,8 @@ public class FancierQuadTest {
     }
 
     private void setupTextures() throws Exception  {
-        texIds[0] = this.loadPNGTexture("F:\\Users\\Brandon\\Desktop/grass.png", GL13.GL_TEXTURE0);
-        texIds[1] = this.loadPNGTexture("F:\\Users\\Brandon\\Desktop/grass.png", GL13.GL_TEXTURE0);
+        //  texIds[0] = this.loadPNGTexture("F:\\Users\\Brandon\\Desktop/grass.png", GL13.GL_TEXTURE0);
+        //  texIds[1] = this.loadPNGTexture("F:\\Users\\Brandon\\Desktop/grass.png", GL13.GL_TEXTURE0);
 
         this.exitOnGLError("setupTexture");
     }
@@ -175,9 +180,9 @@ public class FancierQuadTest {
                     .withForwardCompatible(true)
                     .withProfileCore(true);
 
-            Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
-            Display.setTitle(WINDOW_TITLE);
-            Display.create(pixelFormat, contextAtrributes);
+            org.lwjgl.opengl.Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
+            org.lwjgl.opengl.Display.setTitle(WINDOW_TITLE);
+            org.lwjgl.opengl.Display.create(pixelFormat, contextAtrributes);
 
             GL11.glViewport(0, 0, WIDTH, HEIGHT);
         } catch (LWJGLException e) {
@@ -290,98 +295,6 @@ public class FancierQuadTest {
     }
 
     private void setupQuad(FloatBuffer verticesFloatBuffer, ByteBuffer verticesByteBuffer) throws Exception  {
-
-//
-//        int blackInt = black?0:1;
-//
-//
-//        // We'll define our quad using 4 vertices of the custom 'TexturedVertex' class
-//        VertexData v0 = new VertexData();
-//        //top left
-//        v0.setXYZ(x, y, z+length); v0.setRGB(blackInt,blackInt,blackInt); v0.setST(0, 0);
-//        VertexData v1 = new VertexData();
-//        //bottom left
-//        v1.setXYZ(x, y-length, z); v1.setRGB(blackInt,blackInt,blackInt); v1.setST(0, 1);
-//        VertexData v2 = new VertexData();
-//        //bottom right
-//        v2.setXYZ(x+length, y-length, z-length); v2.setRGB(blackInt,blackInt,blackInt); v2.setST(1, 1);
-//        VertexData v3 = new VertexData();
-//        //top right
-//        v3.setXYZ(x+length, y, z); v3.setRGB(blackInt,blackInt,blackInt); v3.setST(1, 0);
-//
-//        VertexData[] vertices = new VertexData[]{v0, v1, v2, v3};
-//
-//        // Put each 'Vertex' in one FloatBuffer
-//        ByteBuffer verticesByteBuffer = BufferUtils.createByteBuffer(vertices.length *
-//                VertexData.stride);
-//        FloatBuffer verticesFloatBuffer = verticesByteBuffer.asFloatBuffer();
-//        for (int i = 0; i < vertices.length; i++) {
-//            // Add position, color and texture floats to the buffer
-//            verticesFloatBuffer.put(vertices[i].getElements());
-//        }
-//        verticesFloatBuffer.flip();
-//
-//
-//        // OpenGL expects to draw vertices in counter clockwise order by default
-//
-//
-//        // Create a new Vertex Array Object in memory and select it (bind)
-//        int vaoId = GL30.glGenVertexArrays();
-//        GL30.glBindVertexArray(vaoId);
-//
-//        // Create a new Vertex Buffer Object in memory and select it (bind)
-//        if(vboId == null) {
-//            vboId = GL15.glGenBuffers();
-//        }
-//        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, vboId);
-//        GL15.glBufferData(GL15.GL_ARRAY_BUFFER, verticesFloatBuffer, GL15.GL_STREAM_DRAW);
-//
-//        // Put the position coordinates in attribute list 0
-//        GL20.glVertexAttribPointer(0, VertexData.positionElementCount, GL11.GL_FLOAT,
-//                false, VertexData.stride, VertexData.positionByteOffset);
-//        // Put the color components in attribute list 1
-//        GL20.glVertexAttribPointer(1, VertexData.colorElementCount, GL11.GL_FLOAT,
-//                false, VertexData.stride, VertexData.colorByteOffset);
-//        // Put the texture coordinates in attribute list 2
-////        GL20.glVertexAttribPointer(2, VertexData.textureElementCount, GL11.GL_FLOAT,
-////                false, VertexData.stride, VertexData.textureByteOffset);
-//
-//        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
-//
-//        // Deselect (bind to 0) the VAO
-//        GL30.glBindVertexArray(0);
-//
-//        // Create a new VBO for the indices and select it (bind) - INDICES
-//
-//        if(vboiId == null) {
-//
-//            byte[] indices = {
-//                    0, 1, 2,
-//                    2, 3, 0
-//            };
-//            indicesCount = indices.length;
-//            ByteBuffer indicesBuffer = BufferUtils.createByteBuffer(indicesCount);
-//            indicesBuffer.put(indices);
-//            indicesBuffer.flip();
-//
-//            vboiId = GL15.glGenBuffers();
-//            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboiId);
-//            GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBuffer,
-//                    GL15.GL_STATIC_DRAW);
-//            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
-//        }
-//
-//        quadIdsList.add(new QuadIds(vaoId, vboId, vboiId));
-//
-//        // Set the default quad rotation, scale and position values
-//        modelPos = new Vector3f(0, 0, 0);
-//        modelAngle = new Vector3f(0, 0, 0);
-//        modelScale = new Vector3f(1, 1, 1);
-//        cameraPos = new Vector3f(0, 0, -1);
-//
-//        this.exitOnGLError("setupQuad");
-
-
 
 
 
@@ -676,7 +589,7 @@ public class FancierQuadTest {
             GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, vboiId);
 
             // Draw the vertices
-            GL32.glDrawElementsBaseVertex(GL11.GL_TRIANGLES, indicesCount, GL11.GL_UNSIGNED_INT, 0,0);
+            GL32.glDrawElementsBaseVertex(GL11.GL_TRIANGLES, indicesCount, GL11.GL_UNSIGNED_INT, 0, 0);
 
             // Put everything back to default (deselect)
             GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
@@ -741,7 +654,7 @@ public class FancierQuadTest {
 
         this.exitOnGLError("destroyOpenGL");
 
-        Display.destroy();
+        org.lwjgl.opengl.Display.destroy();
     }
 
     private int loadShader(String filename, int type) throws Exception  {
@@ -774,64 +687,6 @@ public class FancierQuadTest {
         return shaderID;
     }
 
-    private int loadPNGTexture(String filename, int textureUnit) throws Exception {
-        ByteBuffer buf = null;
-        int tWidth = 0;
-        int tHeight = 0;
-
-        try {
-            // Open the PNG file as an InputStream
-            InputStream in = new FileInputStream(filename);
-            // Link the PNG decoder to this stream
-            PNGDecoder decoder = new PNGDecoder(in);
-
-            // Get the width and height of the texture
-            tWidth = decoder.getWidth();
-            tHeight = decoder.getHeight();
-
-
-            // Decode the PNG file in a ByteBuffer
-            buf = ByteBuffer.allocateDirect(
-                    4 * decoder.getWidth() * decoder.getHeight());
-            decoder.decode(buf, decoder.getWidth() * 4, PNGDecoder.Format.RGBA);
-            buf.flip();
-
-            in.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new Exception("you suck");
-
-//            System.exit(-1);
-        }
-
-        // Create a new texture object in memory and bind it
-        int texId = GL11.glGenTextures();
-        GL13.glActiveTexture(textureUnit);
-        GL11.glBindTexture(GL11.GL_TEXTURE_2D, texId);
-
-        // All RGB bytes are aligned to each other and each component is 1 byte
-        GL11.glPixelStorei(GL11.GL_UNPACK_ALIGNMENT, 1);
-
-        // Upload the texture data and generate mip maps (for scaling)
-        GL11.glTexImage2D(GL11.GL_TEXTURE_2D, 0, GL11.GL_RGB, tWidth, tHeight, 0,
-                GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, buf);
-        GL30.glGenerateMipmap(GL11.GL_TEXTURE_2D);
-
-        // Setup the ST coordinate system
-        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_WRAP_S, GL11.GL_REPEAT);
-        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_WRAP_T, GL11.GL_REPEAT);
-
-        // Setup what to do when the texture has to be scaled
-        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER,
-                GL11.GL_LINEAR);
-        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER,
-                GL11.GL_LINEAR_MIPMAP_LINEAR);
-
-        this.exitOnGLError("loadPNGTexture");
-
-        return texId;
-    }
-
     private float coTangent(float angle) {
         return (float)(1f / Math.tan(angle));
     }
@@ -847,36 +702,9 @@ public class FancierQuadTest {
             String errorString = GLU.gluErrorString(errorValue);
             System.err.println("ERROR - " + errorMessage + ": " + errorString);
 
-            if (Display.isCreated()) Display.destroy();
+            if (org.lwjgl.opengl.Display.isCreated()) org.lwjgl.opengl.Display.destroy();
 //            System.exit(-1);
             throw new Exception("you suck");
-        }
-    }
-
-    protected class QuadIds {
-        private Integer vaoId, vboId, vboiId, colorVboId;
-
-        public QuadIds(Integer vaoId, Integer vboId, Integer vboiId, Integer colorVboId) {
-            this.vaoId = vaoId;
-            this.vboId = vboId;
-            this.vboiId = vboiId;
-            this.colorVboId = colorVboId;
-        }
-
-        int getVaoId() {
-            return vaoId;
-        }
-
-        int getVboId() {
-            return vboId;
-        }
-
-        int getVboiId() {
-            return vboiId;
-        }
-
-        int getColorVboId() {
-            return colorVboId;
         }
     }
 

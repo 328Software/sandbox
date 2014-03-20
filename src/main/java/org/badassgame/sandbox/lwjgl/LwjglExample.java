@@ -1,4 +1,4 @@
-package org.badassgame.sandbox;
+package org.badassgame.sandbox.lwjgl;
 
 /**
  * Created by Alex on 2/15/14.

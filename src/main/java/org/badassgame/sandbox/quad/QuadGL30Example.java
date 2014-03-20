@@ -1,4 +1,4 @@
-package  org.badassgame.sandbox;
+package org.badassgame.sandbox.quad;
 
 import java.nio.FloatBuffer;
 
@@ -31,7 +31,7 @@ public class QuadGL30Example {
     private int vertexCount = 0;
 
     public QuadGL30Example() {
-        // Initialize OpenGL (Display)
+        // Initialize OpenGL (display)
         this.setupOpenGL();
 
         this.setupQuad();
@@ -46,7 +46,7 @@ public class QuadGL30Example {
             Display.update();
         }
 
-        // Destroy OpenGL (Display)
+        // Destroy OpenGL (display)
         this.destroyOpenGL();
     }
 
