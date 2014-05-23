@@ -1,5 +1,5 @@
 <ivy-module version="2.0"  xmlns:e="http://ant.apache.org/ivy/extra">
-    <info organisation="org.badassgame" module="sandbox"/>
+    <info organisation="org.supply.simulator" module="sandbox"/>
 
 
     <configurations defaultconf="default">
@@ -19,7 +19,7 @@
 
 
     <dependencies>
-        <dependency org="org.badassgame" name="data" rev="0.1">
+        <dependency org="org.supply.simulator" name="data" rev="0.2">
             <conf name="default" mapped="default"/>
             <conf name="runtime" mapped="runtime"/>
         </dependency>

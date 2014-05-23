@@ -1,32 +1,5 @@
-package org.badassgame.sandbox.quad;
+package org.supply.simulator.sandbox.quad;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.ByteBuffer;
-import java.nio.FloatBuffer;
-
-import org.lwjgl.BufferUtils;
-import org.lwjgl.LWJGLException;
-import org.lwjgl.input.Keyboard;
-import org.lwjgl.opengl.ContextAttribs;
-import org.lwjgl.opengl.Display;
-import org.lwjgl.opengl.DisplayMode;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL13;
-import org.lwjgl.opengl.GL15;
-import org.lwjgl.opengl.GL20;
-import org.lwjgl.opengl.GL30;
-import org.lwjgl.opengl.PixelFormat;
-import org.lwjgl.util.glu.GLU;
-import org.lwjgl.util.vector.Matrix4f;
-import org.lwjgl.util.vector.Vector3f;
-
-import de.matthiasmann.twl.utils.PNGDecoder.Format;
-
-import de.matthiasmann.twl.utils.PNGDecoder;
 public class FancyQuadTest {
 //    // Entry point for the application
 //    public static void main(String[] args) {
@@ -66,7 +39,7 @@ public class FancyQuadTest {
 //
 //    public FancyQuadTest() {
 //        try {
-//        // Initialize OpenGL (display)
+//        // Initialize OpenGL (Display)
 //        this.setupOpenGL();
 //
 //        this.setupQuad();
@@ -78,17 +51,17 @@ public class FancyQuadTest {
 //
 //        this.setupMatrices();
 //
-//        while (!display.isCloseRequested()) {
+//        while (!Display.isCloseRequested()) {
 //            // Do a single loop (logic/render)
 //            this.loopCycle();
 //
 //            // Force a maximum FPS of about 60
-//            display.sync(60);
+//            Display.sync(60);
 //            // Let the CPU synchronize with the GPU if GPU is tagging behind
-//            display.update();
+//            Display.update();
 //        }
 //
-//        // Destroy OpenGL (display)
+//        // Destroy OpenGL (Display)
 //        this.destroyOpenGL();
 //        } catch (Exception e) {
 //            e.printStackTrace();
@@ -133,9 +106,9 @@ public class FancyQuadTest {
 //                    .withForwardCompatible(true)
 //                    .withProfileCore(true);
 //
-//            display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
-//            display.setTitle(WINDOW_TITLE);
-//            display.create(pixelFormat, contextAtrributes);
+//            Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
+//            Display.setTitle(WINDOW_TITLE);
+//            Display.create(pixelFormat, contextAtrributes);
 //
 //            GL11.glViewport(0, 0, WIDTH, HEIGHT);
 //        } catch (LWJGLException e) {
@@ -422,7 +395,7 @@ public class FancyQuadTest {
 //
 //        this.exitOnGLError("destroyOpenGL");
 //
-//        display.destroy();
+//        Display.destroy();
 //    }
 //
 //    private float coTangent(float angle) {
@@ -443,7 +416,7 @@ public class FancyQuadTest {
 //            String errorString = GLU.gluErrorString(errorValue);
 //            System.err.println("ERROR - " + errorMessage + ": " + errorString);
 //
-//            if (display.isCreated()) display.destroy();
+//            if (Display.isCreated()) Display.destroy();
 ////            System.exit(-1);
 //            throw new Exception("you suck");
 //        }

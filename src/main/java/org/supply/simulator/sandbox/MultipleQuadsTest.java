@@ -1,37 +1,34 @@
-package org.badassgame.sandbox.quad;
-
-import java.nio.FloatBuffer;
-
+package org.supply.simulator.sandbox;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
-import org.lwjgl.opengl.ContextAttribs;
-import org.lwjgl.opengl.Display;
-import org.lwjgl.opengl.DisplayMode;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL15;
-import org.lwjgl.opengl.GL20;
-import org.lwjgl.opengl.GL30;
-import org.lwjgl.opengl.PixelFormat;
+import org.lwjgl.opengl.*;
 import org.lwjgl.util.glu.GLU;
 
-public class QuadGL30Example {
-    // Entry point for the application
-    public static void main(String[] args) {
-        new QuadGL30Example();
-    }
+import java.nio.FloatBuffer;
 
+/**
+ * Created with IntelliJ IDEA.
+ * User: Brandon
+ * Date: 2/17/14
+ * Time: 1:14 AM
+ * To change this template use File | Settings | File Templates.
+ */
+public class MultipleQuadsTest {
     // Setup variables
-    private final String WINDOW_TITLE = "The Quad: glDrawArrays";
-    private final int WIDTH = 320;
-    private final int HEIGHT = 240;
+    private final String WINDOW_TITLE = "Multiple Quad Test";
+    private final int WIDTH = 800;
+    private final int HEIGHT = 600;
     // Quad variables
     private int vaoId = 0;
     private int vboId = 0;
     private int vertexCount = 0;
 
-    public QuadGL30Example() {
-        // Initialize OpenGL (display)
+
+
+
+    public MultipleQuadsTest() {
+        // Initialize OpenGL (Display)
         this.setupOpenGL();
 
         this.setupQuad();
@@ -46,7 +43,7 @@ public class QuadGL30Example {
             Display.update();
         }
 
-        // Destroy OpenGL (display)
+        // Destroy OpenGL (Display)
         this.destroyOpenGL();
     }
 
@@ -83,7 +80,7 @@ public class QuadGL30Example {
                 // Left bottom triangle
                 -0.5f, 0.5f, 0f,
                 -0.5f, -0.5f, 0f,
-                0.5f, -0.5f, 0f,
+                0.0f, -0.5f, 0f,
                 // Right top triangle
                 0.5f, -0.5f, 0f,
                 0.5f, 0.5f, 0f,
@@ -119,6 +116,8 @@ public class QuadGL30Example {
 
     public void loopCycle() {
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
+
+
 
         // Bind to the VAO that has all the information about the quad vertices
         GL30.glBindVertexArray(vaoId);

@@ -1,4 +1,4 @@
-package org.badassgame.sandbox.quad;
+package org.supply.simulator.sandbox.quad;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,4 +1,4 @@
-package org.badassgame.sandbox.quad;
+package org.badassgame.sandbox;
 
 import org.lwjgl.LWJGLException;
 import org.lwjgl.Sys;

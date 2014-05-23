@@ -1,7 +1,6 @@
-package org.badassgame.sandbox;
+package org.supply.simulator.sandbox;
 
-import org.badassgame.sandbox.quad.FancierQuadTest;
-import org.badassgame.sandbox.quad.FancyQuadTest;
+import org.supply.simulator.sandbox.quad.FancierQuadTest;
 import org.junit.Before;
 import org.junit.Test;
 
