@@ -1,5 +1,6 @@
 package org.supply.simulator.sandbox;
 
+import org.supply.simulator.sandbox.prototype.Controller;
 import org.supply.simulator.sandbox.quad.FancierQuadTest;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,9 +39,14 @@ public class LwjglTest {
 //    }
 
     @Test
-    public void testTriangles() {
-        new FancierQuadTest(1000,1000);
+    public void testPrototype() {
+        new Controller();
     }
+
+//    @Test
+//    public void testTriangles() {
+//        new FancierQuadTest(1000,1000);
+//    }
 
 //    @Test
 //    public void testTriangles2() {
