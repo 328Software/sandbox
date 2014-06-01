@@ -10,6 +10,8 @@ public class Controller {
 
     public Controller () {
         UserDisplay display = UserDisplay.instance();
+
+
         display.setQuadRowsCols(1000, 1000);
         Input input = new Input();
 
@@ -20,14 +22,10 @@ public class Controller {
 
             // Update current input from user
             input.refreshInput();
-            display.render(input);
 
-            // Good Engine sends what entities to display
-            //display.receiveEntities(GoodEngine.sendEntities(display.sendView()));
+            display.receiveInput(input);
 
-            // Calculation changes to display
-           // display.render();
-
+            display.render();
 
         }
 

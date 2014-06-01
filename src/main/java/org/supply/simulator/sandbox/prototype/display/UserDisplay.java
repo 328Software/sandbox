@@ -9,7 +9,6 @@ import org.lwjgl.util.vector.Vector3f;
 import org.supply.simulator.sandbox.prototype.input.Input;
 import org.supply.simulator.sandbox.prototype.util.GraphicsUtilities;
 import org.supply.simulator.sandbox.prototype.util.MathUtilities;
-import org.supply.simulator.sandbox.quad.VertexData;
 
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
@@ -118,20 +117,22 @@ public class UserDisplay {
 
     //*****Loop method
     //These methods must be executed in order during each display loop cycle
+    public void receiveInput(Input input) {
+        modelMatrix = input.getModelMatrix();
+        // modelPos = input.getModelPos();
+        modelAngle = input.getModelAngle();
+        modelScale = input.getModelScale();
+        cameraPos = input.getCameraPos();
+        cameraAngle = input.getCameraAngle();
 
-    public void render(Input inputData) {
+    }
+    public void render() {
 
 
         //*****MOVE THE CAMERA********************************
-        modelMatrix = new Matrix4f();
-       // modelPos = inputData.getModelPos();
-        modelAngle = inputData.getModelAngle();
-        modelScale = inputData.getModelScale();
-        cameraPos = inputData.getCameraPos();
-        cameraAngle = inputData.getCameraAngle();
 
         //-- Update matrices
-        // Reset view and model matrices
+        // Reset view
         viewMatrix = new Matrix4f();
 
         // Translate camera
@@ -425,9 +426,12 @@ public class UserDisplay {
         int vsId = 0;
         int fsId = 0;
         try {
-            vsId = GraphicsUtilities.loadShader("E:/workspace/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+//            ClassLoader.getSystemResourceAsStream("shaders/vertext.glsl")
+
+//            vsId = GraphicsUtilities.loadShader("shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+            vsId = GraphicsUtilities.loadShader("shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
             this.exitOnGLError("GraphicsUtilities.loadShader");
-            fsId = GraphicsUtilities.loadShader("E:/workspace/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+            fsId = GraphicsUtilities.loadShader("shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
             this.exitOnGLError("GraphicsUtilities.loadShader");
         } catch (Exception e) {
             e.printStackTrace();

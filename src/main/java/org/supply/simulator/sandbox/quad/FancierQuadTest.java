@@ -9,6 +9,7 @@ import org.lwjgl.opengl.*;
 import org.lwjgl.util.glu.GLU;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
+import org.supply.simulator.sandbox.prototype.display.VertexData;
 
 import java.io.*;
 import java.nio.ByteBuffer;
@@ -439,10 +440,10 @@ public class FancierQuadTest {
         //Load the vertex shader
         errorMsg = "setupShaders start";
 
-//        int vsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
-//        int fsId = this.loadShader("C:/Users/Alex/IdeaProjects/game/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
-        int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
-        int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+        int vsId = this.loadShader("E:/workspace/Sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+        int fsId = this.loadShader("E:/workspace/Sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
+//        int vsId = this.loadShader("E:/sandbox/src/main/resources/shaders/vertex.glsl", GL20.GL_VERTEX_SHADER);
+//        int fsId = this.loadShader("E:/sandbox/src/main/resources/shaders/fragments.glsl", GL20.GL_FRAGMENT_SHADER);
 
         errorMsg = "setupShaders create pgm";
         //Create a new shader program that links both shaders

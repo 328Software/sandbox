@@ -1,4 +1,4 @@
-package org.supply.simulator.sandbox;
+package org.supply.simulator.sandbox.examples;
 
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
@@ -10,23 +10,18 @@ import org.lwjgl.opengl.DisplayMode;
  * Created with IntelliJ IDEA.
  * User: Brandon
  * Date: 2/16/14
- * Time: 3:31 AM
+ * Time: 3:21 AM
  * To change this template use File | Settings | File Templates.
  */
-public class LwjglBlueGreenExample {
+public class LwjglInputExample {
     public void start() {
         try {
-            Display.setDisplayMode(new DisplayMode(1920, 1080));
+            Display.setDisplayMode(new DisplayMode(800, 600));
             Display.create();
         } catch (LWJGLException e) {
             e.printStackTrace();
             System.exit(0);
         }
-
-
-
-
-//        System.out.println("OpenGL version: " + (GL_VERSION));
 
         // init OpenGL here
 
@@ -34,11 +29,9 @@ public class LwjglBlueGreenExample {
 
             // render OpenGL here
 
-//            pollInput();
+            pollInput();
             Display.update();
         }
-
-//        GL33.
 
         Display.destroy();
     }

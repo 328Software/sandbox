@@ -20,7 +20,7 @@ public class GraphicsUtilities {
 
 
         int lineNum = 0;
-        BufferedReader reader = new BufferedReader(new FileReader(filename));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(ClassLoader.getSystemResourceAsStream(filename)));
         String line;
         while ((line = reader.readLine()) != null) {
             lineNum++;

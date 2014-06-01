@@ -16,32 +16,32 @@ public class Input {
     private final float posDelta = 0.02f;
     private final float mouseDeltaThresh = 0.000000001f;
 
-    private Matrix4f modelMatrix = null;
-    private Vector3f modelPos = null;
-    private Vector3f modelAngle = null;
-    private Vector3f modelScale = null;
-    private Vector3f cameraPos = null;
-    private Vector3f cameraAngle = null;
+    private Matrix4f modelMatrix;
+    private Vector3f modelPos;
+    private Vector3f modelAngle;
+    private Vector3f modelScale;
+    private Vector3f cameraPos;
+    private Vector3f cameraAngle;
 
     public void init() {
+        modelMatrix = new Matrix4f();
         modelPos = new Vector3f(0, 0, 0);
         modelAngle = new Vector3f(0, 0, 0);
         modelScale = new Vector3f(1, 1, 1);
         cameraPos = new Vector3f(0, 0, -1);
         cameraAngle = new Vector3f(0, 0, 0);
+        Keyboard.enableRepeatEvents(true);
+
     }
 
     public void refreshInput() {
         //-- Input processing
-
-        Keyboard.enableRepeatEvents(true);
-
         Vector3f scaleAddResolution = new Vector3f(scaleDelta, scaleDelta, scaleDelta);
         Vector3f scaleMinusResolution = new Vector3f(-scaleDelta, -scaleDelta,
                 -scaleDelta);
 //
-
-        while(Keyboard.next()/*|| Mouse.isInsideWindow()*/) {
+        Mouse.poll();
+        while(Keyboard.next()||Mouse.next()/*|| Mouse.isInsideWindow()*/) {
             // Only listen to events where the key was pressed (down event)
             if (!Keyboard.getEventKeyState()) continue;
 
@@ -102,16 +102,20 @@ public class Input {
             if (Mouse.getDX()>mouseDeltaThresh) {
                 System.out.println("X:"+Mouse.getDX());
                 cameraAngle.x += rotationDelta;
+                break;
             } else if (Mouse.getDX()<-mouseDeltaThresh) {
                 System.out.println("X:"+Mouse.getDX());
                 cameraAngle.x -= rotationDelta;
+                break;
             }
             if (Mouse.getDY()>mouseDeltaThresh) {
                 System.out.println("Y:"+Mouse.getDY());
                 cameraAngle.y += rotationDelta;
+                break;
             } else if (Mouse.getDY()<-mouseDeltaThresh) {
                 System.out.println("Y:"+Mouse.getDY());
                 cameraAngle.y -= rotationDelta;
+                break;
             }
 
         }

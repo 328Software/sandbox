@@ -1,6 +1,8 @@
 package org.supply.simulator.sandbox;
 
 import org.junit.*;
+import org.supply.simulator.sandbox.examples.Asdf;
+
 import static org.junit.Assert.*;
 
 /**

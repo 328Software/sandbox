@@ -1,4 +1,4 @@
-package org.supply.simulator.sandbox;
+package org.supply.simulator.sandbox.examples;
 
 /**
  * Created with IntelliJ IDEA.

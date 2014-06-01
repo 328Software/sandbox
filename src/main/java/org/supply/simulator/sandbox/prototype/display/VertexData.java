@@ -1,4 +1,4 @@
-package org.supply.simulator.sandbox.quad;
+package org.supply.simulator.sandbox.prototype.display;
 
 public class VertexData {
     // Vertex data
