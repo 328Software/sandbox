@@ -6,6 +6,7 @@ import org.lwjgl.opengl.*;
 import org.lwjgl.util.glu.GLU;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
+import org.supply.simulator.sandbox.prototype.input.Camera;
 import org.supply.simulator.sandbox.prototype.input.Input;
 import org.supply.simulator.sandbox.prototype.util.GraphicsUtilities;
 import org.supply.simulator.sandbox.prototype.util.MathUtilities;
@@ -51,12 +52,15 @@ public class UserDisplay {
     private Matrix4f projectionMatrix = null;
     private Matrix4f viewMatrix = null;
     private Matrix4f modelMatrix = null;
+    private FloatBuffer matrix44Buffer = null;
+
+    //Camera/Quad positional information
     private Vector3f modelPos = null;
     private Vector3f modelAngle = null;
     private Vector3f modelScale = null;
     private Vector3f cameraPos = null;
     private Vector3f cameraAngle = null;
-    private FloatBuffer matrix44Buffer = null;
+
 
 
     //*****Singleton pattern constructor
@@ -117,25 +121,22 @@ public class UserDisplay {
 
     //*****Loop method
     //These methods must be executed in order during each display loop cycle
-    public void receiveInput(Input input) {
-        modelMatrix = input.getModelMatrix();
-        // modelPos = input.getModelPos();
-        modelAngle = input.getModelAngle();
-        modelScale = input.getModelScale();
-        cameraPos = input.getCameraPos();
+    public void receiveInput(Camera input) {
+        modelPos    = input.getModelPos();
+        modelAngle  = input.getModelAngle();
+        modelScale  = input.getModelScale();
+        cameraPos   = input.getCameraPos();
         cameraAngle = input.getCameraAngle();
-
     }
     public void render() {
-
-
         //*****MOVE THE CAMERA********************************
 
         //-- Update matrices
         // Reset view
         viewMatrix = new Matrix4f();
+        modelMatrix = new Matrix4f();
 
-        // Translate camera
+        // Translate and rotate camera
         Matrix4f.translate(cameraPos, viewMatrix, viewMatrix);
         Matrix4f.rotate(cameraAngle.z, new Vector3f(0, 0, 1), viewMatrix, viewMatrix);
         Matrix4f.rotate(cameraAngle.y, new Vector3f(0, 1, 0), viewMatrix, viewMatrix);
@@ -489,6 +490,7 @@ public class UserDisplay {
 
         // Setup view matrix
         viewMatrix = new Matrix4f();
+        modelMatrix = new Matrix4f();
 
         // Create a FloatBuffer with the proper size to store our matrices later
         matrix44Buffer = BufferUtils.createFloatBuffer(16);

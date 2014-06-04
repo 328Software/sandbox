@@ -23,7 +23,7 @@ public class Controller {
             // Update current input from user
             input.refreshInput();
 
-            display.receiveInput(input);
+            display.receiveInput(input.getCamera());
 
             display.render();
 
