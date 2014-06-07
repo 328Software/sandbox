@@ -2,8 +2,6 @@ package org.supply.simulator.sandbox.prototype.input;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
-import org.lwjgl.opengl.GL20;
-import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 
 /**
@@ -11,7 +9,8 @@ import org.lwjgl.util.vector.Vector3f;
  */
 public class Input {
 
-    private final float rotationDelta = 3f;
+    private final float rotationDelta = 0.02f;
+    private final float rotationDelta2 = 3f;
     private final float posDelta = 0.02f;
     private final float mouseDeltaThresh = 0.000000001f;
 
@@ -22,14 +21,13 @@ public class Input {
     private Camera camera;
 
     public void init() {
-        Keyboard.enableRepeatEvents(true);
+        //Keyboard.enableRepeatEvents(true);
         camera = new Camera();
         camera.setModelPos(new Vector3f(0, 0, 0));
         camera.setModelAngle(new Vector3f(0, 0, 0));
         camera.setModelScale(new Vector3f(1, 1, 1));
         camera.setCameraPos(new Vector3f(0, 0, -1));
         camera.setCameraAngle(new Vector3f(0, 0, 0));
-
     }
 
     public void refreshInput() {
@@ -39,7 +37,6 @@ public class Input {
             if (!Keyboard.getEventKeyState()) continue;
 
             switch (Keyboard.getEventKey()) {
-
 
                 case Keyboard.KEY_W:
                     camera.moveNorth(posDelta);
@@ -54,7 +51,6 @@ public class Input {
                     camera.moveWest(posDelta);
                     break;
 
-
                 case Keyboard.KEY_UP:
                     camera.rotateUp(rotationDelta);
                     break;
@@ -66,6 +62,19 @@ public class Input {
                     break;
                 case Keyboard.KEY_LEFT:
                     camera.rotateLeft(rotationDelta);
+                    break;
+
+                case Keyboard.KEY_I:
+                    camera.rotateMUp(rotationDelta2);
+                    break;
+                case Keyboard.KEY_K:
+                    camera.rotateMDown(rotationDelta2);
+                    break;
+                case Keyboard.KEY_L:
+                    camera.rotateMRight(rotationDelta2);
+                    break;
+                case Keyboard.KEY_J:
+                    camera.rotateMLeft(rotationDelta2);
                     break;
             }
         }

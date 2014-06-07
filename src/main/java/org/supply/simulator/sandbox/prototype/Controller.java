@@ -18,14 +18,16 @@ public class Controller {
         input.init();
         display.init();
 
+
+
         while (!display.isCloseRequested()) {
 
             // Update current input from user
             input.refreshInput();
 
-            display.receiveInput(input.getCamera());
+            //display.receiveInput(input.getCamera());
 
-            display.render();
+            //display.render(input.getCamera());
 
         }
 

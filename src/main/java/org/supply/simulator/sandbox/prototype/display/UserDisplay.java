@@ -8,6 +8,7 @@ import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
 import org.supply.simulator.sandbox.prototype.input.Camera;
 import org.supply.simulator.sandbox.prototype.input.Input;
+import org.supply.simulator.sandbox.prototype.util.DebugUtilities;
 import org.supply.simulator.sandbox.prototype.util.GraphicsUtilities;
 import org.supply.simulator.sandbox.prototype.util.MathUtilities;
 
@@ -128,7 +129,7 @@ public class UserDisplay {
         cameraPos   = input.getCameraPos();
         cameraAngle = input.getCameraAngle();
     }
-    public void render() {
+    public void render(Camera input) {
         //*****MOVE THE CAMERA********************************
 
         //-- Update matrices
@@ -137,10 +138,29 @@ public class UserDisplay {
         modelMatrix = new Matrix4f();
 
         // Translate and rotate camera
-        Matrix4f.translate(cameraPos, viewMatrix, viewMatrix);
-        Matrix4f.rotate(cameraAngle.z, new Vector3f(0, 0, 1), viewMatrix, viewMatrix);
-        Matrix4f.rotate(cameraAngle.y, new Vector3f(0, 1, 0), viewMatrix, viewMatrix);
-        Matrix4f.rotate(cameraAngle.x, new Vector3f(1, 0, 0), viewMatrix, viewMatrix);
+
+        if (cameraPos!=input.getCameraPos()) {
+            System.out.println("TRANSLATE");
+            cameraPos   = input.getCameraPos();
+            Matrix4f.translate(cameraPos, viewMatrix, viewMatrix);
+            DebugUtilities.printMatrix4f(viewMatrix);
+        }
+
+        if (cameraAngle!=input.getCameraAngle()) {
+            cameraAngle = input.getCameraAngle();
+            System.out.println("ROTATE Z");
+            Matrix4f.rotate(cameraAngle.z, new Vector3f(0, 0, 1), viewMatrix, viewMatrix);
+            DebugUtilities.printMatrix4f(viewMatrix);
+
+            System.out.println("ROTATE Y");
+            Matrix4f.rotate(cameraAngle.y, new Vector3f(0, 1, 0), viewMatrix, viewMatrix);
+            DebugUtilities.printMatrix4f(viewMatrix);
+
+            System.out.println("ROTATE x");
+            Matrix4f.rotate(cameraAngle.x, new Vector3f(1, 0, 0), viewMatrix, viewMatrix);
+            DebugUtilities.printMatrix4f(viewMatrix);
+        }
+
 
         // Scale, translate and rotate model
         Matrix4f.scale(modelScale, modelMatrix, modelMatrix);
@@ -154,7 +174,6 @@ public class UserDisplay {
 
         // Upload matrices to the uniform variables
         GL20.glUseProgram(pId);
-
         projectionMatrix.store(matrix44Buffer); matrix44Buffer.flip();
         GL20.glUniformMatrix4(projectionMatrixLocation, false, matrix44Buffer);
         viewMatrix.store(matrix44Buffer); matrix44Buffer.flip();
@@ -192,6 +211,7 @@ public class UserDisplay {
             GL20.glDisableVertexAttribArray(1);
             GL30.glBindVertexArray(0);
         }
+
 
         GL20.glUseProgram(0);
 

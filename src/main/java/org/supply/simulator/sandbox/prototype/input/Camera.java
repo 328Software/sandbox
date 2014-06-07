@@ -45,6 +45,23 @@ public class Camera {
     public void rotateRight(float rotationDelta) {
         cameraAngle.y += rotationDelta;
     }
+
+
+    public void rotateMUp(float rotationDelta) {
+        modelAngle.x += rotationDelta;
+    }
+
+    public void rotateMDown(float rotationDelta) {
+        modelAngle.x -= rotationDelta;
+    }
+
+    public void rotateMLeft(float rotationDelta) {
+        modelAngle.y -= rotationDelta;
+    }
+
+    public void rotateMRight(float rotationDelta) {
+        modelAngle.y += rotationDelta;
+    }
     //***** Movement Methods
 
     //*****Setters
