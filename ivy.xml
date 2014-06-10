@@ -28,6 +28,10 @@
             <conf name="test" mapped="default"/>
         </dependency>
 
+        <dependency org="com.carrotsearch" name="junit-benchmarks" rev="0.7.2">
+            <conf name="test" mapped="default"/>
+        </dependency>
+
         <dependency org="org.easymock" name="easymock" rev="3.2">
             <conf name="test" mapped="default"/>
         </dependency>
