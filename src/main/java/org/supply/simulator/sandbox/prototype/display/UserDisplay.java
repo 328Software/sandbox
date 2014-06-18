@@ -31,7 +31,6 @@ public class UserDisplay {
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
 
-
     //Quad variables
     List<QuadIds> quadIdsList;
     private int quadColumns;
@@ -139,27 +138,27 @@ public class UserDisplay {
 
         // Translate and rotate camera
 
-        if (cameraPos!=input.getCameraPos()) {
-            System.out.println("TRANSLATE");
+//        if (cameraPos!=input.getCameraPos()) {
+            //System.out.println("TRANSLATE");
             cameraPos   = input.getCameraPos();
             Matrix4f.translate(cameraPos, viewMatrix, viewMatrix);
-            DebugUtilities.printMatrix4f(viewMatrix);
-        }
+           // DebugUtilities.printMatrix4f(viewMatrix);
+//        }
 
-        if (cameraAngle!=input.getCameraAngle()) {
-            cameraAngle = input.getCameraAngle();
-            System.out.println("ROTATE Z");
+//        if (cameraAngle!=input.getCameraAngle()) {
+           // cameraAngle = input.getCameraAngle();
+        //    System.out.println("ROTATE Z");
             Matrix4f.rotate(cameraAngle.z, new Vector3f(0, 0, 1), viewMatrix, viewMatrix);
-            DebugUtilities.printMatrix4f(viewMatrix);
+          //  DebugUtilities.printMatrix4f(viewMatrix);
 
-            System.out.println("ROTATE Y");
+         //   System.out.println("ROTATE Y");
             Matrix4f.rotate(cameraAngle.y, new Vector3f(0, 1, 0), viewMatrix, viewMatrix);
-            DebugUtilities.printMatrix4f(viewMatrix);
+          //  DebugUtilities.printMatrix4f(viewMatrix);
 
-            System.out.println("ROTATE x");
+      //      System.out.println("ROTATE x");
             Matrix4f.rotate(cameraAngle.x, new Vector3f(1, 0, 0), viewMatrix, viewMatrix);
-            DebugUtilities.printMatrix4f(viewMatrix);
-        }
+         //   DebugUtilities.printMatrix4f(viewMatrix);
+//        }
 
 
         // Scale, translate and rotate model
@@ -174,6 +173,7 @@ public class UserDisplay {
 
         // Upload matrices to the uniform variables
         GL20.glUseProgram(pId);
+
         projectionMatrix.store(matrix44Buffer); matrix44Buffer.flip();
         GL20.glUniformMatrix4(projectionMatrixLocation, false, matrix44Buffer);
         viewMatrix.store(matrix44Buffer); matrix44Buffer.flip();
@@ -204,7 +204,6 @@ public class UserDisplay {
 
             // Draw the vertices
             GL32.glDrawElementsBaseVertex(GL11.GL_TRIANGLES, indicesCount, GL11.GL_UNSIGNED_INT, 0,0);
-
             // Put everything back to default (deselect)
             GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
             GL20.glDisableVertexAttribArray(0);
@@ -376,8 +375,14 @@ public class UserDisplay {
         if(vboiId == null) {
 
             int[] indices = new int[values.size()];
+
+           System.out.println("PRINTING BUFFER INDICES");
             for(int i = 0; i < indices.length;i++) {
                 indices[i] = values.get(i);
+
+                if (i<100) {
+                    System.out.println("  "+indices[i]);
+                }
             }
 
 
@@ -524,6 +529,7 @@ public class UserDisplay {
 
         if (errorValue != GL11.GL_NO_ERROR) {
             String errorString = GLU.gluErrorString(errorValue);
+            System.out.println("ERROR IN:"+setupOpenGL+", MSG:"+errorString);
             if (org.lwjgl.opengl.Display.isCreated()) org.lwjgl.opengl.Display.destroy();
             System.exit(-1);
         }

@@ -5,7 +5,7 @@ import org.lwjgl.util.vector.Vector3f;
 /**
  * Created by Alex on 6/3/2014.
  */
-public class Camera {
+public class  Camera {
     private Vector3f modelPos;
     private Vector3f modelAngle;
     private Vector3f modelScale;

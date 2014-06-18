@@ -21,7 +21,7 @@ public class Input {
     private Camera camera;
 
     public void init() {
-        //Keyboard.enableRepeatEvents(true);
+        Keyboard.enableRepeatEvents(true);
         camera = new Camera();
         camera.setModelPos(new Vector3f(0, 0, 0));
         camera.setModelAngle(new Vector3f(0, 0, 0));

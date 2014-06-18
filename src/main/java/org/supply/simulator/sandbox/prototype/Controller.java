@@ -27,7 +27,7 @@ public class Controller {
 
             //display.receiveInput(input.getCamera());
 
-            //display.render(input.getCamera());
+            display.render(input.getCamera());
 
         }
 
