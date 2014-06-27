@@ -7,6 +7,15 @@ import java.util.Map;
  */
 public class BusinessDaoImplementation extends BusinessLayerAbstract implements BusinessLayerContract {
 
+
+//    public Chunk findByLocation(x,y) {
+//        Query q = sessionFactory.getCurrentSession().createQuery("select * from Chunk as o where o.x = ? and o.y = ?");
+//        q.addParameter(x);
+//        q.addParameter(y);
+//        return (Chunk) q.uniqueResult();
+//    }
+
+
     //
     private Map<String,Object> mapInsteadOfDAO;
 
