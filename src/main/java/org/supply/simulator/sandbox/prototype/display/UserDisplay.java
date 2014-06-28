@@ -486,6 +486,7 @@ public class UserDisplay {
         viewMatrixLocation = GL20.glGetUniformLocation(pId, "viewMatrix");
         modelMatrixLocation = GL20.glGetUniformLocation(pId, "modelMatrix");
 
+        System.out.println("666VIEWMATRIX");
         System.out.println(projectionMatrixLocation);
         System.out.println(viewMatrixLocation);
         System.out.println(modelMatrixLocation );

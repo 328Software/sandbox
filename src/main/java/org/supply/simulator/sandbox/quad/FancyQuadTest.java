@@ -1,5 +1,7 @@
 package org.supply.simulator.sandbox.quad;
 
+import org.lwjgl.util.vector.Matrix4f;
+
 public class FancyQuadTest {
 //    // Entry point for the application
 //    public static void main(String[] args) {
