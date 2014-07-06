@@ -11,6 +11,7 @@ import org.supply.simulator.sandbox.prototype.input.Input;
 import org.supply.simulator.sandbox.prototype.util.DebugUtilities;
 import org.supply.simulator.sandbox.prototype.util.GraphicsUtilities;
 import org.supply.simulator.sandbox.prototype.util.MathUtilities;
+import org.supply.simulator.sandbox.prototype.util.MyDebugger;
 
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
@@ -368,6 +369,7 @@ public class UserDisplay {
                 }
             }
         }
+
         verticesFloatBuffer.flip();
         verticesByteBuffer.flip();
 
@@ -380,15 +382,16 @@ public class UserDisplay {
             for(int i = 0; i < indices.length;i++) {
                 indices[i] = values.get(i);
 
-                if (i<100) {
-                    System.out.println("  "+indices[i]);
-                }
+//                if (i<100) {
+//                    System.out.println("  "+indices[i]);
+//                }
             }
 
 
             indicesCount = indices.length;
             IntBuffer indicesBuffer = BufferUtils.createIntBuffer(indicesCount);
             indicesBuffer.put(indices);
+
             indicesBuffer.flip();
 
             vboiId = GL15.glGenBuffers();
@@ -441,6 +444,12 @@ public class UserDisplay {
         modelScale = new Vector3f(1, 1, 1);
         cameraPos = new Vector3f(0, 0, -1);
         cameraAngle = new Vector3f(0, 0, 0);
+
+        MyDebugger.printColorBuffer(colorVboId,quadRows,quadColumns);
+        MyDebugger.printPositionsBuffer(vboId,quadRows,quadColumns);
+        MyDebugger.printIndicesBuffer(vboiId,quadRows,quadColumns);
+
+
 
         this.exitOnGLError("setupQuads");
     }

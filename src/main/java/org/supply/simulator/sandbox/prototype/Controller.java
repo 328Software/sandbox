@@ -12,7 +12,7 @@ public class Controller {
         UserDisplay display = UserDisplay.instance();
 
 
-        display.setQuadRowsCols(1000, 1000);
+        display.setQuadRowsCols(100, 100);
         Input input = new Input();
 
         input.init();
