@@ -1,13 +1,16 @@
-package org.supply.simulator.sandbox.prototype.input;
+package org.supply.simulator.sandbox.alexonly;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
+import org.lwjgl.opengl.Display;
 import org.lwjgl.util.vector.Vector3f;
+import org.supply.simulator.sandbox.prototype.input.Camera;
 
 /**
- * Created by Alex on 6/1/2014.
+ * Created by Alex on 7/10/2014.
  */
-public class Input {
+public class MouseTest {
+    private Camera camera;
 
     private final float rotationDelta = 0.02f;
     private final float rotationDelta2 = 3f;
@@ -18,9 +21,7 @@ public class Input {
     private final Vector3f scaleAddResolution = new Vector3f(scaleDelta, scaleDelta, scaleDelta);
     private final Vector3f scaleMinusResolution = new Vector3f(-scaleDelta, -scaleDelta,-scaleDelta);
 
-    private Camera camera;
-
-    public void init() {
+    public void run() {
         Keyboard.enableRepeatEvents(true);
         camera = new Camera();
         camera.setModelPos(new Vector3f(0, 0, 0));
@@ -28,10 +29,25 @@ public class Input {
         camera.setModelScale(new Vector3f(1, 1, 1));
         camera.setCameraPos(new Vector3f(0, 0, -1));
         camera.setCameraAngle(new Vector3f(0, 0, 0));
+        while(!Display.isCloseRequested()) {
+            go();
+            Display.sync(60);
+
+            Display.update();
+        }
     }
 
-    public void refreshInput() {
+    private void go() {
         Mouse.poll();
+        System.out.println("MOUSE XY: " + Mouse.getX() + ", "+ Mouse.getY());
+
+
+
+
+        //doKeyboard();
+    }
+
+    private void doKeyboard() {
         while(Keyboard.next()/*||Mouse.next()|| Mouse.isInsideWindow()*/) {
             // Only listen to events where the key was pressed (down event)
             if (!Keyboard.getEventKeyState()) continue;
@@ -80,10 +96,5 @@ public class Input {
         }
     }
 
-    //*****Getters
-    public Camera getCamera() {
-        return this.camera;
-    }
-    //*****Getters
 
 }

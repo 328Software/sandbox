@@ -40,7 +40,7 @@ public class LwjglTest {
 
     @Test
     public void testPrototype() {
-        new Controller();
+        //new Controller();
     }
 
 //    @Test
