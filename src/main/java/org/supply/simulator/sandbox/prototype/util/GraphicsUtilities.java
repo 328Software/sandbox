@@ -48,7 +48,7 @@ public class GraphicsUtilities {
 
         try {
             // Open the PNG file as an InputStream
-            InputStream in = new FileInputStream(filename);
+            InputStream in = ClassLoader.getSystemResourceAsStream(filename);
             // Link the PNG decoder to this stream
             PNGDecoder decoder = new PNGDecoder(in);
 

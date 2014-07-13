@@ -13,6 +13,7 @@ import org.supply.simulator.sandbox.prototype.util.GraphicsUtilities;
 import org.supply.simulator.sandbox.prototype.util.MathUtilities;
 import org.supply.simulator.sandbox.prototype.util.MyDebugger;
 
+
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
@@ -31,6 +32,9 @@ public class UserDisplay {
     private static final String WINDOW_TITLE = "The Quad: Moving";
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
+
+    private static final int textureWidth = 620;
+    private static final int textureHeight = 539;
 
     //Quad variables
     List<QuadIds> quadIdsList;
@@ -62,6 +66,9 @@ public class UserDisplay {
     private Vector3f cameraPos = null;
     private Vector3f cameraAngle = null;
 
+    //Texture variables
+    int frameBufferId;
+    int depthBufferId;
 
 
     //*****Singleton pattern constructor
@@ -114,10 +121,17 @@ public class UserDisplay {
             System.out.println("setupShaders failed");
         }
 
+        try {
+            this.setupTexture();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("setupTexture failed");
+        }
+
         this.setupMatrices();
 
     }
-    //*****Init
+
 
 
     //*****Loop method
@@ -192,6 +206,12 @@ public class UserDisplay {
 
         GL20.glUseProgram(pId);
 
+//        EXTFramebufferObject.glBindFramebufferEXT( EXTFramebufferObject.GL_FRAMEBUFFER_EXT, frameBufferId);
+        //GL11.glPushAttrib(GL11.GL_VIEWPORT_BIT);
+//        GL11.glViewport( 0, 0, textureWidth, textureHeight);
+//        GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
+
+
         for(QuadIds ids: quadIdsList) {
             int vaoId = ids.getVaoId();
             int vboiId = ids.getVboiId();
@@ -211,6 +231,9 @@ public class UserDisplay {
             GL20.glDisableVertexAttribArray(1);
             GL30.glBindVertexArray(0);
         }
+
+//        EXTFramebufferObject.glBindFramebufferEXT( EXTFramebufferObject.GL_FRAMEBUFFER_EXT, 0);
+        //GL11.glPopAttrib();
 
 
         GL20.glUseProgram(0);
@@ -445,9 +468,9 @@ public class UserDisplay {
         cameraPos = new Vector3f(0, 0, -1);
         cameraAngle = new Vector3f(0, 0, 0);
 
-        MyDebugger.printColorBuffer(colorVboId,quadRows,quadColumns);
-        MyDebugger.printPositionsBuffer(vboId,quadRows,quadColumns);
-        MyDebugger.printIndicesBuffer(vboiId,quadRows,quadColumns);
+//        MyDebugger.printColorBuffer(colorVboId,quadRows,quadColumns);
+//        MyDebugger.printPositionsBuffer(vboId,quadRows,quadColumns);
+//        MyDebugger.printIndicesBuffer(vboiId,quadRows,quadColumns);
 
 
 
@@ -544,6 +567,57 @@ public class UserDisplay {
             System.exit(-1);
         }
     }
+
+
+    private void setupTexture() {
+
+//        //create frame and depth buffer
+//        frameBufferId = EXTFramebufferObject.glGenFramebuffersEXT();
+//        depthBufferId = EXTFramebufferObject.glGenRenderbuffersEXT();
+//
+//        //Bind frame buffer
+//        EXTFramebufferObject.glBindFramebufferEXT(EXTFramebufferObject.GL_FRAMEBUFFER_EXT,frameBufferId);
+//
+//        //create texture
+//        int textureId = 0;
+//        try {
+//            textureId = GraphicsUtilities.loadPNGTexture("texture/alexsface.png",GL13.GL_TEXTURE0);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        //Attach texture to framebuffer
+//        EXTFramebufferObject.glFramebufferTexture2DEXT(EXTFramebufferObject.GL_FRAMEBUFFER_EXT,
+//                EXTFramebufferObject.GL_DEPTH_ATTACHMENT_EXT,
+//                GL11.GL_TEXTURE_2D,textureId,0);
+//
+//        //bind depth buffer
+//        EXTFramebufferObject.glBindRenderbufferEXT(EXTFramebufferObject.GL_RENDERBUFFER_EXT,depthBufferId);
+//
+//        //Alloc depth buffer space
+//        EXTFramebufferObject.glRenderbufferStorageEXT(EXTFramebufferObject.GL_RENDERBUFFER_EXT,
+//                GL14.GL_DEPTH_COMPONENT24, textureWidth, textureHeight);
+//
+//        // bind to renderbuffer
+//        EXTFramebufferObject.glFramebufferRenderbufferEXT(EXTFramebufferObject.GL_FRAMEBUFFER_EXT
+//                ,EXTFramebufferObject.GL_DEPTH_ATTACHMENT_EXT
+//                ,EXTFramebufferObject.GL_RENDERBUFFER_EXT
+//                , depthBufferId);
+//
+//        EXTFramebufferObject.glBindFramebufferEXT(EXTFramebufferObject.GL_FRAMEBUFFER_EXT,0);
+//
+//        if(EXTFramebufferObject.glCheckFramebufferStatusEXT(EXTFramebufferObject.GL_FRAMEBUFFER_EXT)
+//                ==EXTFramebufferObject.GL_FRAMEBUFFER_COMPLETE_EXT) {
+//            System.out.println("Framebuffer complete");
+//        } else {
+//            System.out.println("Framebuffer failed");
+//        }
+
+
+
+
+    }
+    //*****Init
 
     //***** Private utility functions
 

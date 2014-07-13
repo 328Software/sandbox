@@ -1,5 +1,6 @@
 package org.supply.simulator.sandbox;
 
+import org.supply.simulator.sandbox.alexonly.OtherBuffers;
 import org.supply.simulator.sandbox.prototype.Controller;
 import org.supply.simulator.sandbox.quad.FancierQuadTest;
 import org.junit.Before;
@@ -37,10 +38,16 @@ public class LwjglTest {
 //    public void testQuadGL30() {
 //        new QuadGL30Example();
 //    }
+//
+//    @Test
+//    public void testPrototype() {
+//        new Controller();
+//    }
 
     @Test
-    public void testPrototype() {
-        //new Controller();
+    public void testOtherBuffers() {
+        OtherBuffers b = new OtherBuffers();
+        b.run();
     }
 
 //    @Test

@@ -14,29 +14,29 @@ public class MouseTestTest {
     @Test
     public void testMouse () {
 
-        try {
-            PixelFormat pixelFormat = new PixelFormat();
-            ContextAttribs contextAtrributes = new ContextAttribs(3, 2)
-                    .withForwardCompatible(true)
-                    .withProfileCore(true);
-
-            org.lwjgl.opengl.Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
-            org.lwjgl.opengl.Display.setTitle("MOuseTety");
-            org.lwjgl.opengl.Display.create(pixelFormat, contextAtrributes);
-
-            GL11.glViewport(0, 0, WIDTH, HEIGHT);
-        } catch (LWJGLException e) {
-        }
-
-        GL11.glClearColor(130f / 255f, 208f / 255f, 157f / 255f, 0f);
-
-        GL11.glViewport(0, 0, WIDTH, HEIGHT);
-
-
-        MouseTest mouseTest = new MouseTest();
-        mouseTest.run();
-
-        Display.destroy();
+//        try {
+//            PixelFormat pixelFormat = new PixelFormat();
+//            ContextAttribs contextAtrributes = new ContextAttribs(3, 2)
+//                    .withForwardCompatible(true)
+//                    .withProfileCore(true);
+//
+//            org.lwjgl.opengl.Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
+//            org.lwjgl.opengl.Display.setTitle("MOuseTety");
+//            org.lwjgl.opengl.Display.create(pixelFormat, contextAtrributes);
+//
+//            GL11.glViewport(0, 0, WIDTH, HEIGHT);
+//        } catch (LWJGLException e) {
+//        }
+//
+//        GL11.glClearColor(130f / 255f, 208f / 255f, 157f / 255f, 0f);
+//
+//        GL11.glViewport(0, 0, WIDTH, HEIGHT);
+//
+//
+//        MouseTest mouseTest = new MouseTest();
+//        mouseTest.run();
+//
+//        Display.destroy();
 
     }
 
