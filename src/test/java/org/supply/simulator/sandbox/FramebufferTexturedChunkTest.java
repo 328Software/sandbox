@@ -4,10 +4,10 @@ import de.matthiasmann.twl.utils.PNGDecoder;
 import org.junit.Before;
 import org.junit.Test;
 import org.lwjgl.opengl.*;
-import org.supply.simulator.display.shader.ShaderEngine;
-import org.supply.simulator.display.shader.ShaderProgramType;
-import org.supply.simulator.display.shader.ShaderType;
-import org.supply.simulator.display.shader.impl.BasicShaderEngine;
+import org.supply.simulator.display.assetengine.shader.ShaderEngine;
+import org.supply.simulator.display.assetengine.shader.ShaderProgramType;
+import org.supply.simulator.display.assetengine.shader.ShaderType;
+import org.supply.simulator.display.assetengine.shader.impl.BasicShaderEngine;
 import org.supply.simulator.display.window.Camera;
 import org.supply.simulator.sandbox.mockdisplay.MockCamera;
 import org.supply.simulator.sandbox.mockdisplay.MockDisplayCore;
@@ -45,19 +45,17 @@ public class FramebufferTexturedChunkTest {
         MockDisplayCore.build("FramebufferTexturedChunkTest");
 
         shaderEngine = new BasicShaderEngine();
-        shaderEngine.setPlayShaderFile("shaders/vertexWithTexture.glsl", ShaderType.VERTEX);
-        shaderEngine.setPlayShaderFile("shaders/fragmentsWithTexture.glsl", ShaderType.FRAGMENT);
+        shaderEngine.setShaderFile("shaders/vertexWithTexture.glsl", ShaderType.VERTEX, ShaderProgramType.PLAY);
+        shaderEngine.setShaderFile("shaders/fragmentsWithTexture.glsl", ShaderType.FRAGMENT, ShaderProgramType.PLAY);
 
         camera = new MockCamera();
 
         manager = new TexturedChunkManager();
         manager.setChunkSizes(20,20,1,1);
 
-
-        shaderEngine.createProgram(ShaderProgramType.PLAY);
-        camera.setProjectionMatrixLocation(shaderEngine.getProjectionMatrixLocation(ShaderProgramType.PLAY));
-        camera.setModelMatrixLocation(shaderEngine.getModelMatrixLocation(ShaderProgramType.PLAY));
-        camera.setViewMatrixLocation(shaderEngine.getViewMatrixLocation(ShaderProgramType.PLAY));
+        camera.setProjectionMatrixLocation(shaderEngine.get(ShaderProgramType.PLAY).getProjectionMatrixLocation());
+        camera.setModelMatrixLocation(shaderEngine.get(ShaderProgramType.PLAY).getModelMatrixLocation());
+        camera.setViewMatrixLocation(shaderEngine.get(ShaderProgramType.PLAY).getViewMatrixLocation());
 
 
         camera.build();
@@ -79,12 +77,12 @@ public class FramebufferTexturedChunkTest {
 
 
             // Set shader program type to VIEW
-            shaderEngine.useProgram(ShaderProgramType.PLAY);
+            GL20.glUseProgram(shaderEngine.get(ShaderProgramType.PLAY).getProgramId());
 
             camera.render();
 
             // Clear shader program type
-            shaderEngine.useProgram(ShaderProgramType.CLEAR);
+            GL20.glUseProgram(0);
 
             EXTFramebufferObject.glBindFramebufferEXT(EXTFramebufferObject.GL_FRAMEBUFFER_EXT, 0);
 
@@ -93,7 +91,7 @@ public class FramebufferTexturedChunkTest {
             GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);
 
             // Set shader program type t o CHUNK
-            shaderEngine.useProgram(ShaderProgramType.PLAY);
+            GL20.glUseProgram(shaderEngine.get(ShaderProgramType.PLAY).getProgramId());
 
             GL13.glActiveTexture(GL13.GL_TEXTURE0);
             GL11.glBindTexture(GL11.GL_TEXTURE_2D, textureId);
@@ -105,7 +103,7 @@ public class FramebufferTexturedChunkTest {
             {
                 it.next().render();
             }
-            shaderEngine.useProgram(ShaderProgramType.CLEAR);
+            GL20.glUseProgram(0);
 
 
 
@@ -113,8 +111,8 @@ public class FramebufferTexturedChunkTest {
         }
 
         manager.clear();
-        shaderEngine.useProgram(ShaderProgramType.CLEAR);
-        shaderEngine.deleteProgram(ShaderProgramType.PLAY);
+        GL20.glUseProgram(0);
+        GL20.glDeleteProgram(shaderEngine.get(ShaderProgramType.PLAY).getProgramId());
         MockDisplayCore.destroy();
     }
 

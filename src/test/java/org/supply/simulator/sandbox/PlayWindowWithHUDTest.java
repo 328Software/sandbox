@@ -3,9 +3,9 @@ package org.supply.simulator.sandbox;
 import org.junit.Before;
 import org.junit.Test;
 import org.lwjgl.opengl.Display;
-import org.supply.simulator.display.shader.ShaderProgramType;
-import org.supply.simulator.display.shader.ShaderType;
-import org.supply.simulator.display.shader.impl.BasicShaderEngine;
+import org.supply.simulator.display.assetengine.shader.ShaderProgramType;
+import org.supply.simulator.display.assetengine.shader.ShaderType;
+import org.supply.simulator.display.assetengine.shader.impl.BasicShaderEngine;
 import org.supply.simulator.display.window.impl.BasicPlayWindow;
 import org.supply.simulator.sandbox.mockdisplay.MockCamera;
 import org.supply.simulator.sandbox.mockdisplay.MockChunkManager;
@@ -17,6 +17,7 @@ import org.supply.simulator.sandbox.mockdisplay.MockDisplayCore;
 public class PlayWindowWithHUDTest {
 
     private BasicPlayWindow window;
+
 
     @Before
     public void create() {
