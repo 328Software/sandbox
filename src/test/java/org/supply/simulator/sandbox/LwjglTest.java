@@ -46,8 +46,8 @@ public class LwjglTest {
 
     @Test
     public void testOtherBuffers() {
-        OtherBuffers b = new OtherBuffers();
-        b.run();
+//        OtherBuffers b = new OtherBuffers();
+//        b.run();
     }
 
 //    @Test
