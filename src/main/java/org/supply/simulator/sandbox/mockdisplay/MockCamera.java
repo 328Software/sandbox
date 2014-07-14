@@ -1,4 +1,4 @@
-package org.supply.simulator.sandbox.texture;
+package org.supply.simulator.sandbox.mockdisplay;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;

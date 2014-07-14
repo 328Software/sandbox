@@ -1,4 +1,4 @@
-package org.supply.simulator.sandbox.texture;
+package org.supply.simulator.sandbox.mockdisplay;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

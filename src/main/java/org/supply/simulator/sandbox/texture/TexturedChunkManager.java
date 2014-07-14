@@ -6,6 +6,7 @@ import org.supply.simulator.display.manager.chunk.impl.BasicChunkData;
 import org.supply.simulator.display.manager.chunk.impl.BasicChunkIndexManager;
 import org.supply.simulator.display.manager.chunk.impl.FloatPositionByteColorChunkData;
 import org.supply.simulator.display.window.Camera;
+import org.supply.simulator.sandbox.mockdisplay.VertexData;
 
 import java.util.ArrayList;
 import java.util.List;

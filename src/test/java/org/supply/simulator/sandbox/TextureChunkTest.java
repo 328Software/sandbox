@@ -12,8 +12,8 @@ import org.supply.simulator.display.shader.ShaderProgramType;
 import org.supply.simulator.display.shader.ShaderType;
 import org.supply.simulator.display.shader.impl.BasicShaderEngine;
 import org.supply.simulator.display.window.Camera;
-import org.supply.simulator.sandbox.texture.MockCamera;
-import org.supply.simulator.sandbox.texture.MockDisplayCore;
+import org.supply.simulator.sandbox.mockdisplay.MockCamera;
+import org.supply.simulator.sandbox.mockdisplay.MockDisplayCore;
 import org.supply.simulator.sandbox.texture.TexturedChunk;
 import org.supply.simulator.sandbox.texture.TexturedChunkManager;
 

@@ -1,4 +1,4 @@
-package org.supply.simulator.sandbox.texture;
+package org.supply.simulator.sandbox.mockdisplay;
 
 /**
  * Created by Alex on 6/29/2014.
