@@ -4,13 +4,15 @@ import de.matthiasmann.twl.utils.PNGDecoder;
 import org.junit.Before;
 import org.junit.Test;
 import org.lwjgl.opengl.*;
+import org.supply.simulator.display.assetengine.indices.ChunkType;
+import org.supply.simulator.display.assetengine.indices.impl.BasicChunkIndexHandle;
 import org.supply.simulator.display.assetengine.shader.ShaderEngine;
+import org.supply.simulator.display.assetengine.shader.ShaderHandle;
 import org.supply.simulator.display.assetengine.shader.ShaderProgramType;
-import org.supply.simulator.display.assetengine.shader.ShaderType;
-import org.supply.simulator.display.assetengine.shader.impl.BasicShaderEngine;
 import org.supply.simulator.display.window.Camera;
 import org.supply.simulator.sandbox.mockdisplay.MockCamera;
 import org.supply.simulator.sandbox.mockdisplay.MockDisplayCore;
+import org.supply.simulator.sandbox.mockdisplay.MockShaderEngine;
 import org.supply.simulator.sandbox.texture.TexturedChunk;
 import org.supply.simulator.sandbox.texture.TexturedChunkManager;
 
@@ -23,14 +25,14 @@ import java.util.Iterator;
  * Created by Alex on 6/28/2014.
  */
 public class FramebufferTexturedChunkTest {
+    private final ChunkType chunkType = ChunkType.MEDIUM_T;
 
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
 
     private TexturedChunkManager manager;
     private Camera camera;
-    private ShaderEngine shaderEngine;
-
+    private MockShaderEngine<ShaderProgramType,ShaderHandle> shaderEngine;
     //Texture variables
     private int frameBufferId;
     private int depthBufferId;
@@ -44,14 +46,14 @@ public class FramebufferTexturedChunkTest {
     public void create() {
         MockDisplayCore.build("FramebufferTexturedChunkTest");
 
-        shaderEngine = new BasicShaderEngine();
-        shaderEngine.setShaderFile("shaders/vertexWithTexture.glsl", ShaderType.VERTEX, ShaderProgramType.PLAY);
-        shaderEngine.setShaderFile("shaders/fragmentsWithTexture.glsl", ShaderType.FRAGMENT, ShaderProgramType.PLAY);
+        shaderEngine = new MockShaderEngine();
+        shaderEngine.set(ShaderProgramType.PLAY,"shaders/vertexWithTexture.glsl");
+        shaderEngine.set(ShaderProgramType.PLAY,"shaders/fragmentsWithTexture.glsl");
 
         camera = new MockCamera();
 
         manager = new TexturedChunkManager();
-        manager.setChunkSizes(20,20,1,1);
+        manager.setChunkSizes(ChunkType.MEDIUM_T.rows(),ChunkType.MEDIUM_T.columns(),1,1);
 
         camera.setProjectionMatrixLocation(shaderEngine.get(ShaderProgramType.PLAY).getProjectionMatrixLocation());
         camera.setModelMatrixLocation(shaderEngine.get(ShaderProgramType.PLAY).getModelMatrixLocation());

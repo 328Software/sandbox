@@ -58,9 +58,9 @@
         </dependency>
 
         <dependency org="org.l33tlabs.twl" name="pngdecoder" rev="1.0">
-        <conf name="default" mapped="default"/>
-        <conf name="runtime" mapped="runtime"/>
-    </dependency>
+            <conf name="default" mapped="default"/>
+            <conf name="runtime" mapped="runtime"/>
+        </dependency>
 
         <dependency org="org.apache.commons" name="commons-math" rev="2.2">
             <conf name="default" mapped="default"/>

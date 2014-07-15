@@ -5,12 +5,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.lwjgl.opengl.*;
 import org.supply.simulator.display.assetengine.shader.ShaderEngine;
+import org.supply.simulator.display.assetengine.shader.ShaderHandle;
 import org.supply.simulator.display.assetengine.shader.ShaderProgramType;
 import org.supply.simulator.display.assetengine.shader.ShaderType;
 import org.supply.simulator.display.assetengine.shader.impl.BasicShaderEngine;
 import org.supply.simulator.display.window.Camera;
 import org.supply.simulator.sandbox.mockdisplay.MockCamera;
 import org.supply.simulator.sandbox.mockdisplay.MockDisplayCore;
+import org.supply.simulator.sandbox.mockdisplay.MockShaderEngine;
 import org.supply.simulator.sandbox.texture.TexturedChunk;
 import org.supply.simulator.sandbox.texture.TexturedChunkManager;
 
@@ -29,7 +31,7 @@ public class TextureChunkTest {
 
     private TexturedChunkManager manager;
     private Camera camera;
-    private ShaderEngine shaderEngine;
+    private MockShaderEngine<ShaderProgramType,ShaderHandle> shaderEngine;
 
     //Texture variables
     private int textureId;
@@ -42,11 +44,9 @@ public class TextureChunkTest {
     public void create() {
         MockDisplayCore.build("TextureChunkTest");
 
-        shaderEngine = new BasicShaderEngine();
-//        shaderEngine.setPlayShaderFile("shaders/vertexWithTexture.glsl", ShaderType.VERTEX);
-//        shaderEngine.setPlayShaderFile("shaders/fragmentsWithTexture.glsl", ShaderType.FRAGMENT);
-        shaderEngine.setShaderFile("shaders/vertexWithTexture.glsl", ShaderType.VERTEX, ShaderProgramType.PLAY);
-        shaderEngine.setShaderFile("shaders/fragmentsWithTexture.glsl", ShaderType.FRAGMENT, ShaderProgramType.PLAY);
+        shaderEngine = new MockShaderEngine();
+        shaderEngine.set(ShaderProgramType.PLAY,"shaders/vertexWithTexture.glsl");
+        shaderEngine.set(ShaderProgramType.PLAY,"shaders/fragmentsWithTexture.glsl");
         camera = new MockCamera();
 
         manager = new TexturedChunkManager();

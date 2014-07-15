@@ -3,12 +3,15 @@ package org.supply.simulator.sandbox.texture;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.*;
 import org.supply.simulator.data.HasId;
+import org.supply.simulator.display.assetengine.indices.ChunkIndexEngine;
+import org.supply.simulator.display.assetengine.indices.ChunkIndexHandle;
+import org.supply.simulator.display.assetengine.indices.ChunkType;
 import org.supply.simulator.display.manager.chunk.Chunk;
 import org.supply.simulator.display.manager.chunk.ChunkData;
-import org.supply.simulator.display.manager.chunk.ChunkIndexManager;
 import org.supply.simulator.display.manager.chunk.impl.BasicChunkData;
 import org.supply.simulator.display.supplyrenderable.AbstractChunkSupplyRenderable;
 import org.supply.simulator.display.supplyrenderable.ChunkSupplyRenderable;
+import org.supply.simulator.sandbox.mockdisplay.MockChunkIndexEngine;
 
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
@@ -20,7 +23,7 @@ import java.util.List;
  */
 public class TexturedChunk
         extends AbstractChunkSupplyRenderable
-        implements Chunk, ChunkSupplyRenderable, HasId<Long> {
+        implements Chunk<ChunkData<float[], byte[]>>, ChunkSupplyRenderable, HasId<Long> {
 
     protected Long id;
 
@@ -29,13 +32,14 @@ public class TexturedChunk
     private boolean isBuilt;
     private boolean isDestroyed;
 
-    private ChunkIndexManager indexManager;
+    private ChunkIndexEngine<ChunkType,ChunkIndexHandle> indexManager;
 
-    private ChunkData<List<Float>,List<Byte>> data;
+    private ChunkData<float[], byte[]> data;
 
     public TexturedChunk () {
         isBuilt =false;
         isDestroyed=true;
+        indexManager = new MockChunkIndexEngine();
     }
 
     @Override
@@ -43,27 +47,28 @@ public class TexturedChunk
         rows = data.getRows();
         columns = data.getColumns();
 
-        if (!indexManager.isIndicesBufferIdStored(rows,columns)) {
-
-            List<Integer> indicesBufferData = indexManager.createIndicesBufferData(2, 2);
-
-
-            IntBuffer indicesBuffer = BufferUtils.createIntBuffer(indicesBufferData.size());
-            for(Integer i: indicesBufferData) {
-                indicesBuffer.put(i);
-            }
-
-            indicesBuffer.flip();
-
-            indicesBufferId = GL15.glGenBuffers();
-            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBufferId);
-            GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBuffer, GL15.GL_STATIC_DRAW);
-            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
-
-            indexManager.storeIndicesBufferId(rows,columns,indicesBufferId);
-        } else {
-            indicesBufferId = indexManager.getIndicesBufferId(rows,columns);
-        }
+        indicesBufferId = indexManager.get(ChunkType.MEDIUM_T).getIndicesId();
+//        if (!indexManager.isIndicesBufferIdStored(rows,columns)) {
+//
+//            List<Integer> indicesBufferData = indexManager.createIndicesBufferData(2, 2);
+//
+//
+//            IntBuffer indicesBuffer = BufferUtils.createIntBuffer(indicesBufferData.size());
+//            for(Integer i: indicesBufferData) {
+//                indicesBuffer.put(i);
+//            }
+//
+//            indicesBuffer.flip();
+//
+//            indicesBufferId = GL15.glGenBuffers();
+//            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBufferId);
+//            GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBuffer, GL15.GL_STATIC_DRAW);
+//            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
+//
+//            indexManager.storeIndicesBufferId(rows,columns,indicesBufferId);
+//        } else {
+//            indicesBufferId = indexManager.getIndicesBufferId(rows,columns);
+//        }
 
 
         vertexAttributesId = GL30.glGenVertexArrays();
@@ -73,10 +78,10 @@ public class TexturedChunk
         positionsArrayId = GL15.glGenBuffers();
         colorsArrayId = GL15.glGenBuffers();
 
-        FloatBuffer verticesFloatBuffer = BufferUtils.createFloatBuffer(data.getPositions().size());
-        for(Float f: data.getPositions()) {
-            verticesFloatBuffer.put(f);
-        }
+        FloatBuffer verticesFloatBuffer = BufferUtils.createFloatBuffer(data.getPositions().length);
+//        for(Float f: data.getPositions()) {
+            verticesFloatBuffer.put(data.getPositions());
+//        }
         verticesFloatBuffer.flip();
 
         GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, positionsArrayId);
@@ -91,10 +96,10 @@ public class TexturedChunk
                 BasicChunkData.TEXTURE_BYTE_OFFSET);
 
 
-        ByteBuffer verticesByteBuffer = BufferUtils.createByteBuffer(data.getColors().size());
-        for(Byte b: data.getColors()) {
-            verticesByteBuffer.put(b);
-        }
+        ByteBuffer verticesByteBuffer = BufferUtils.createByteBuffer(data.getColors().length);
+//        for(Byte b: data.getColors()) {
+            verticesByteBuffer.put(data.getColors());
+//        }
         verticesByteBuffer.flip();
 
         GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, colorsArrayId);
@@ -171,17 +176,17 @@ public class TexturedChunk
     }
 
     @Override
-    public ChunkData<List<Float>, List<Byte>> getData() {
+    public ChunkData<float[], byte[]> getData() {
         return data;
     }
 
     @Override
-    public void setIndexManager(ChunkIndexManager indexManager) {
+    public void setChunkIndexEngine(ChunkIndexEngine indexManager) {
         this.indexManager = indexManager;
     }
 
     @Override
-    public void setData(ChunkData<List<Float>, List<Byte>> data) {
+    public void setData(ChunkData<float[], byte[]> data) {
         this.data=data;
     }
 
