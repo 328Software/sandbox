@@ -39,10 +39,10 @@ public class LwjglTest {
 //        new QuadGL30Example();
 //    }
 //
-//    @Test
-//    public void testPrototype() {
-//        new Controller();
-//    }
+    @Test
+    public void testPrototype() {
+        new Controller();
+    }
 
     @Test
     public void testOtherBuffers() {
