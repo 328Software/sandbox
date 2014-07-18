@@ -1,12 +1,12 @@
 package org.supply.simulator.sandbox.texture;
 
-import org.supply.simulator.display.supplyrenderable.AbstractChunkSupplyRenderable;
-import org.supply.simulator.display.supplyrenderable.ChunkSupplyRenderable;
+import org.supply.simulator.display.renderable.ChunkRenderable;
+import org.supply.simulator.display.renderable.AbstractChunkRenderable;
 
 /**
  * Created by Alex on 7/13/2014.
  */
-public class GUIMenu extends AbstractChunkSupplyRenderable implements ChunkSupplyRenderable {
+public class GUIMenu extends AbstractChunkRenderable implements ChunkRenderable {
     private boolean isBuilt;
     private boolean isDestroyed;
 

@@ -8,22 +8,20 @@ import org.supply.simulator.display.assetengine.indices.ChunkIndexHandle;
 import org.supply.simulator.display.assetengine.indices.ChunkType;
 import org.supply.simulator.display.manager.chunk.Chunk;
 import org.supply.simulator.display.manager.chunk.ChunkData;
+import org.supply.simulator.display.renderable.ChunkRenderable;
 import org.supply.simulator.display.manager.chunk.impl.BasicChunkData;
-import org.supply.simulator.display.supplyrenderable.AbstractChunkSupplyRenderable;
-import org.supply.simulator.display.supplyrenderable.ChunkSupplyRenderable;
+import org.supply.simulator.display.renderable.AbstractChunkRenderable;
 import org.supply.simulator.sandbox.mockdisplay.MockChunkIndexEngine;
 
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
-import java.nio.IntBuffer;
-import java.util.List;
 
 /**
  * Created by Alex on 7/13/2014.
  */
 public class TexturedChunk
-        extends AbstractChunkSupplyRenderable
-        implements Chunk<ChunkData<float[], byte[]>>, ChunkSupplyRenderable, HasId<Long> {
+        extends AbstractChunkRenderable
+        implements Chunk<ChunkData<float[], byte[]>>, ChunkRenderable, HasId<Long> {
 
     protected Long id;
 
@@ -48,9 +46,9 @@ public class TexturedChunk
         columns = data.getColumns();
 
         indicesBufferId = indexManager.get(ChunkType.MEDIUM_T).getIndicesId();
-//        if (!indexManager.isIndicesBufferIdStored(rows,columns)) {
+//        if (!indexEngine.isIndicesBufferIdStored(rows,columns)) {
 //
-//            List<Integer> indicesBufferData = indexManager.createIndicesBufferData(2, 2);
+//            List<Integer> indicesBufferData = indexEngine.createIndicesBufferData(2, 2);
 //
 //
 //            IntBuffer indicesBuffer = BufferUtils.createIntBuffer(indicesBufferData.size());
@@ -65,9 +63,9 @@ public class TexturedChunk
 //            GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, indicesBuffer, GL15.GL_STATIC_DRAW);
 //            GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER, 0);
 //
-//            indexManager.storeIndicesBufferId(rows,columns,indicesBufferId);
+//            indexEngine.storeIndicesBufferId(rows,columns,indicesBufferId);
 //        } else {
-//            indicesBufferId = indexManager.getIndicesBufferId(rows,columns);
+//            indicesBufferId = indexEngine.getIndicesBufferId(rows,columns);
 //        }
 
 
