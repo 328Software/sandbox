@@ -15,7 +15,7 @@ public class LwjglExample {
             Display.create();
         } catch (LWJGLException e) {
             e.printStackTrace();
-            System.exit(0);
+
         }
 
         // init OpenGL

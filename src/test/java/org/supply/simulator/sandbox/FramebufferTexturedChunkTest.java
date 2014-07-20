@@ -181,7 +181,7 @@ public class FramebufferTexturedChunkTest {
 //            e.printStackTrace();
 //            throw new Exception("you suck");
 //
-////            System.exit(-1);
+////
 //        }
 //
 //        // Create a new texture object in memory and bind it

@@ -20,7 +20,7 @@ public class LwjglInputExample {
             Display.create();
         } catch (LWJGLException e) {
             e.printStackTrace();
-            System.exit(0);
+
         }
 
         // init OpenGL here

@@ -62,7 +62,7 @@ public class MultipleQuadsTest {
             GL11.glViewport(0, 0, WIDTH, HEIGHT);
         } catch (LWJGLException e) {
             e.printStackTrace();
-            System.exit(-1);
+
         }
 
         // Setup an XNA like background color
@@ -156,7 +156,7 @@ public class MultipleQuadsTest {
             System.err.println("ERROR - " + errorMessage + ": " + errorString);
 
             if (Display.isCreated()) Display.destroy();
-            System.exit(-1);
+
         }
     }
 }

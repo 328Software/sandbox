@@ -338,7 +338,7 @@ public class OtherBuffers {
             GL11.glViewport(0, 0, WIDTH, HEIGHT);
         } catch (LWJGLException e) {
             e.printStackTrace();
-//            System.exit(-1);
+//
         }
 
         // Setup an XNA like background color

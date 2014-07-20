@@ -115,7 +115,7 @@ public class QuadArrayGL11 {
             Display.create();
         } catch (LWJGLException e) {
             Sys.alert("Error", "Initialization failed!\n\n" + e.getMessage());
-            System.exit(0);
+
         }
     }
 

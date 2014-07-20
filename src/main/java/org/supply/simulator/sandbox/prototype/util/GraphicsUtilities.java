@@ -35,7 +35,7 @@ public class GraphicsUtilities {
         if (GL20.glGetShader(shaderID, GL20.GL_COMPILE_STATUS) == GL11.GL_FALSE) {
             System.err.println("Could not compile shader.");
             throw new Exception("lineNum: " + lineNum);
-//            System.exit(-1);
+//
         }
 
         return shaderID;
@@ -68,7 +68,7 @@ public class GraphicsUtilities {
             e.printStackTrace();
             throw new Exception("you suck");
 
-//            System.exit(-1);
+//
         }
 
         // Create a new texture object in memory and bind it

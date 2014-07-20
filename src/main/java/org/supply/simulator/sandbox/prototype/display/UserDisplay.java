@@ -322,7 +322,7 @@ public class UserDisplay {
             GL11.glViewport(0, 0, WIDTH, HEIGHT);
         } catch (LWJGLException e) {
             e.printStackTrace();
-//            System.exit(-1);
+//
         }
 
         // Setup an XNA like background color
@@ -564,7 +564,7 @@ public class UserDisplay {
             String errorString = GLU.gluErrorString(errorValue);
             System.out.println("ERROR IN:"+setupOpenGL+", MSG:"+errorString);
             if (org.lwjgl.opengl.Display.isCreated()) org.lwjgl.opengl.Display.destroy();
-            System.exit(-1);
+
         }
     }
 

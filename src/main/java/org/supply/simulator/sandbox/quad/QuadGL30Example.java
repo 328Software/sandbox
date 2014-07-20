@@ -65,7 +65,7 @@ public class QuadGL30Example {
             GL11.glViewport(0, 0, WIDTH, HEIGHT);
         } catch (LWJGLException e) {
             e.printStackTrace();
-            System.exit(-1);
+
         }
 
         // Setup an XNA like background color
@@ -157,7 +157,7 @@ public class QuadGL30Example {
             System.err.println("ERROR - " + errorMessage + ": " + errorString);
 
             if (Display.isCreated()) Display.destroy();
-            System.exit(-1);
+
         }
     }
 }

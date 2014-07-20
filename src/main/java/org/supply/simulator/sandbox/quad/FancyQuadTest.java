@@ -116,7 +116,7 @@ public class FancyQuadTest {
 //        } catch (LWJGLException e) {
 //            e.printStackTrace();
 //            throw new Exception("you suck");
-////            System.exit(-1);
+////
 //        }
 //
 //        // Setup an XNA like background color
@@ -419,7 +419,7 @@ public class FancyQuadTest {
 //            System.err.println("ERROR - " + errorMessage + ": " + errorString);
 //
 //            if (Display.isCreated()) Display.destroy();
-////            System.exit(-1);
+////
 //            throw new Exception("you suck");
 //        }
 //    }

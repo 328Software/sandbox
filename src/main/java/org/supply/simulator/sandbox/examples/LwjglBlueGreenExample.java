@@ -20,7 +20,7 @@ public class LwjglBlueGreenExample {
             Display.create();
         } catch (LWJGLException e) {
             e.printStackTrace();
-            System.exit(0);
+
         }
 
 
