@@ -112,7 +112,6 @@ public class TexturedChunk {}
 //        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
 //        GL15.glDeleteBuffers(positionsArrayId);
 //
-//        //  TODO figure out why we are unbinding this buffer twice
 //        GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);
 //        GL15.glDeleteBuffers(colorsArrayId);
 //
