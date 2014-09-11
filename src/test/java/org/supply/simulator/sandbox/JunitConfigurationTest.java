@@ -32,9 +32,9 @@ public class JunitConfigurationTest {
         assertTrue(true);
         System.out.println("running unit test two...");
         try {
-            Class.forName("org.supply.simulator.data.entity.Entity");
+            Class.forName("org.supply.simulator.data.impl.impl");
         } catch (ClassNotFoundException e) {
-            fail("could not find class entity");
+            fail("could not find class impl");
         }
     }
 }

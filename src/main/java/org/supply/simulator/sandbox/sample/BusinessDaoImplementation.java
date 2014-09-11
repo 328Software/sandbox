@@ -29,7 +29,7 @@ public class BusinessDaoImplementation extends BusinessLayerAbstract implements 
 
         Object data = mapInsteadOfDAO.get("query");
         //actual dao call might look like this
-        //Entity entity = entityDAO.getEntityFromSomeCriteria(..)
+        //impl impl = entityDAO.getEntityFromSomeCriteria(..)
 
         someMethod(data);
     }
