@@ -19,7 +19,7 @@ public class TexturedChunk {}
 //    private boolean isBuilt;
 //    private boolean isDestroyed;
 //
-//   // private ChunkIndexEngine<ChunkType,ChunkIndexHandle> indexManager;
+//   // private IndexEngine<ChunkType,ChunkIndexHandle> indexManager;
 //
 //    private ChunkData<float[], byte[]> data;
 //
@@ -166,7 +166,7 @@ public class TexturedChunk {}
 //    }
 //
 //    //@Override
-//    //public void setChunkIndexEngine(ChunkIndexEngine indexManager) {
+//    //public void setIndexEngine(IndexEngine indexManager) {
 //     //   this.indexManager = indexManager;
 //    //}
 //
