@@ -1,0 +1,96 @@
+apply plugin: 'java'
+
+import org.apache.tools.ant.taskdefs.condition.Os
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springVersion = '5.0.3.RELEASE'
+    log4jVersion = '2.0-rc1'
+    lwjglVersion = '2.9.3'
+}
+
+configurations {
+    api
+    agents
+}
+
+task extractApi(type: Sync) {
+    dependsOn configurations.api
+
+    from {
+        configurations.api.collect { zipTree(it) }
+    }
+
+    into "$buildDir/native/"
+}
+
+compileJava.dependsOn extractApi
+
+dependencies {
+    api 'org.lwjgl.lwjgl:lwjgl-platform:2.9.3:natives-windows'
+    agents (group: 'org.springframework', name: 'spring-instrument', version: springVersion)
+
+    compile(
+            [group: 'org.apache.logging.log4j', name: 'log4j-api', version: log4jVersion],
+
+            [group: 'org.apache.logging.log4j', name: 'log4j-core', version: log4jVersion],
+
+            [group: 'org.springframework', name: 'spring-core', version: springVersion],
+
+            [group: 'org.springframework', name: 'spring-context', version: springVersion],
+
+            [group: 'org.springframework', name: 'spring-orm', version: springVersion],
+
+            [group: 'org.springframework', name: 'spring-aspects', version: springVersion],
+
+            [group: 'org.lwjgl.lwjgl', name: 'lwjgl', version: lwjglVersion],
+
+            [group: 'org.lwjgl.lwjgl', name: 'lwjgl_util', version: lwjglVersion],
+
+            [group: 'org.l33tlabs.twl', name: 'pngdecoder', version: '1.0'],
+
+            [group: 'org.hibernate', name: 'hibernate-core', version: '5.2.12.Final'],
+
+            [group: 'org.hsqldb', name: 'hsqldb', version: '2.3.2'],
+
+            [group: 'commons-dbcp', name: 'commons-dbcp', version: '1.4'],
+
+            [group: 'net.sf.ehcache', name: 'ehcache', version: '2.10.2'],
+
+            [group: 'mysql', name: 'mysql-connector-java', version: '5.1.31'],
+
+            [group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.1'],
+
+            [group: 'org.joml', name: 'joml', version: '1.7.1'],
+
+            [group: 'org.jgrapht', name: 'jgrapht-core', version: '1.1.0'],
+
+            [group:'org.lwjgl.lwjgl', name:'lwjgl-platform', version: lwjglVersion, classifier:'natives-windows'],
+//            'org.lwjgl:lwjgl-platform:3.0:natives-windows'
+//            [group:'org.lwjgl', name:'lwjgl-platform', version:'3.0', classifier:'natives-linux'],
+//            [group:'org.lwjgl', name:'lwjgl-platform', version:'3.0', classifier:'natives-osx']
+
+    )
+
+    testCompile(
+            [group: 'junit', name: 'junit', version: '4.11'],
+            [group: 'com.carrotsearch', name: 'junit-benchmarks', version: '0.7.2']
+    )
+
+
+}
+
+
+test {
+    jvmArgs "-javaagent:${configurations.agents.singleFile}",'-Djava.library.path=build\\native'
+}
+
+/*
+task checkWin() << {
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        println "*** WINDOWS "
+    }
+}*/
